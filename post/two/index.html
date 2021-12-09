@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003evue-cli4 配置\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/two\/",
+  "keywords":"[vue]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="vue">
+<meta name="description" content="vue-cli4 配置">
+
+
+<meta property="og:description" content="vue-cli4 配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli4 配置">
+<meta name="twitter:title" content="vue-cli4 配置">
+<meta property="og:url" content="https://caiqing123.github.io/post/two/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/two/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="vue-cli4 配置">
+<meta name="twitter:description" content="vue-cli4 配置">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2021-12-09T17:28:53">
+  
+  
+    <meta property="article:modified_time" content="2021-12-09T17:28:53">
+  
+  
+  
+    
+      <meta property="article:section" content="vue">
+    
+  
+  
+    
+      <meta property="article:tag" content="vue">
+    
+      <meta property="article:tag" content="cli">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>vue-cli4 配置</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/two/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      vue-cli4 配置
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-09T17:28:53&#43;08:00">
+        
+  十二月 9, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/vue">vue</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>vue-cli4 配置</p>
+<h1 id="vue-cli4-配置">vue-cli4 配置</h1>
+<p><span id="top">目录</span></p>
+<ul>
+<li><a href="#env">√ 配置多环境变量</a></li>
+<li><a href="#base">√ 配置基础 vue.config.js</a></li>
+<li><a href="#proxy">√ 配置 proxy 跨域</a></li>
+<li><a href="#hmr">√ 修复 HMR(热更新)失效</a></li>
+<li><a href="#lazyloading">√ 修复 Lazy loading routes Error： Cyclic dependency</a></li>
+<li><a href="#alias">√ 添加别名 alias</a></li>
+<li><a href="#compressimage">√ 压缩图片</a></li>
+<li><a href="#spritesmith">√ 自动生成雪碧图</a></li>
+<li><a href="#font">√ SVG 转 font 字体</a></li>
+<li><a href="#svg">√ 使用 SVG 组件</a></li>
+<li><a href="#removecss">√ 去除多余无效的 css</a></li>
+<li><a href="#analyze">√ 添加打包分析</a></li>
+<li><a href="#externals">√ 配置 externals 引入 cdn 资源</a></li>
+<li><a href="#multiple-pages">√ 多页面打包 multi-page</a></li>
+<li><a href="#moment">√ 删除 moment 语言包</a></li>
+<li><a href="#log">√ 去掉 console.log</a></li>
+<li><a href="#splitchunks">√ 利用 splitChunks 单独打包第三方模块</a></li>
+<li><a href="#gzip">√ 开启 gzip 压缩</a></li>
+<li><a href="#stylelint">√ 开启 stylelint 检测scss, css语法</a></li>
+<li><a href="#globalscss">√ 为 sass 提供全局样式，以及全局变量</a></li>
+<li><a href="#globalless">√ 为 less 提供全局样式，以及全局变量</a></li>
+<li><a href="#globalstylus">√ 为 stylus 提供全局变量</a></li>
+<li><a href="#prerender">√ 预渲染 prerender-spa-plugin</a></li>
+<li><a href="#ie">√ 添加 IE 兼容</a></li>
+<li><a href="#alioss">√ 静态资源自动打包上传阿里 oss、华为 obs</a></li>
+<li><a href="#allconfig">√ 完整依赖</a></li>
+</ul>
+<h3 id="span-idenv-配置多环境变量span"><span id="env">✅ 配置多环境变量</span></h3>
+<p>  通过在 package.json 里的 scripts 配置项中添加&ndash;mode xxx 来选择不同环境</p>
+<p>  只有以 VUE_APP 开头的变量会被 webpack.DefinePlugin 静态嵌入到客户端侧的包中，代码中可以通过 process.env.VUE_APP_BASE_API 访问</p>
+<p>  NODE_ENV 和 BASE_URL 是两个特殊变量，在代码中始终可用</p>
+<h5 id="配置">配置</h5>
+<p>  在项目根目录中新建.env, .env.production, .env.analyz 等文件</p>
+<ul>
+<li>.env</li>
+</ul>
+<p>  serve 默认的本地开发环境配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;development&#34;</span>
+<span style="color:#a6e22e">BASE_URL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./&#34;</span>
+<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./&#34;</span>
+<span style="color:#a6e22e">VUE_APP_API</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://test.staven630.com/api&#34;</span>
+</code></pre></div><ul>
+<li>.env.production</li>
+</ul>
+<p>  build 默认的环境配置（正式服务器）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;production&#34;</span>
+<span style="color:#a6e22e">BASE_URL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://prod.staven630.com/&#34;</span>
+<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://prod.oss.com/staven-blog&#34;</span>
+<span style="color:#a6e22e">VUE_APP_API</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://prod.staven630.com/api&#34;</span>
+
+<span style="color:#a6e22e">ACCESS_KEY_ID</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxxxxxxx&#34;</span>
+<span style="color:#a6e22e">ACCESS_KEY_SECRET</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxxxxxxx&#34;</span>
+<span style="color:#a6e22e">REGION</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;oss-cn-hangzhou&#34;</span>
+<span style="color:#a6e22e">BUCKET</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;staven-prod&#34;</span>
+<span style="color:#a6e22e">PREFIX</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;staven-blog&#34;</span>
+</code></pre></div><ul>
+<li>.env.crm</li>
+</ul>
+<p>  自定义 build 环境配置（预发服务器）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;production&#34;</span>
+<span style="color:#a6e22e">BASE_URL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://crm.staven630.com/&#34;</span>
+<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://crm.oss.com/staven-blog&#34;</span>
+<span style="color:#a6e22e">VUE_APP_API</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://crm.staven630.com/api&#34;</span>
+
+<span style="color:#a6e22e">ACCESS_KEY_ID</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxxxxxxx&#34;</span>
+<span style="color:#a6e22e">ACCESS_KEY_SECRET</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;xxxxxxxxxxxxx&#34;</span>
+<span style="color:#a6e22e">REGION</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;oss-cn-hangzhou&#34;</span>
+<span style="color:#a6e22e">BUCKET</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;staven-crm&#34;</span>
+<span style="color:#a6e22e">PREFIX</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;staven-blog&#34;</span>
+
+<span style="color:#a6e22e">IS_ANALYZE</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</code></pre></div><p>  修改 package.json</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
+  <span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;vue-cli-service build&#34;</span>,
+  <span style="color:#e6db74">&#34;crm&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;vue-cli-service build --mode crm&#34;</span>
+}
+</code></pre></div><h5 id="使用环境变量">使用环境变量</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">template</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">template中使用环境变量</span> <span style="color:#f92672">--&gt;</span>
+     <span style="color:#a6e22e">API</span><span style="color:#f92672">:</span> {{ <span style="color:#a6e22e">api</span> }}
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/template&gt;</span>
+
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;home&#34;</span>,
+  <span style="color:#a6e22e">data</span>() {
+    <span style="color:#66d9ef">return</span> {
+      <span style="color:#a6e22e">api</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_API</span>
+    };
+  },
+  <span style="color:#a6e22e">mounted</span>() {
+    <span style="color:#75715e">// js代码中使用环境变量
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;BASE_URL: &#34;</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">BASE_URL</span>);
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;VUE_APP_API: &#34;</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_API</span>);
+  }
+};
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idbase-配置基础-vueconfigjsspan"><span id="base">✅ 配置基础 vue.config.js</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./&#34;</span>, <span style="color:#75715e">// 默认&#39;/&#39;，部署应用包时的基本 URL
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// outputDir: process.env.outputDir || &#39;dist&#39;, // &#39;dist&#39;, 生产环境构建文件的目录
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// assetsDir: &#34;&#34;, // 相对于outputDir的静态资源(js、css、img、fonts)目录
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">lintOnSave</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+  <span style="color:#a6e22e">runtimeCompiler</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// 是否使用包含运行时编译器的 Vue 构建版本
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">productionSourceMap</span><span style="color:#f92672">:</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">IS_PROD</span>, <span style="color:#75715e">// 生产环境的 source map
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">parallel</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;os&#34;</span>).<span style="color:#a6e22e">cpus</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">pwa</span><span style="color:#f92672">:</span> {}
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idproxy-配置-proxy-代理解决跨域问题span"><span id="proxy">✅ 配置 proxy 代理解决跨域问题</span></h3>
+<p>  假设 mock 接口为https://www.easy-mock.com/mock/5bc75b55dc36971c160cad1b/sheets/1</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
+    <span style="color:#75715e">// overlay: { // 让浏览器 overlay 同时显示警告和错误
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   warnings: true,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   errors: true
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// },
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// open: false, // 是否打开浏览器
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// host: &#34;localhost&#34;,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// port: &#34;8080&#34;, // 代理断就
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// https: false,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// hotOnly: false, // 热更新
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">proxy</span><span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;/api&#34;</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span>
+          <span style="color:#e6db74">&#34;https://www.easy-mock.com/mock/5bc75b55dc36971c160cad1b/sheets&#34;</span>, <span style="color:#75715e">// 目标代理接口地址
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">secure</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// 开启代理，在本地创建一个虚拟服务端
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// ws: true, // 是否启用websockets
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">pathRewrite</span><span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;^/api&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/&#34;</span>
+        }
+      }
+    }
+  }
+};
+</code></pre></div><p>  访问</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;axios&#34;</span>;
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">mounted</span>() {
+    <span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/api/1&#34;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">res</span> =&gt; {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;proxy:&#39;</span>, <span style="color:#a6e22e">res</span>);
+    });
+  }
+};
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idhmr-修复-hmr热更新失效span"><span id="hmr">✅ 修复 HMR(热更新)失效</span></h3>
+<p>  如果热更新失效，如下操作：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 修复HMR
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">symlinks</span>(<span style="color:#66d9ef">true</span>);
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idlazyloading-修复-lazy-loading-routes-error-cyclic-dependencyspan-httpsgithubcomvuejsvue-cliissues1669httpsgithubcomvuejsvue-cliissues1669"><span id="lazyloading">✅ 修复 Lazy loading routes Error： Cyclic dependency</span> <a href="https://github.com/vuejs/vue-cli/issues/1669">https://github.com/vuejs/vue-cli/issues/1669</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;html&#34;</span>).<span style="color:#a6e22e">tap</span>(<span style="color:#a6e22e">args</span> =&gt; {
+      <span style="color:#75715e">// 修复 Lazy loading routes Error
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">chunksSortMode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>;
+    });
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idalias-添加别名-aliasspan"><span id="alias">✅ 添加别名 alias</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 添加别名
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">alias</span>
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;vue$&#34;</span>, <span style="color:#e6db74">&#34;vue/dist/vue.esm.js&#34;</span>)
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@assets&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/assets&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@scss&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/assets/scss&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@components&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/components&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@plugins&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/plugins&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@views&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/views&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@router&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/router&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@store&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/store&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@layouts&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/layouts&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@static&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/static&#34;</span>));
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idcompressimage-压缩图片span"><span id="compressimage">✅ 压缩图片</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">D</span> <span style="color:#a6e22e">image</span><span style="color:#f92672">-</span><span style="color:#a6e22e">webpack</span><span style="color:#f92672">-</span><span style="color:#a6e22e">loader</span>
+</code></pre></div><p>  在某些版本的 OSX 上安装可能会因缺少 libpng 依赖项而引发错误。可以通过安装最新版本的 libpng 来解决。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">brew</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">libpng</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>
+        .<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>)
+        .<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;image-webpack-loader&#34;</span>)
+        .<span style="color:#a6e22e">loader</span>(<span style="color:#e6db74">&#34;image-webpack-loader&#34;</span>)
+        .<span style="color:#a6e22e">options</span>({
+          <span style="color:#a6e22e">mozjpeg</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">progressive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">quality</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">65</span> },
+          <span style="color:#a6e22e">optipng</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">enabled</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> },
+          <span style="color:#a6e22e">pngquant</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">quality</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">0.65</span>, <span style="color:#ae81ff">0.9</span>], <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span> },
+          <span style="color:#a6e22e">gifsicle</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">interlaced</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
+          <span style="color:#75715e">// webp: { quality: 75 }
+</span><span style="color:#75715e"></span>        });
+    }
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idspritesmith-自动生成雪碧图span"><span id="spritesmith">✅ 自动生成雪碧图</span></h3>
+<p>  默认 src/assets/icons 中存放需要生成雪碧图的 png 文件。首次运行 npm run serve/build 会生成雪碧图，并在跟目录生成 icons.json 文件。再次运行命令时，会对比 icons 目录内文件与 icons.json 的匹配关系，确定是否需要再次执行 webpack-spritesmith 插件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D webpack-spritesmith
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">icons</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#66d9ef">try</span> {
+  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">statSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+  <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readdirSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+  <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#34;-&#34;</span>);
+    <span style="color:#a6e22e">icons</span>[<span style="color:#a6e22e">filename</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  });
+
+} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">mkdirSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">length</span>) {
+  <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">iconsObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#e6db74">&#34;utf8&#34;</span>);
+    <span style="color:#a6e22e">iconsObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">iconsObj</span>);
+    <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">some</span>(<span style="color:#a6e22e">item</span> =&gt; {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#34;-&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">iconsObj</span>[<span style="color:#a6e22e">filename</span>];
+    });
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">has_sprite</span>) {
+      <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">icons</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+    }
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">icons</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+    <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  }
+}
+
+<span style="color:#75715e">// 雪碧图样式处理模板
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SpritesmithTemplate</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+  <span style="color:#75715e">// pc
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">icons</span> <span style="color:#f92672">=</span> {};
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tpl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`.ico { 
+</span><span style="color:#e6db74">  display: inline-block; 
+</span><span style="color:#e6db74">  background-image: url(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">sprites</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">image</span><span style="color:#e6db74">}</span><span style="color:#e6db74">); 
+</span><span style="color:#e6db74">  background-size: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">spritesheet</span>.<span style="color:#a6e22e">width</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">spritesheet</span>.<span style="color:#a6e22e">height</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">}`</span>;
+
+  <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">sprites</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">sprite</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#34;-&#34;</span>);
+    <span style="color:#a6e22e">icons</span>[<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png`</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+    <span style="color:#a6e22e">tpl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tpl</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 
+</span><span style="color:#e6db74">.ico-</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  width: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">width</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">  height: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">height</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">  background-position: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">offset_x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">offset_y</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px;
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">`</span>;
+  });
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tpl</span>;
+};
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">has_sprite</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SpritesmithPlugin</span>({
+          <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">cwd</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;./src/assets/icons/&#34;</span>), <span style="color:#75715e">// 图标根路径
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">glob</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;**/*.png&#34;</span> <span style="color:#75715e">// 匹配任意 png 图标
+</span><span style="color:#75715e"></span>          },
+          <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;./src/assets/images/sprites.png&#34;</span>), <span style="color:#75715e">// 生成雪碧图目标路径与名称
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 设置生成CSS背景及其定位的文件或方式
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> [
+              [
+                <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;./src/assets/scss/sprites.scss&#34;</span>),
+                {
+                  <span style="color:#a6e22e">format</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;function_based_template&#34;</span>
+                }
+              ]
+            ]
+          },
+          <span style="color:#a6e22e">customTemplates</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">function_based_template</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">SpritesmithTemplate</span>
+          },
+          <span style="color:#a6e22e">apiOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">cssImageRef</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;../images/sprites.png&#34;</span> <span style="color:#75715e">// css文件中引用雪碧图的相对位置路径配置
+</span><span style="color:#75715e"></span>          },
+          <span style="color:#a6e22e">spritesmithOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+          }
+        })
+      );
+    }
+
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idfont-svg-转-font-字体span"><span id="font">✅ SVG 转 font 字体</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D svgtofont
+</code></pre></div><p>  根目录新增 scripts 目录，并新建 svg2font.js 文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">svgtofont</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;svgtofont&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pkg</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;../package.json&#34;</span>);
+
+<span style="color:#a6e22e">svgtofont</span>({
+  <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">cwd</span>(), <span style="color:#e6db74">&#34;src/assets/svg&#34;</span>), <span style="color:#75715e">// svg 图标目录路径
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dist</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">cwd</span>(), <span style="color:#e6db74">&#34;src/assets/fonts&#34;</span>), <span style="color:#75715e">// 输出到指定目录中
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fontName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;icon&#34;</span>, <span style="color:#75715e">// 设置字体名称
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// 生成字体文件
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">startNumber</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20000</span>, <span style="color:#75715e">// unicode起始编号
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">svgicons2svgfont</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">fontHeight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span>,
+    <span style="color:#a6e22e">normalize</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+  },
+  <span style="color:#75715e">// website = null, 没有演示html文件
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">website</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;icon&#34;</span>,
+    <span style="color:#a6e22e">logo</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+    <span style="color:#a6e22e">version</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">pkg</span>.<span style="color:#a6e22e">version</span>,
+    <span style="color:#a6e22e">meta</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+      <span style="color:#a6e22e">keywords</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>
+    },
+    <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">``</span>,
+    <span style="color:#a6e22e">links</span><span style="color:#f92672">:</span> [
+      {
+        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Font Class&#34;</span>,
+        <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;index.html&#34;</span>
+      },
+      {
+        <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Unicode&#34;</span>,
+        <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;unicode.html&#34;</span>
+      }
+    ],
+    <span style="color:#a6e22e">footerInfo</span><span style="color:#f92672">:</span> <span style="color:#e6db74">``</span>
+  }
+}).<span style="color:#a6e22e">then</span>(() =&gt; {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;done!&#34;</span>);
+});
+</code></pre></div><p>  添加 package.json scripts 配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;prebuild&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;npm run font&#34;</span>,
+<span style="color:#e6db74">&#34;font&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;node scripts/svg2font.js&#34;</span>,
+</code></pre></div><p>  执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">run</span> <span style="color:#a6e22e">font</span>
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idsvg-使用-svg-组件span"><span id="svg">✅ 使用 SVG 组件</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D svg-sprite-loader
+</code></pre></div><p>  新增 SvgIcon 组件。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">template</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">svg</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;svg-icon&#34;</span>
+       <span style="color:#a6e22e">aria</span><span style="color:#f92672">-</span><span style="color:#a6e22e">hidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">use</span> <span style="color:#f92672">:</span><span style="color:#a6e22e">xlink</span><span style="color:#f92672">:</span><span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;iconName&#34;</span> <span style="color:#f92672">/&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/svg&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/template&gt;</span>
+
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> {
+  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SvgIcon&#39;</span>,
+  <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">iconClass</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String,
+      <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+    }
+  },
+  <span style="color:#a6e22e">computed</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">iconName</span>() {
+      <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`#icon-</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">iconClass</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>
+    }
+  }
+}
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">style</span> <span style="color:#a6e22e">scoped</span><span style="color:#f92672">&gt;</span>
+.<span style="color:#a6e22e">svg</span><span style="color:#f92672">-</span><span style="color:#a6e22e">icon</span> {
+  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">em</span>;
+  <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">em</span>;
+  <span style="color:#a6e22e">vertical</span><span style="color:#f92672">-</span><span style="color:#a6e22e">align</span><span style="color:#f92672">:</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.15</span><span style="color:#a6e22e">em</span>;
+  <span style="color:#a6e22e">fill</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">currentColor</span>;
+  <span style="color:#a6e22e">overflow</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hidden</span>;
+}
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/style&gt;</span>
+</code></pre></div><p>  在 src 文件夹中创建 icons 文件夹。icons 文件夹中新增 svg 文件夹（用来存放 svg 文件）与 index.js 文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">SvgIcon</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;@/components/SvgIcon&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Vue</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;vue&#34;</span>;
+
+<span style="color:#75715e">// 注册到全局
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">component</span>(<span style="color:#e6db74">&#34;svg-icon&#34;</span>, <span style="color:#a6e22e">SvgIcon</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">requireAll</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">requireContext</span> =&gt; <span style="color:#a6e22e">requireContext</span>.<span style="color:#a6e22e">keys</span>().<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">requireContext</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">req</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">context</span>(<span style="color:#e6db74">&#34;./svg&#34;</span>, <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">/\.svg$/</span>);
+<span style="color:#a6e22e">requireAll</span>(<span style="color:#a6e22e">req</span>);
+</code></pre></div><p>  在 main.js 中导入 icons/index.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;@/icons&#34;</span>;
+</code></pre></div><p>  修改 vue.config.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">svgRule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;svg&#34;</span>);
+    <span style="color:#a6e22e">svgRule</span>.<span style="color:#a6e22e">uses</span>.<span style="color:#a6e22e">clear</span>();
+    <span style="color:#a6e22e">svgRule</span>.<span style="color:#a6e22e">exclude</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">/node_modules/</span>);
+    <span style="color:#a6e22e">svgRule</span>
+      .<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">/\.svg$/</span>)
+      .<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;svg-sprite-loader&#34;</span>)
+      .<span style="color:#a6e22e">loader</span>(<span style="color:#e6db74">&#34;svg-sprite-loader&#34;</span>)
+      .<span style="color:#a6e22e">options</span>({
+        <span style="color:#a6e22e">symbolId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;icon-[name]&#34;</span>
+      });
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">imagesRule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>);
+    <span style="color:#a6e22e">imagesRule</span>.<span style="color:#a6e22e">exclude</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/icons&#34;</span>));
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>).<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>);
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idremovecss-去除多余无效的-cssspan"><span id="removecss">✅ 去除多余无效的 css</span></h3>
+<p>  注：谨慎使用。可能出现各种样式丢失现象。</p>
+<ul>
+<li>方案一：@fullhuman/postcss-purgecss</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D postcss-import @fullhuman/postcss-purgecss
+</code></pre></div><p>  更新 postcss.config.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">autoprefixer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;autoprefixer&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">postcssImport</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;postcss-import&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">purgecss</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;@fullhuman/postcss-purgecss&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+  <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">postcssImport</span>);
+  <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+    <span style="color:#a6e22e">purgecss</span>({
+      <span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">&#34;./layouts/**/*.vue&#34;</span>,
+        <span style="color:#e6db74">&#34;./components/**/*.vue&#34;</span>,
+        <span style="color:#e6db74">&#34;./pages/**/*.vue&#34;</span>
+      ],
+      <span style="color:#a6e22e">extractors</span><span style="color:#f92672">:</span> [
+        {
+          <span style="color:#a6e22e">extractor</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Extractor</span> {
+            <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">extract</span>(<span style="color:#a6e22e">content</span>) {
+              <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">validSection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">replace</span>(
+                <span style="color:#e6db74">/&lt;style([\s\S]*?)&lt;\/style&gt;+/gim</span>,
+                <span style="color:#e6db74">&#34;&#34;</span>
+              );
+              <span style="color:#66d9ef">return</span> (
+                <span style="color:#a6e22e">validSection</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g</span>) <span style="color:#f92672">||</span> []
+              );
+            }
+          },
+          <span style="color:#a6e22e">extensions</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;html&#34;</span>, <span style="color:#e6db74">&#34;vue&#34;</span>]
+        }
+      ],
+      <span style="color:#a6e22e">whitelist</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;html&#34;</span>, <span style="color:#e6db74">&#34;body&#34;</span>],
+      <span style="color:#a6e22e">whitelistPatterns</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">/el-.*/</span>,
+        <span style="color:#e6db74">/-(leave|enter|appear)(|-(to|from|active))$/</span>,
+        <span style="color:#e6db74">/^(?!cursor-move).+-move$/</span>,
+        <span style="color:#e6db74">/^router-link(|-exact)-active$/</span>
+      ],
+      <span style="color:#a6e22e">whitelistPatternsChildren</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">/^token/</span>, <span style="color:#e6db74">/^pre/</span>, <span style="color:#e6db74">/^code/</span>]
+    })
+  );
+}
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [...<span style="color:#a6e22e">plugins</span>, <span style="color:#a6e22e">autoprefixer</span>]
+};
+</code></pre></div><ul>
+<li>方案二：purgecss-webpack-plugin</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D glob-all purgecss-webpack-plugin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">glob</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;glob-all&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PurgecssPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;purgecss-webpack-plugin&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PurgecssPlugin</span>({
+          <span style="color:#a6e22e">paths</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">glob</span>.<span style="color:#a6e22e">sync</span>([<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./**/*.vue&#34;</span>)]),
+          <span style="color:#a6e22e">extractors</span><span style="color:#f92672">:</span> [
+            {
+              <span style="color:#a6e22e">extractor</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Extractor</span> {
+                <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">extract</span>(<span style="color:#a6e22e">content</span>) {
+                  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">validSection</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">content</span>.<span style="color:#a6e22e">replace</span>(
+                    <span style="color:#e6db74">/&lt;style([\s\S]*?)&lt;\/style&gt;+/gim</span>,
+                    <span style="color:#e6db74">&#34;&#34;</span>
+                  );
+                  <span style="color:#66d9ef">return</span> (
+                    <span style="color:#a6e22e">validSection</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/[A-Za-z0-9-_/:]*[A-Za-z0-9-_/]+/g</span>) <span style="color:#f92672">||</span> []
+                  );
+                }
+              },
+              <span style="color:#a6e22e">extensions</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;html&#34;</span>, <span style="color:#e6db74">&#34;vue&#34;</span>]
+            }
+          ],
+          <span style="color:#a6e22e">whitelist</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;html&#34;</span>, <span style="color:#e6db74">&#34;body&#34;</span>],
+          <span style="color:#a6e22e">whitelistPatterns</span><span style="color:#f92672">:</span> [
+            <span style="color:#e6db74">/el-.*/</span>,
+            <span style="color:#e6db74">/-(leave|enter|appear)(|-(to|from|active))$/</span>,
+            <span style="color:#e6db74">/^(?!cursor-move).+-move$/</span>,
+            <span style="color:#e6db74">/^router-link(|-exact)-active$/</span>
+          ],
+          <span style="color:#a6e22e">whitelistPatternsChildren</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">/^token/</span>, <span style="color:#e6db74">/^pre/</span>, <span style="color:#e6db74">/^code/</span>]
+        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idanalyze-添加打包分析span"><span id="analyze">✅ 添加打包分析</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">BundleAnalyzerPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack-bundle-analyzer&#34;</span>)
+  .<span style="color:#a6e22e">BundleAnalyzerPlugin</span>;
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 打包分析
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;webpack-report&#34;</span>).<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">BundleAnalyzerPlugin</span>, [
+        {
+          <span style="color:#a6e22e">analyzerMode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;static&#34;</span>
+        }
+      ]);
+    }
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idexternals-配置-externals-引入-cdn-资源span"><span id="externals">✅ 配置 externals 引入 cdn 资源</span></h3>
+<p>  防止将某些 import 的包(package)打包到 bundle 中，而是在运行时(runtime)再去从外部获取这些扩展依赖</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">externals</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">vue</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vue&#34;</span>,
+      <span style="color:#e6db74">&#34;element-ui&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ELEMENT&#34;</span>,
+      <span style="color:#e6db74">&#34;vue-router&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;VueRouter&#34;</span>,
+      <span style="color:#a6e22e">vuex</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vuex&#34;</span>,
+      <span style="color:#a6e22e">axios</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;axios&#34;</span>
+    };
+  },
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> {
+      <span style="color:#75715e">// 访问https://unpkg.com/element-ui/lib/theme-chalk/index.css获取最新版本
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/theme-chalk/index.css&#34;</span>],
+      <span style="color:#a6e22e">js</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">&#34;//unpkg.com/vue@2.6.10/dist/vue.min.js&#34;</span>, <span style="color:#75715e">// 访问https://unpkg.com/vue/dist/vue.min.js获取最新版本
+</span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#34;//unpkg.com/vue-router@3.0.6/dist/vue-router.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/vuex@3.1.1/dist/vuex.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/axios@0.19.0/dist/axios.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/index.js&#34;</span>
+      ]
+    };
+
+    <span style="color:#75715e">// 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;html&#34;</span>).<span style="color:#a6e22e">tap</span>(<span style="color:#a6e22e">args</span> =&gt; {
+      <span style="color:#75715e">// html中添加cdn
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cdn</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>;
+    });
+  }
+};
+</code></pre></div><p>  在 html 中添加</p>
+<pre tabindex="0"><code>&lt;!-- 使用CDN的CSS文件 --&gt;
+&lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp;
+htmlWebpackPlugin.options.cdn.css) { %&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;%= htmlWebpackPlugin.options.cdn.css[i] %&gt;&quot; /&gt;
+&lt;% } %&gt;
+
+&lt;!-- 使用CDN的JS文件 --&gt;
+&lt;% for (var i in htmlWebpackPlugin.options.cdn &amp;&amp;
+htmlWebpackPlugin.options.cdn.js) { %&gt;
+&lt;script
+  type=&quot;text/javascript&quot;
+  src=&quot;&lt;%= htmlWebpackPlugin.options.cdn.js[i] %&gt;&quot;
+&gt;&lt;/script&gt;
+&lt;% } %&gt;
+</code></pre><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idmultiple-pages-多页面打包-multi-pagespan"><span id="multiple-pages">✅ 多页面打包 multi-page</span></h3>
+<p>  多入口页面打包，建议在 src 目录下新建 pages 目录存放多页面模块。</p>
+<ul>
+<li>pages.config.js</li>
+</ul>
+<p>   配置多页面信息。src/main.js 文件对应 main 字段，其他根据参照 pages 为根路径为字段。如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#39;admin&#39;</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;public/index.html&#39;</span>,
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;admin.html&#39;</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;后台管理&#39;</span>,
+  },
+  <span style="color:#e6db74">&#39;mobile&#39;</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;public/index.html&#39;</span>,
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mobile.html&#39;</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;移动端&#39;</span>,
+  },
+  <span style="color:#e6db74">&#39;pc/crm&#39;</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;public/index.html&#39;</span>,
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;pc-crm.html&#39;</span>,
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;预发服务&#39;</span>,
+  }
+}
+</code></pre></div><ul>
+<li>vue.config.js</li>
+</ul>
+<p>  vue.config.js 的 pages 字段为多页面提供配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">glob</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;glob&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pagesInfo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./pages.config&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pages</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#a6e22e">glob</span>.<span style="color:#a6e22e">sync</span>(<span style="color:#e6db74">&#39;./src/pages/**/main.js&#39;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">entry</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">chunk</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\.\/src\/pages\/(.*)\/main\.js/</span>)[<span style="color:#ae81ff">1</span>];
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">curr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pagesInfo</span>[<span style="color:#a6e22e">chunk</span>];
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">curr</span>) {
+    <span style="color:#a6e22e">pages</span>[<span style="color:#a6e22e">chunk</span>] <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">entry</span>,
+      ...<span style="color:#a6e22e">curr</span>,
+      <span style="color:#a6e22e">chunk</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;chunk-vendors&#34;</span>, <span style="color:#e6db74">&#34;chunk-common&#34;</span>, <span style="color:#a6e22e">chunk</span>]
+    }
+  }
+})
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 防止多页面打包卡顿
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span> =&gt; <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#34;named-chunks&#34;</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+  },
+  <span style="color:#a6e22e">pages</span>
+};
+</code></pre></div><p>  如果多页面打包需要使用 CDN，使用 vue inspect &ndash;plugins 查看 html 是否在结果数组中的形式。上例中 plugins 列表中存在&rsquo;html-main',&lsquo;html-pages/admin&rsquo;,&lsquo;html-pages/mobile&rsquo;， 没有&rsquo;html'。因此不能再使用 config.plugin(&ldquo;html&rdquo;)。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">glob</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;glob&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pagesInfo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./pages.config&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pages</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#a6e22e">glob</span>.<span style="color:#a6e22e">sync</span>(<span style="color:#e6db74">&#39;./src/pages/**/main.js&#39;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">entry</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">chunk</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\.\/src\/pages\/(.*)\/main\.js/</span>)[<span style="color:#ae81ff">1</span>];
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">curr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pagesInfo</span>[<span style="color:#a6e22e">chunk</span>];
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">curr</span>) {
+    <span style="color:#a6e22e">pages</span>[<span style="color:#a6e22e">chunk</span>] <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">entry</span>,
+      ...<span style="color:#a6e22e">curr</span>,
+      <span style="color:#a6e22e">chunk</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;chunk-vendors&#34;</span>, <span style="color:#e6db74">&#34;chunk-common&#34;</span>, <span style="color:#a6e22e">chunk</span>]
+    }
+  }
+});
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./&#34;</span>, <span style="color:#75715e">//
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">externals</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">vue</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vue&#34;</span>,
+      <span style="color:#e6db74">&#34;element-ui&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ELEMENT&#34;</span>,
+      <span style="color:#e6db74">&#34;vue-router&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;VueRouter&#34;</span>,
+      <span style="color:#a6e22e">vuex</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vuex&#34;</span>,
+      <span style="color:#a6e22e">axios</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;axios&#34;</span>
+    };
+  },
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> {
+      <span style="color:#75715e">// 访问https://unpkg.com/element-ui/lib/theme-chalk/index.css获取最新版本
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/theme-chalk/index.css&#34;</span>],
+      <span style="color:#a6e22e">js</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">&#34;//unpkg.com/vue@2.6.10/dist/vue.min.js&#34;</span>, <span style="color:#75715e">// 访问https://unpkg.com/vue/dist/vue.min.js获取最新版本
+</span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#34;//unpkg.com/vue-router@3.0.6/dist/vue-router.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/vuex@3.1.1/dist/vuex.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/axios@0.19.0/dist/axios.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/index.js&#34;</span>
+      ]
+    };
+
+    <span style="color:#75715e">// 防止多页面打包卡顿
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span> =&gt; <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#34;named-chunks&#34;</span>);
+
+    <span style="color:#75715e">// 多页面cdn添加
+</span><span style="color:#75715e"></span>    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">pagesInfo</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">page</span> =&gt; {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">`html-</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">page</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>).<span style="color:#a6e22e">tap</span>(<span style="color:#a6e22e">args</span> =&gt; {
+        <span style="color:#75715e">// html中添加cdn
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cdn</span>;
+
+        <span style="color:#75715e">// 修复 Lazy loading routes Error
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">chunksSortMode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>;
+      });
+    });
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+  },
+  <span style="color:#a6e22e">pages</span>
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idmoment-删除-moment-语言包span"><span id="moment">✅ 删除 moment 语言包</span></h3>
+<p>  删除 moment 除 zh-cn 中文包外的其它语言包，无需在代码中手动引入 zh-cn 语言包。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webpack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack&#34;</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#a6e22e">config</span>
+      .<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;ignore&#34;</span>)
+      .<span style="color:#a6e22e">use</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">webpack</span>.<span style="color:#a6e22e">ContextReplacementPlugin</span>(<span style="color:#e6db74">/moment[/\\]locale$/</span>, <span style="color:#e6db74">/zh-cn$/</span>)
+      );
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idlog-去掉-consolelogspan"><span id="log">✅ 去掉 console.log</span></h3>
+<h5 id="方法一使用-babel-plugin-transform-remove-console-插件">方法一：使用 babel-plugin-transform-remove-console 插件</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D babel-plugin-transform-remove-console
+</code></pre></div><p>在 babel.config.js 中配置</p>
+<pre tabindex="0"><code>const IS_PROD = [&quot;production&quot;, &quot;prod&quot;].includes(process.env.NODE_ENV);
+
+const plugins = [];
+if (IS_PROD) {
+  plugins.push(&quot;transform-remove-console&quot;);
+}
+
+module.exports = {
+  presets: [&quot;@vue/app&quot;, { useBuiltIns: &quot;entry&quot; }],
+  plugins
+};
+</code></pre><h5 id="方法二">方法二：</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">UglifyJsPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;uglifyjs-webpack-plugin&#34;</span>);
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">UglifyJsPlugin</span>({
+          <span style="color:#a6e22e">uglifyOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">compress</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">warnings</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+              <span style="color:#a6e22e">drop_console</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+              <span style="color:#a6e22e">drop_debugger</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+              <span style="color:#a6e22e">pure_funcs</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;console.log&#34;</span>] <span style="color:#75715e">//移除console
+</span><span style="color:#75715e"></span>            }
+          },
+          <span style="color:#a6e22e">sourceMap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+          <span style="color:#a6e22e">parallel</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+        })
+      );
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+    }
+  }
+};
+</code></pre></div><p>  如果使用 uglifyjs-webpack-plugin 会报错，可能存在 node_modules 中有些依赖需要 babel 转译。</p>
+<p>  而 vue-cli 的<a href="https://cli.vuejs.org/zh/config/#transpiledependencies">transpileDependencies</a>配置默认为[], babel-loader 会忽略所有 node_modules 中的文件。如果你想要通过 Babel 显式转译一个依赖，可以在这个选项中列出来。配置需要转译的第三方库。</p>
+<p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idsplitchunks利用-splitchunks-单独打包第三方模块span"><span id="splitchunks">利用 splitChunks 单独打包第三方模块</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">optimization</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">splitChunks</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">cacheGroups</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">common</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;chunk-common&#34;</span>,
+              <span style="color:#a6e22e">chunks</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;initial&#34;</span>,
+              <span style="color:#a6e22e">minChunks</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+              <span style="color:#a6e22e">maxInitialRequests</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">5</span>,
+              <span style="color:#a6e22e">minSize</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
+              <span style="color:#a6e22e">priority</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+              <span style="color:#a6e22e">reuseExistingChunk</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+              <span style="color:#a6e22e">enforce</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            },
+            <span style="color:#a6e22e">vendors</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;chunk-vendors&#34;</span>,
+              <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/[\\/]node_modules[\\/]/</span>,
+              <span style="color:#a6e22e">chunks</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;initial&#34;</span>,
+              <span style="color:#a6e22e">priority</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+              <span style="color:#a6e22e">reuseExistingChunk</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+              <span style="color:#a6e22e">enforce</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            },
+            <span style="color:#a6e22e">elementUI</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;chunk-elementui&#34;</span>,
+              <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/[\\/]node_modules[\\/]element-ui[\\/]/</span>,
+              <span style="color:#a6e22e">chunks</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;all&#34;</span>,
+              <span style="color:#a6e22e">priority</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+              <span style="color:#a6e22e">reuseExistingChunk</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+              <span style="color:#a6e22e">enforce</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            },
+            <span style="color:#a6e22e">echarts</span><span style="color:#f92672">:</span> {
+              <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;chunk-echarts&#34;</span>,
+              <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/[\\/]node_modules[\\/](vue-)?echarts[\\/]/</span>,
+              <span style="color:#a6e22e">chunks</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;all&#34;</span>,
+              <span style="color:#a6e22e">priority</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span>,
+              <span style="color:#a6e22e">reuseExistingChunk</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+              <span style="color:#a6e22e">enforce</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+            }
+          }
+        }
+      };
+    }
+  },
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">optimization</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#34;splitChunks&#34;</span>);
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idgzip-开启-gzip-压缩span"><span id="gzip">✅ 开启 gzip 压缩</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D compression-webpack-plugin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CompressionWebpackPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;compression-webpack-plugin&#34;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productionGzipExtensions</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i</span>;
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CompressionWebpackPlugin</span>({
+          <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;[path].gz[query]&#34;</span>,
+          <span style="color:#a6e22e">algorithm</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;gzip&#34;</span>,
+          <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">productionGzipExtensions</span>,
+          <span style="color:#a6e22e">threshold</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10240</span>,
+          <span style="color:#a6e22e">minRatio</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.8</span>
+        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p>  还可以开启比 gzip 体验更好的 Zopfli 压缩详见<a href="https://webpack.js.org/plugins/compression-webpack-plugin">https://webpack.js.org/plugins/compression-webpack-plugin</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D @gfx/zopfli brotli-webpack-plugin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CompressionWebpackPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;compression-webpack-plugin&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">zopfli</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;@gfx/zopfli&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">BrotliPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;brotli-webpack-plugin&#34;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productionGzipExtensions</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i</span>;
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CompressionWebpackPlugin</span>({
+          <span style="color:#a6e22e">algorithm</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">compressionOptions</span>, <span style="color:#a6e22e">callback</span>) {
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">zopfli</span>.<span style="color:#a6e22e">gzip</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">compressionOptions</span>, <span style="color:#a6e22e">callback</span>);
+          },
+          <span style="color:#a6e22e">compressionOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">numiterations</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span>
+          },
+          <span style="color:#a6e22e">minRatio</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.99</span>,
+          <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">productionGzipExtensions</span>
+        })
+      );
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BrotliPlugin</span>({
+          <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">productionGzipExtensions</span>,
+          <span style="color:#a6e22e">minRatio</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.99</span>
+        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idstylelint-开启-stylelint-检测scss-css语法span"><span id="stylelint">✅ 开启 stylelint 检测scss, css语法</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D stylelint stylelint-config-standard stylelint-config-prettier stylelint-webpack-plugin
+</code></pre></div><p>在文件夹创建stylelint.config.js,详细配置在<a href="https://stylelint.io/user-guide/configuration">这里</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">ignoreFiles</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;**/*.js&#34;</span>, <span style="color:#e6db74">&#34;src/assets/css/element-variables.scss&#34;</span>, <span style="color:#e6db74">&#34;theme/&#34;</span>], 
+  <span style="color:#66d9ef">extends</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;stylelint-config-standard&#34;</span>, <span style="color:#e6db74">&#34;stylelint-config-prettier&#34;</span>],
+  <span style="color:#a6e22e">rules</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;no-empty-source&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">null</span>,
+    <span style="color:#e6db74">&#34;at-rule-no-unknown&#34;</span><span style="color:#f92672">:</span> [
+      <span style="color:#66d9ef">true</span>,
+      {
+        <span style="color:#a6e22e">ignoreAtRules</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;extend&#34;</span>]
+      }
+    ]
+  }
+};
+</code></pre></div><p>启用webpack配置</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">StylelintPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;stylelint-webpack-plugin&#34;</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_DEV</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StylelintPlugin</span>({
+          <span style="color:#a6e22e">files</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;src/**/*.vue&#34;</span>, <span style="color:#e6db74">&#34;src/assets/**/*.scss&#34;</span>],
+          <span style="color:#a6e22e">fix</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> <span style="color:#75715e">//打开自动修复（谨慎使用！注意上面的配置不要加入js或html文件，会发生问题，js文件请手动修复）
+</span><span style="color:#75715e"></span>        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+}
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idglobalscss-为-sass-提供全局样式以及全局变量span"><span id="globalscss">✅ 为 sass 提供全局样式，以及全局变量</span></h3>
+<p>  可以通过在 main.js 中 Vue.prototype.$src = process.env.VUE_APP_PUBLIC_PATH;挂载环境变量中的配置信息，然后在js中使用$src 访问。</p>
+<p>  css 中可以使用注入 sass 变量访问环境变量中的配置信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">extract</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span>,
+    <span style="color:#a6e22e">sourceMap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">loaderOptions</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">scss</span><span style="color:#f92672">:</span> {
+        <span style="color:#75715e">// 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">prependData</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">        @import &#34;@scss/variables.scss&#34;;
+</span><span style="color:#e6db74">        @import &#34;@scss/mixins.scss&#34;;
+</span><span style="color:#e6db74">        @import &#34;@scss/function.scss&#34;;
+</span><span style="color:#e6db74">        $src: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_OSS_SRC</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;;
+</span><span style="color:#e6db74">        `</span>
+      }
+    }
+  }
+};
+</code></pre></div><p>在 scss 中引用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">home</span> {
+  <span style="color:#66d9ef">background</span>: url(<span style="color:#e6db74">$src+&#34;/images/500.png&#34;</span>);
+}
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idgloballess-为-less-提供全局样式以及全局变量span"><span id="globalless">✅ 为 less 提供全局样式，以及全局变量</span></h3>
+<blockquote>
+<p>npm i -D less less-loader</p>
+</blockquote>
+<p>  在src/assets/less目录下新建variables.less文件，并定义全局less变量</p>
+<pre tabindex="0"><code class="language-less" data-lang="less">@primary-color: #1890ff;
+@normal-color: #d9d9d9;
+@text-color: #303753;
+</code></pre><p>  vue.config.js中为其添加相应less配置。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">postcss</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;postcss&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>)
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;prod&#39;</span>, <span style="color:#e6db74">&#39;production&#39;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>)
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getLessVaribles</span>(<span style="color:#a6e22e">fileUrl</span>, <span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> {}) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">existsSync</span>(<span style="color:#a6e22e">fileUrl</span>)) <span style="color:#66d9ef">return</span> {};
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lessFile</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">fileUrl</span>, <span style="color:#e6db74">&#39;utf8&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">postcss</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">lessFile</span>).<span style="color:#a6e22e">nodes</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">curr</span>) =&gt; {
+    <span style="color:#a6e22e">acc</span>[<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">curr</span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/\:/</span>, <span style="color:#e6db74">&#39;&#39;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">curr</span>.<span style="color:#a6e22e">params</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">acc</span>;
+  }, <span style="color:#a6e22e">list</span>);
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">modifyVars</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getLessVaribles</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;./src/assets/less/variables.less&#39;</span>));
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">extract</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span>,
+    <span style="color:#75715e">// sourceMap: false,
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">loaderOptions</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">less</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">modifyVars</span>,
+        <span style="color:#a6e22e">javascriptEnabled</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+      }
+    }
+  }
+}
+</code></pre></div><h3 id="span-idglobalstylus-为-stylus-提供全局变量span"><span id="globalstylus">✅ 为 stylus 提供全局变量</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D style-resources-loader
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">addStylusResource</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rule</span> =&gt; {
+  <span style="color:#a6e22e">rule</span>
+    .<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;style-resouce&#34;</span>)
+    .<span style="color:#a6e22e">loader</span>(<span style="color:#e6db74">&#34;style-resources-loader&#34;</span>)
+    .<span style="color:#a6e22e">options</span>({
+      <span style="color:#a6e22e">patterns</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/assets/stylus/variable.styl&#34;</span>)]
+    });
+};
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">types</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;vue-modules&#34;</span>, <span style="color:#e6db74">&#34;vue&#34;</span>, <span style="color:#e6db74">&#34;normal-modules&#34;</span>, <span style="color:#e6db74">&#34;normal&#34;</span>];
+    <span style="color:#a6e22e">types</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">type</span> =&gt;
+      <span style="color:#a6e22e">addStylusResource</span>(<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;stylus&#34;</span>).<span style="color:#a6e22e">oneOf</span>(<span style="color:#a6e22e">type</span>))
+    );
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idprerender预渲染-prerender-spa-pluginspan"><span id="prerender">预渲染 prerender-spa-plugin</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D prerender-spa-plugin
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;prerender-spa-plugin&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span>({
+          <span style="color:#a6e22e">staticDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;dist&#34;</span>),
+          <span style="color:#a6e22e">routes</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;/&#34;</span>],
+          <span style="color:#a6e22e">postProcess</span>(<span style="color:#a6e22e">ctx</span>) {
+            <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">originalRoute</span>;
+            <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/&gt;[\s]+&lt;/gim</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&gt;&lt;&#34;</span>);
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>.<span style="color:#a6e22e">endsWith</span>(<span style="color:#e6db74">&#34;.html&#34;</span>)) {
+              <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">outputPath</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;dist&#34;</span>, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>);
+            }
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ctx</span>;
+          },
+          <span style="color:#a6e22e">minify</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">collapseBooleanAttributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">collapseWhitespace</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">decodeEntities</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">keepClosingSlash</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">sortAttributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+          },
+          <span style="color:#a6e22e">renderer</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span>.<span style="color:#a6e22e">PuppeteerRenderer</span>({
+            <span style="color:#75715e">// 需要注入一个值，这样就可以检测页面当前是否是预渲染的
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">inject</span><span style="color:#f92672">:</span> {},
+            <span style="color:#a6e22e">headless</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+            <span style="color:#75715e">// 视图组件是在API请求获取所有必要数据后呈现的，因此我们在dom中存在“data view”属性后创建页面快照
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">renderAfterDocumentEvent</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;render-event&#34;</span>
+          })
+        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p>  mounted()中添加 document.dispatchEvent(new Event(&lsquo;render-event&rsquo;))</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#a6e22e">router</span>,
+  <span style="color:#a6e22e">store</span>,
+  <span style="color:#a6e22e">render</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">h</span> =&gt; <span style="color:#a6e22e">h</span>(<span style="color:#a6e22e">App</span>),
+  <span style="color:#a6e22e">mounted</span>() {
+    document.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#34;render-event&#34;</span>));
+  }
+}).<span style="color:#a6e22e">$mount</span>(<span style="color:#e6db74">&#34;#app&#34;</span>);
+</code></pre></div><h5 id="为自定义预渲染页面添加自定义-titledescriptioncontent">为自定义预渲染页面添加自定义 title、description、content</h5>
+<ul>
+<li>
+<p>删除 public/index.html 中关于 description、content 的 meta 标签。保留 title 标签</p>
+</li>
+<li>
+<p>配置 router-config.js</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;首页&#34;</span>,
+    <span style="color:#a6e22e">keywords</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;首页关键词&#34;</span>,
+    <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;这是首页描述&#34;</span>
+  },
+  <span style="color:#e6db74">&#34;/about.html&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;关于我们&#34;</span>,
+    <span style="color:#a6e22e">keywords</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;关于我们页面关键词&#34;</span>,
+    <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;关于我们页面关键词描述&#34;</span>
+  }
+};
+</code></pre></div><ul>
+<li>vue.config.js</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;prerender-spa-plugin&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">routesConfig</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./router-config&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#75715e">// 预加载
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span>({
+          <span style="color:#a6e22e">staticDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;dist&#34;</span>),
+          <span style="color:#a6e22e">routes</span><span style="color:#f92672">:</span> Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">routesConfig</span>),
+          <span style="color:#a6e22e">postProcess</span>(<span style="color:#a6e22e">ctx</span>) {
+            <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">originalRoute</span>;
+            <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">/&gt;[\s]+&lt;/gim</span>).<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&gt;&lt;&#34;</span>);
+            <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">html</span>.<span style="color:#a6e22e">replace</span>(
+              <span style="color:#e6db74">/&lt;title&gt;(.*?)&lt;\/title&gt;/gi</span>,
+              <span style="color:#e6db74">`&lt;title&gt;</span><span style="color:#e6db74">${</span>
+                <span style="color:#a6e22e">routesConfig</span>[<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>].<span style="color:#a6e22e">title</span>
+              <span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/title&gt;&lt;meta name=&#34;keywords&#34; content=&#34;</span><span style="color:#e6db74">${</span>
+                <span style="color:#a6e22e">routesConfig</span>[<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>].<span style="color:#a6e22e">keywords</span>
+              <span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; /&gt;&lt;meta name=&#34;description&#34; content=&#34;</span><span style="color:#e6db74">${</span>
+                <span style="color:#a6e22e">routesConfig</span>[<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>].<span style="color:#a6e22e">description</span>
+              <span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; /&gt;`</span>
+            );
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>.<span style="color:#a6e22e">endsWith</span>(<span style="color:#e6db74">&#34;.html&#34;</span>)) {
+              <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">outputPath</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#34;dist&#34;</span>, <span style="color:#a6e22e">ctx</span>.<span style="color:#a6e22e">route</span>);
+            }
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">ctx</span>;
+          },
+          <span style="color:#a6e22e">minify</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">collapseBooleanAttributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">collapseWhitespace</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">decodeEntities</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">keepClosingSlash</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+            <span style="color:#a6e22e">sortAttributes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+          },
+          <span style="color:#a6e22e">renderer</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PrerenderSpaPlugin</span>.<span style="color:#a6e22e">PuppeteerRenderer</span>({
+            <span style="color:#75715e">// 需要注入一个值，这样就可以检测页面当前是否是预渲染的
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">inject</span><span style="color:#f92672">:</span> {},
+            <span style="color:#a6e22e">headless</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+            <span style="color:#75715e">// 视图组件是在API请求获取所有必要数据后呈现的，因此我们在dom中存在“data view”属性后创建页面快照
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">renderAfterDocumentEvent</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;render-event&#34;</span>
+          })
+        })
+      );
+    }
+
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idie-添加-ie-兼容span"><span id="ie">✅ 添加 IE 兼容</span></h3>
+<p>  在 main.js 中添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;core-js/stable&#39;</span>; 
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;regenerator-runtime/runtime&#39;</span>;
+</code></pre></div><p>配置 babel.config.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">presets</span><span style="color:#f92672">:</span> [[<span style="color:#e6db74">&#34;@vue/app&#34;</span>, { <span style="color:#a6e22e">useBuiltIns</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;entry&#34;</span> }]],
+  <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">plugins</span>
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idalioss-静态资源自动打包上传阿里-oss华为-obsspan"><span id="alioss">✅ 静态资源自动打包上传阿里 oss、华为 obs</span></h3>
+<p>  开启文件上传 ali oss，需要将 publicPath 改成 ali oss 资源 url 前缀,也就是修改 VUE_APP_PUBLIC_PATH。具体配置参见<a href="https://github.com/staven630/webpack-oss">阿里 oss 插件 webpack-oss</a>、<a href="https://github.com/staven630/huawei-obs-plugin">华为 obs 插件 huawei-obs-plugin</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -D webpack-oss
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">AliOssPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack-oss&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">format</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">AliOssPlugin</span>.<span style="color:#a6e22e">getFormat</span>();
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">format</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./&#34;</span>, <span style="color:#75715e">// 默认&#39;/&#39;，部署应用包时的基本 URL
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">AliOssPlugin</span>({
+          <span style="color:#a6e22e">accessKeyId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">ACCESS_KEY_ID</span>,
+          <span style="color:#a6e22e">accessKeySecret</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">ACCESS_KEY_SECRET</span>,
+          <span style="color:#a6e22e">region</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">REGION</span>,
+          <span style="color:#a6e22e">bucket</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">BUCKET</span>,
+          <span style="color:#a6e22e">prefix</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">PREFIX</span>,
+          <span style="color:#a6e22e">exclude</span><span style="color:#f92672">:</span> <span style="color:#e6db74">/.*\.html$/</span>,
+          <span style="color:#a6e22e">format</span>
+        })
+      );
+    }
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  }
+};
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idallconfig-完整配置span"><span id="allconfig">✅ 完整配置</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SpritesmithPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack-spritesmith&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">BundleAnalyzerPlugin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack-bundle-analyzer&#34;</span>)
+  .<span style="color:#a6e22e">BundleAnalyzerPlugin</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webpack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;webpack&#34;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;path&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;fs&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">resolve</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">dir</span> =&gt; <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#a6e22e">dir</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;production&#34;</span>, <span style="color:#e6db74">&#34;prod&#34;</span>].<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">glob</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;glob&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pagesInfo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./pages.config&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pages</span> <span style="color:#f92672">=</span> {}
+
+<span style="color:#a6e22e">glob</span>.<span style="color:#a6e22e">sync</span>(<span style="color:#e6db74">&#39;./src/pages/**/main.js&#39;</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">entry</span> =&gt; {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">chunk</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/\.\/src\/pages\/(.*)\/main\.js/</span>)[<span style="color:#ae81ff">1</span>];
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">curr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">pagesInfo</span>[<span style="color:#a6e22e">chunk</span>];
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">curr</span>) {
+    <span style="color:#a6e22e">pages</span>[<span style="color:#a6e22e">chunk</span>] <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">entry</span>,
+      ...<span style="color:#a6e22e">curr</span>,
+      <span style="color:#a6e22e">chunk</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;chunk-vendors&#34;</span>, <span style="color:#e6db74">&#34;chunk-common&#34;</span>, <span style="color:#a6e22e">chunk</span>]
+    }
+  }
+})
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> [];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">icons</span> <span style="color:#f92672">=</span> {};
+
+<span style="color:#66d9ef">try</span> {
+  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">statSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+  <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readdirSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+  <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">item</span> =&gt; {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#34;-&#34;</span>);
+    <span style="color:#a6e22e">icons</span>[<span style="color:#a6e22e">filename</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  });
+
+} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">mkdirSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./src/assets/icons&#34;</span>));
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">length</span>) {
+  <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+} <span style="color:#66d9ef">else</span> {
+  <span style="color:#66d9ef">try</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">iconsObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">readFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#e6db74">&#34;utf8&#34;</span>);
+    <span style="color:#a6e22e">iconsObj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">iconsObj</span>);
+    <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">files</span>.<span style="color:#a6e22e">some</span>(<span style="color:#a6e22e">item</span> =&gt; {
+      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">filename</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#34;-&#34;</span>);
+      <span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">iconsObj</span>[<span style="color:#a6e22e">filename</span>];
+    });
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">has_sprite</span>) {
+      <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">icons</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+    }
+  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+    <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;./icons.json&#34;</span>), <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">icons</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+    <span style="color:#a6e22e">has_sprite</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  }
+}
+
+<span style="color:#75715e">// 雪碧图样式处理模板
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SpritesmithTemplate</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">data</span>) {
+  <span style="color:#75715e">// pc
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">icons</span> <span style="color:#f92672">=</span> {}
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">tpl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`.ico { 
+</span><span style="color:#e6db74">  display: inline-block; 
+</span><span style="color:#e6db74">  background-image: url(</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">sprites</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">image</span><span style="color:#e6db74">}</span><span style="color:#e6db74">); 
+</span><span style="color:#e6db74">  background-size: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">spritesheet</span>.<span style="color:#a6e22e">width</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">spritesheet</span>.<span style="color:#a6e22e">height</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">}`</span>
+
+  <span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">sprites</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">sprite</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">toLocaleLowerCase</span>().<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/_/g</span>, <span style="color:#e6db74">&#39;-&#39;</span>)
+    <span style="color:#a6e22e">icons</span>[<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.png`</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+    <span style="color:#a6e22e">tpl</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">tpl</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> 
+</span><span style="color:#e6db74">.ico-</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">{
+</span><span style="color:#e6db74">  width: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">width</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">  height: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">height</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px; 
+</span><span style="color:#e6db74">  background-position: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">offset_x</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">sprite</span>.<span style="color:#a6e22e">offset_y</span><span style="color:#e6db74">}</span><span style="color:#e6db74">px;
+</span><span style="color:#e6db74">}
+</span><span style="color:#e6db74">`</span>
+  })
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">tpl</span>
+}
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_PUBLIC_PATH</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;./&#34;</span>, <span style="color:#75715e">// 默认&#39;/&#39;，部署应用包时的基本 URL
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// outputDir: process.env.outputDir || &#39;dist&#39;, // &#39;dist&#39;, 生产环境构建文件的目录
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// assetsDir: &#34;&#34;, // 相对于outputDir的静态资源(js、css、img、fonts)目录
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">configureWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">has_sprite</span>) {
+      <span style="color:#75715e">// 生成雪碧图
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">plugins</span>.<span style="color:#a6e22e">push</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SpritesmithPlugin</span>({
+          <span style="color:#a6e22e">src</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">cwd</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;./src/assets/icons/&#39;</span>), <span style="color:#75715e">// 图标根路径
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">glob</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;**/*.png&#39;</span> <span style="color:#75715e">// 匹配任意 png 图标
+</span><span style="color:#75715e"></span>          },
+          <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;./src/assets/images/sprites.png&#39;</span>), <span style="color:#75715e">// 生成雪碧图目标路径与名称
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 设置生成CSS背景及其定位的文件或方式
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> [
+              [
+                <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;./src/assets/scss/sprites.scss&#39;</span>),
+                {
+                  <span style="color:#a6e22e">format</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;function_based_template&#39;</span>
+                }
+              ]
+            ]
+          },
+          <span style="color:#a6e22e">customTemplates</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">function_based_template</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">SpritesmithTemplate</span>
+          },
+          <span style="color:#a6e22e">apiOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">cssImageRef</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;../images/sprites.png&#39;</span> <span style="color:#75715e">// css文件中引用雪碧图的相对位置路径配置
+</span><span style="color:#75715e"></span>          },
+          <span style="color:#a6e22e">spritesmithOptions</span><span style="color:#f92672">:</span> {
+            <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+          }
+        })
+      )
+    }
+
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">externals</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">vue</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vue&#34;</span>,
+      <span style="color:#e6db74">&#34;element-ui&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;ELEMENT&#34;</span>,
+      <span style="color:#e6db74">&#34;vue-router&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;VueRouter&#34;</span>,
+      <span style="color:#a6e22e">vuex</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Vuex&#34;</span>,
+      <span style="color:#a6e22e">axios</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;axios&#34;</span>
+    };
+
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>, ...<span style="color:#a6e22e">plugins</span>];
+  },
+  <span style="color:#a6e22e">chainWebpack</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">config</span> =&gt; {
+    <span style="color:#75715e">// 修复HMR
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">symlinks</span>(<span style="color:#66d9ef">true</span>);
+
+    <span style="color:#75715e">// config.plugins.delete(&#39;preload&#39;);
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// config.plugins.delete(&#39;prefetch&#39;);
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">config</span>
+      .<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;ignore&#34;</span>)
+      .<span style="color:#a6e22e">use</span>(
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">webpack</span>.<span style="color:#a6e22e">ContextReplacementPlugin</span>(<span style="color:#e6db74">/moment[/\\]locale$/</span>, <span style="color:#e6db74">/zh-cn$/</span>)
+      );
+
+    <span style="color:#75715e">// 添加别名
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">alias</span>
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;vue$&#34;</span>, <span style="color:#e6db74">&#34;vue/dist/vue.esm.js&#34;</span>)
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@apis&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/apis&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@assets&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/assets&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@scss&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/assets/scss&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@components&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/components&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@middlewares&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/middlewares&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@mixins&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/mixins&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@plugins&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/plugins&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@router&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/router&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@store&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/store&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@utils&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/utils&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@views&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/views&#34;</span>))
+      .<span style="color:#a6e22e">set</span>(<span style="color:#e6db74">&#34;@layouts&#34;</span>, <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/layouts&#34;</span>));
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> {
+      <span style="color:#75715e">// 访问https://unpkg.com/element-ui/lib/theme-chalk/index.css获取最新版本
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/theme-chalk/index.css&#34;</span>],
+      <span style="color:#a6e22e">js</span><span style="color:#f92672">:</span> [
+        <span style="color:#e6db74">&#34;//unpkg.com/vue@2.6.10/dist/vue.min.js&#34;</span>, <span style="color:#75715e">// 访问https://unpkg.com/vue/dist/vue.min.js获取最新版本
+</span><span style="color:#75715e"></span>        <span style="color:#e6db74">&#34;//unpkg.com/vue-router@3.0.6/dist/vue-router.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/vuex@3.1.1/dist/vuex.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/axios@0.19.0/dist/axios.min.js&#34;</span>,
+        <span style="color:#e6db74">&#34;//unpkg.com/element-ui@2.10.1/lib/index.js&#34;</span>
+      ]
+    };
+
+    <span style="color:#75715e">// 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// config.plugin(&#34;html&#34;).tap(args =&gt; {
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   // html中添加cdn
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   args[0].cdn = cdn;
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">//   // 修复 Lazy loading routes Error
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   args[0].chunksSortMode = &#34;none&#34;;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   return args;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// 防止多页面打包卡顿
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">config</span> =&gt; <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#e6db74">&#39;named-chunks&#39;</span>)
+
+    <span style="color:#75715e">// 多页面cdn添加
+</span><span style="color:#75715e"></span>    Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">pagesInfo</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">page</span> =&gt; {
+      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">`html-</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">page</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>).<span style="color:#a6e22e">tap</span>(<span style="color:#a6e22e">args</span> =&gt; {
+        <span style="color:#75715e">// html中添加cdn
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">cdn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">cdn</span>;
+
+        <span style="color:#75715e">// 修复 Lazy loading routes Error
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">args</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">chunksSortMode</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>;
+      });
+    })
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">IS_PROD</span>) {
+      <span style="color:#75715e">// 压缩图片
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>
+        .<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>)
+        .<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>)
+        .<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;image-webpack-loader&#34;</span>)
+        .<span style="color:#a6e22e">loader</span>(<span style="color:#e6db74">&#34;image-webpack-loader&#34;</span>)
+        .<span style="color:#a6e22e">options</span>({
+          <span style="color:#a6e22e">mozjpeg</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">progressive</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#a6e22e">quality</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">65</span> },
+          <span style="color:#a6e22e">optipng</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">enabled</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> },
+          <span style="color:#a6e22e">pngquant</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">quality</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">0.65</span>, <span style="color:#ae81ff">0.90</span>], <span style="color:#a6e22e">speed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">4</span> },
+          <span style="color:#a6e22e">gifsicle</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">interlaced</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
+        });
+
+      <span style="color:#75715e">// 打包分析
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugin</span>(<span style="color:#e6db74">&#34;webpack-report&#34;</span>).<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">BundleAnalyzerPlugin</span>, [
+        {
+          <span style="color:#a6e22e">analyzerMode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;static&#34;</span>
+        }
+      ]);
+    }
+
+    <span style="color:#75715e">// 使用svg组件
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">svgRule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;svg&#34;</span>);
+    <span style="color:#a6e22e">svgRule</span>.<span style="color:#a6e22e">uses</span>.<span style="color:#a6e22e">clear</span>();
+    <span style="color:#a6e22e">svgRule</span>.<span style="color:#a6e22e">exclude</span>.<span style="color:#a6e22e">add</span>(<span style="color:#e6db74">/node_modules/</span>);
+    <span style="color:#a6e22e">svgRule</span>
+      .<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">/\.svg$/</span>)
+      .<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;svg-sprite-loader&#34;</span>)
+      .<span style="color:#a6e22e">loader</span>(<span style="color:#e6db74">&#34;svg-sprite-loader&#34;</span>)
+      .<span style="color:#a6e22e">options</span>({
+        <span style="color:#a6e22e">symbolId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;icon-[name]&#34;</span>
+      });
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">imagesRule</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>);
+    <span style="color:#a6e22e">imagesRule</span>.<span style="color:#a6e22e">exclude</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;src/icons&#34;</span>));
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">rule</span>(<span style="color:#e6db74">&#34;images&#34;</span>).<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">/\.(png|jpe?g|gif|svg)(\?.*)?$/</span>);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+  },
+  <span style="color:#a6e22e">pages</span>,
+  <span style="color:#a6e22e">css</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">extract</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">IS_PROD</span>,
+    <span style="color:#a6e22e">sourceMap</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+    <span style="color:#a6e22e">loaderOptions</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">scss</span><span style="color:#f92672">:</span> {
+        <span style="color:#75715e">// 向全局sass样式传入共享的全局变量, $src可以配置图片cdn前缀
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 详情: https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">prependData</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">          @import &#34;@scss/variables.scss&#34;;
+</span><span style="color:#e6db74">          @import &#34;@scss/mixins.scss&#34;;
+</span><span style="color:#e6db74">          @import &#34;@scss/function.scss&#34;;
+</span><span style="color:#e6db74">          $src: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">VUE_APP_BASE_API</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;;
+</span><span style="color:#e6db74">          `</span>
+      }
+    }
+  },
+  <span style="color:#a6e22e">lintOnSave</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+  <span style="color:#a6e22e">runtimeCompiler</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// 是否使用包含运行时编译器的 Vue 构建版本
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">productionSourceMap</span><span style="color:#f92672">:</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">IS_PROD</span>, <span style="color:#75715e">// 生产环境的 source map
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">parallel</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;os&#34;</span>).<span style="color:#a6e22e">cpus</span>().<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>,
+  <span style="color:#a6e22e">pwa</span><span style="color:#f92672">:</span> {},
+  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
+    <span style="color:#75715e">// overlay: { // 让浏览器 overlay 同时显示警告和错误
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   warnings: true,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   errors: true
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// },
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// open: false, // 是否打开浏览器
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// host: &#34;localhost&#34;,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// port: &#34;8080&#34;, // 代理断就
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// https: false,
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// hotOnly: false, // 热更新
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">proxy</span><span style="color:#f92672">:</span> {
+      <span style="color:#e6db74">&#34;/api&#34;</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">target</span><span style="color:#f92672">:</span>
+          <span style="color:#e6db74">&#34;https://www.easy-mock.com/mock/5bc75b55dc36971c160cad1b/sheets&#34;</span>, <span style="color:#75715e">// 目标代理接口地址
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">secure</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+        <span style="color:#a6e22e">changeOrigin</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>, <span style="color:#75715e">// 开启代理，在本地创建一个虚拟服务端
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// ws: true, // 是否启用websockets
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">pathRewrite</span><span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;^/api&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;/&#34;</span>
+        }
+      }
+    }
+  }
+};
+</code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/vue/">vue</a>
+
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/cli/">cli</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/first/" data-tooltip="java 分享" aria-label="上一篇: java 分享">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/two/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/two/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/two/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/two\/';
+        
+          this.page.identifier = '\/post\/two\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'cql';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/first/" data-tooltip="java 分享" aria-label="上一篇: java 分享">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/two/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/two/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/two/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftwo%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftwo%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftwo%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
