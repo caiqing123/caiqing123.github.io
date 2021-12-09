@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hugo tranquilpeak theme</title>
-    <link>https://example.org/tags/</link>
+    <link>https://caiqing123.github.io/tags/</link>
     <description>Recent content in Tags on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Dec 2021 15:02:53 +0800</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 15:02:53 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据库</title>
-      <link>https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <link>https://caiqing123.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
       <pubDate>Thu, 09 Dec 2021 15:02:53 +0800</pubDate>
       
-      <guid>https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <guid>https://caiqing123.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description></description>
     </item>
     
     <item>
       <title>面试</title>
-      <link>https://example.org/tags/%E9%9D%A2%E8%AF%95/</link>
+      <link>https://caiqing123.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Thu, 09 Dec 2021 15:02:53 +0800</pubDate>
       
-      <guid>https://example.org/tags/%E9%9D%A2%E8%AF%95/</guid>
+      <guid>https://caiqing123.github.io/tags/%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
     

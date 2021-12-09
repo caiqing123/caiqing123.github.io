@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>数据库 on Hugo tranquilpeak theme</title>
-    <link>https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <link>https://caiqing123.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
     <description>Recent content in 数据库 on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Dec 2021 15:02:53 +0800</lastBuildDate><atom:link href="https://example.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Dec 2021 15:02:53 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>java 分享</title>
-      <link>https://example.org/post/first/</link>
+      <link>https://caiqing123.github.io/post/first/</link>
       <pubDate>Thu, 09 Dec 2021 15:02:53 +0800</pubDate>
       
-      <guid>https://example.org/post/first/</guid>
+      <guid>https://caiqing123.github.io/post/first/</guid>
       <description>&lt;h1 id=&#34;0编码之外&#34;&gt;&lt;strong&gt;0.编码之外&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;把事情想明白，说清楚，跟别人商量好，写好文档&lt;/li&gt;
@@ -40,7 +40,7 @@
 &lt;h1 id=&#34;4多线程与并发&#34;&gt;&lt;strong&gt;4.多线程与并发&lt;/strong&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;说说线程池的底层工作原理&#34;&gt;&lt;strong&gt;说说线程池的底层工作原理？&lt;/strong&gt;&lt;/h2&gt;
 &lt;h2 id=&#34;说说java内存模型&#34;&gt;&lt;strong&gt;说说java内存模型？&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.001.png&#34; alt=&#34;IMG\_256&#34; title=&#34;IMG_256&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.001.png&#34; alt=&#34;IMG\_256&#34; title=&#34;IMG_256&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;各种线程池在什么场景下使用&#34;&gt;&lt;strong&gt;各种线程池在什么场景下使用？&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;FixedThreadPool&lt;/li&gt;
@@ -126,7 +126,7 @@
 &lt;p&gt;把编译后的文件交给计算机执行，直到程序运行结束。&lt;/p&gt;
 &lt;p&gt;所谓的 运行期，就是把磁盘中的代码放到内存中执行起来,在java中，把磁盘中的代码放到内存中就是类加载的过程，类加载是运行期的开始部分&lt;/p&gt;
 &lt;p&gt;加载-&amp;gt;验证-&amp;gt;准备-&amp;gt;解析-&amp;gt;初始化-&amp;gt;使用-&amp;gt;卸载&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.002.png&#34; alt=&#34;&#34; title=&#34;IMG_257&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.002.png&#34; alt=&#34;&#34; title=&#34;IMG_257&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;我们平时写的java代码，是如何运行起来的？&lt;/li&gt;
 &lt;/ul&gt;
@@ -137,10 +137,10 @@
 &lt;p&gt;&lt;a href=&#34;https://www.processon.com/view/5f45d1d9e0b34d638e07816d&#34;&gt;https://www.processon.com/view/5f45d1d9e0b34d638e07816d&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;class文件常量池存储的是当class文件被java虚拟机加载进来后存放在方法区的一些字面量和符号引用，字面量包括字符串，基本类型的常量。&lt;/p&gt;
 &lt;p&gt;运行时常量池是当class文件被加载完成后，java虚拟机会将class文件常量池里的内容转移到运行时常量池里，在class文件常量池的符号引用有一部分是会被转变为直接引用的，比如说类的静态方法或私有方法，实例构造方法，父类方法，这是因为这些方法不能被重写其他版本，所以能在加载的时候就可以将符号引用转变为直接引用，而其他的一些方法是在这个方法被第一次调用的时候才会将符号引用转变为直接引用的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.003.png&#34; alt=&#34;&#34; title=&#34;IMG_258&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.003.png&#34; alt=&#34;&#34; title=&#34;IMG_258&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;双亲委派机制&#34;&gt;&lt;strong&gt;双亲委派机制&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;简单说，就是先由父加载器加载，再由子加载器加载&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.004.png&#34; alt=&#34;&#34; title=&#34;IMG_259&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.004.png&#34; alt=&#34;&#34; title=&#34;IMG_259&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;如果线上服务器cpu使用达到了100了如何排查定位和解决问题高负载问题&#34;&gt;&lt;strong&gt;如果线上服务器CPU使用达到了100%了，如何排查、定位和解决问题？（高负载问题）&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;核心思路：找到这台服务器上，哪个进程的哪个线程的哪段代码，导致cpu 100了。（考察是否熟练运用线上命令）&lt;/p&gt;
 &lt;p&gt;步骤：&lt;/p&gt;
@@ -160,7 +160,7 @@
 &lt;/ul&gt;
 &lt;p&gt;jvm栈在哪些情况下会溢出？java堆在哪些情况下会溢出？做过哪些jvm优化？用了哪些方法？达到了什么样的效果？jvm问题（内存泄露、线程卡死、jvm崩溃、内存溢出、频繁gc），该如何定位和排查（jmap和jstack）？&lt;/p&gt;
 &lt;h3 id=&#34;垃圾收集算法有哪些垃圾收集器有哪些说说他们的特点&#34;&gt;&lt;strong&gt;垃圾收集算法有哪些？垃圾收集器有哪些？说说他们的特点&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.005.png&#34; alt=&#34;&#34; title=&#34;IMG_260&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.005.png&#34; alt=&#34;&#34; title=&#34;IMG_260&#34;&gt;&lt;/p&gt;
 &lt;p&gt;标记清除、标记整理算法，会比复制算法慢10倍以上&lt;/p&gt;
 &lt;p&gt;新生代中，每次收集都会有99%的对象被回收，可以选择复制算法，只需要付出少量对象的复制成本就可以完成每次垃圾收集。&lt;/p&gt;
 &lt;p&gt;对JVM优化，就是尽可能让对象都在新生代里分配和回收，尽量别让太多对象频繁进入老年代，避免频繁对老年代进行垃圾回收（Full GC）。同时给系统充足内存大小，避免新生代频繁的进行垃圾回收&lt;/p&gt;
@@ -205,7 +205,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;62-rocketmq&#34;&gt;&lt;strong&gt;6.2 RocketMQ&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;你了解rocketmq对分布式事务支持的底层原理吗&#34;&gt;&lt;strong&gt;你了解RocketMQ对分布式事务支持的底层原理吗？&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.006.png&#34; alt=&#34;&#34; title=&#34;IMG_261&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.006.png&#34; alt=&#34;&#34; title=&#34;IMG_261&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;如果没有rocketmq那你们如何实现最终一致性&#34;&gt;&lt;strong&gt;如果没有RocketMQ，那你们如何实现最终一致性？&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;可以自己写一个基于数据库的可靠消息服务组件，实现以下功能：&lt;/p&gt;
 &lt;p&gt;1.接收 业务方produce 发送的half message，返回响应 message success&lt;/p&gt;
@@ -213,7 +213,7 @@
 &lt;p&gt;3.可靠消息服务启动一个后台线程定时扫描本地数据表中所有half message，超过一定时间没commit/rollback就回调produce，确认本地事务是否成功，获取commit/rollback&lt;/p&gt;
 &lt;p&gt;4.如果消息被rollback就废弃掉，如果消息被commit就发送这个消息给下游服务，或者发送到消息中间件，然后由下游服务消费，必须回调可靠消息服务进行ACK&lt;/p&gt;
 &lt;p&gt;5.如果一段时间没有收到ack，则重发消息给下游服务&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.007.png&#34; alt=&#34;&#34; title=&#34;IMG_262&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.007.png&#34; alt=&#34;&#34; title=&#34;IMG_262&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;63-redis&#34;&gt;&lt;strong&gt;6.3 redis&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;什么是缓存雪崩有什么解决方案&#34;&gt;&lt;strong&gt;什么是缓存雪崩，有什么解决方案？&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;缓存在同一时间大面积失效，后面的请求直接落到数据库上了，造成数据库在短时间内承受大量请求。&lt;/p&gt;
@@ -291,7 +291,7 @@
 &lt;h2 id=&#34;如果数据暴增10倍会产生什么问题怎么解决&#34;&gt;&lt;strong&gt;如果数据暴增10倍，会产生什么问题？怎么解决？&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;1.数据库承载的数据量&lt;/p&gt;
 &lt;p&gt;2.数据库数据处理能力&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.008.png&#34; alt=&#34;&#34; title=&#34;IMG_263&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.008.png&#34; alt=&#34;&#34; title=&#34;IMG_263&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;你们生产上是怎么配置超时和重试机制的&#34;&gt;&lt;strong&gt;你们生产上是怎么配置超时和重试机制的&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;每个服务第一次被请求是，都会去初始化一个ribbon主键，初始化这些组件需要耗费一定的时间，会很容易导致timeout。让每个服务启动时候直接初始化Ribbon相关主键，避免第一次请求时候初始化&lt;/p&gt;
 &lt;p&gt;ribbon:&lt;/p&gt;
@@ -326,7 +326,7 @@
 &lt;p&gt;4.心跳检测，默认60s，修改时为6s&lt;/p&gt;
 &lt;h3 id=&#34;如果需要部署上万服务实例现有的服务注册中心能否抗住如何优化&#34;&gt;&lt;strong&gt;如果需要部署上万服务实例，现有的服务注册中心能否抗住？如何优化？&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;模仿kafka架构&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.009.png&#34; alt=&#34;&#34; title=&#34;IMG_264&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.009.png&#34; alt=&#34;&#34; title=&#34;IMG_264&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;网关面试题&#34;&gt;&lt;strong&gt;网关面试题&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;说说生产环境下你们是怎么实现网关对服务的动态路由&#34;&gt;&lt;strong&gt;说说生产环境下，你们是怎么实现网关对服务的动态路由？&lt;/strong&gt;&lt;/h3&gt;
 &lt;h3 id=&#34;如果网关需要抗每秒10w并发你应该如何优化&#34;&gt;&lt;strong&gt;如果网关需要抗每秒10w并发，你应该如何优化？&lt;/strong&gt;&lt;/h3&gt;
@@ -334,7 +334,7 @@
 &lt;p&gt;8核16G，对网关路由转发的请求，每秒抗个几千请求不成问题，10w并发需要几十台zuul网关机器。如果是32核心64G高配物理机，每秒可以抗一两万个请求，5台就差不多了&lt;/p&gt;
 &lt;p&gt;优化：&lt;/p&gt;
 &lt;p&gt;可以基于mysql，apollo，redis等做一些简单的二次开发，比如动态路由，授权认证，性能监控&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.010.png&#34; alt=&#34;&#34; title=&#34;IMG_265&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.010.png&#34; alt=&#34;&#34; title=&#34;IMG_265&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;分布式锁面试题&#34;&gt;&lt;strong&gt;分布式锁面试题&lt;/strong&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;你是如何设计分布式锁的&#34;&gt;&lt;strong&gt;你是如何设计分布式锁的？&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;设计一个分布式锁，目的就是为了锁定全局资源，让请求串行化处理。&lt;/p&gt;
@@ -528,7 +528,7 @@
 &lt;p&gt;网络层：IP协议&lt;/p&gt;
 &lt;p&gt;数据链路层：以太网协议&lt;/p&gt;
 &lt;h2 id=&#34;聊聊https原理&#34;&gt;&lt;strong&gt;聊聊HTTPS原理&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.011.png&#34; alt=&#34;&#34; title=&#34;IMG_266&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.011.png&#34; alt=&#34;&#34; title=&#34;IMG_266&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;浏览器请求wwwbaiducom的全过程是怎样的&#34;&gt;&lt;strong&gt;浏览器请求www.baidu.com的全过程是怎样的？&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1610028644&amp;amp;ver=2814&amp;amp;signature=gKN6ebPYKdo4LCqc2xWVoL7ESyjOZ0qyPQlift7ACViOAbvmMEVY8d2a4gUNjVJ5h58Xv9LbgOs1G4bmLKCh6kw5sNtzrtfrMGvpcgdv4wOED2pUf4ogh8shaPUwrMj2&amp;amp;new=1&#34;&gt;https://mp.weixin.qq.com/s?src=11&amp;amp;timestamp=1610028644&amp;amp;ver=2814&amp;amp;signature=gKN6ebPYKdo4LCqc2xWVoL7ESyjOZ0qyPQlift7ACViOAbvmMEVY8d2a4gUNjVJ5h58Xv9LbgOs1G4bmLKCh6kw5sNtzrtfrMGvpcgdv4wOED2pUf4ogh8shaPUwrMj2&amp;amp;new=1&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;1系统网络角度&#34;&gt;&lt;strong&gt;1.系统网络角度&lt;/strong&gt;&lt;/h3&gt;
@@ -559,10 +559,10 @@
 &lt;p&gt;IP数据包传输和路由选择&lt;/p&gt;
 &lt;p&gt;ARP将ip地址映射为MAC地址，为数据包选择路由&lt;/p&gt;
 &lt;p&gt;4） 链路层（ARP）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.012.png&#34; alt=&#34;&#34; title=&#34;IMG_267&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.012.png&#34; alt=&#34;&#34; title=&#34;IMG_267&#34;&gt;&lt;/p&gt;
 &lt;p&gt;浏览器请求一个地址，先按照应用层的http协议，封装一个应用层数据包，数据包放着请求报文。（此时数据包只有数据部分，还没有头）（应用层：根据http协议，生成一个）&lt;/p&gt;
 &lt;h2 id=&#34;tcp数据结构&#34;&gt;&lt;strong&gt;TCP数据结构&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;../../static/img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.013.png&#34; alt=&#34;&#34; title=&#34;IMG_268&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./img/Aspose.Words.e567eb3f-812f-4e77-98e7-c2fa9ea1fe2a.013.png&#34; alt=&#34;&#34; title=&#34;IMG_268&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;序号Seq：占32位，用来标识从计算机A到计算机B的数据包的序号，计算机发送数据时对此进行标记。&lt;/li&gt;
 &lt;li&gt;确认号Ack：占32位，客户端和服务端都可以发送，Ack=Seq+1&lt;/li&gt;
