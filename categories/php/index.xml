@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php on cql 博客</title>
+    <link>https://caiqing123.github.io/categories/php/</link>
+    <description>Recent content in php on cql 博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Dec 2021 11:51:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Php</title>
+      <link>https://caiqing123.github.io/post/php/</link>
+      <pubDate>Fri, 10 Dec 2021 11:51:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/php/</guid>
+      <description>&lt;p&gt;php 语法特性&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Dec 2021 17:28:53 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 11:51:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Php</title>
+      <link>https://caiqing123.github.io/post/php/</link>
+      <pubDate>Fri, 10 Dec 2021 11:51:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/php/</guid>
+      <description>&lt;p&gt;php 语法特性&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>vue-cli4 配置</title>
       <link>https://caiqing123.github.io/post/two/</link>

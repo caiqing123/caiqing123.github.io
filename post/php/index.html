@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003ephp 语法特性\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/php\/",
+  "keywords":"[语法]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="语法">
+<meta name="description" content="php 语法特性">
+
+
+<meta property="og:description" content="php 语法特性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Php">
+<meta name="twitter:title" content="Php">
+<meta property="og:url" content="https://caiqing123.github.io/post/php/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/php/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="php 语法特性">
+<meta name="twitter:description" content="php 语法特性">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2021-12-10T11:51:07">
+  
+  
+    <meta property="article:modified_time" content="2021-12-10T11:51:07">
+  
+  
+  
+    
+      <meta property="article:section" content="php">
+    
+  
+  
+    
+      <meta property="article:tag" content="php">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>Php</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/php/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Php
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-10T11:51:07&#43;08:00">
+        
+  十二月 10, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/php">php</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>php 语法特性</p>
+<h1 id="php-语法特性">php 语法特性</h1>
+<p><span id="top">目录</span></p>
+<ul>
+<li><a href="#php7">7.0</a></li>
+<li><a href="#php71">7.1</a></li>
+<li><a href="#php72">7.2</a></li>
+<li><a href="#php74">7.4</a></li>
+<li><a href="#php8">8.0</a></li>
+<li><a href="#php81">8.1</a></li>
+</ul>
+<h3 id="span-idphp770span"><span id="php7">7.0</span></h3>
+<ul>
+<li><strong>请求参数和返回值类型声明</strong></li>
+</ul>
+<p><code>请求参数和返回值需要和声明的类型一致</code></p>
+<ul>
+<li><strong>null合并运算符</strong></li>
+</ul>
+<p><code>由于日常使用中存在大量同时使用三元表达式和 isset()的情况， 我们添加了null合并运算符 (??) 这个语法糖。如果变量存在且值不为null， 它就会返回自身的值，否则返回它的第二个操作数。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 获取 $GET[&#39;user&#39;]的值，如果该值不存在，则返回&#39;nobody&#39;。
+</span><span style="color:#75715e"></span>$username <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;user&#39;</span>] <span style="color:#f92672">??</span> <span style="color:#e6db74">&#39;nobody&#39;</span>;
+<span style="color:#75715e">// 这相当于：
+</span><span style="color:#75715e"></span>$username <span style="color:#f92672">=</span> <span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;user&#39;</span>]) <span style="color:#f92672">?</span> $_GET[<span style="color:#e6db74">&#39;user&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;nobody&#39;</span>;
+
+<span style="color:#75715e">// 存在user返回user 否则存在user1 返回user1 最后返回 nobody
+</span><span style="color:#75715e"></span>$username <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;user&#39;</span>] <span style="color:#f92672">??</span> $_GET[<span style="color:#e6db74">&#39;user1&#39;</span>] <span style="color:#f92672">??</span> <span style="color:#e6db74">&#39;nobody&#39;</span>;
+</code></pre></div><ul>
+<li><strong>组合比较符</strong></li>
+</ul>
+<p><code>太空船操作符用于比较两个表达式。当$a小于、等于或大于$b时它分别返回-1、0或1。 比较的原则是沿用 PHP 的常规比较规则进行的。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 整数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">2</span>; <span style="color:#75715e">// -1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 浮点数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">1.5</span>; <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">1.5</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">2.5</span>; <span style="color:#75715e">// -1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#ae81ff">2.5</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#ae81ff">1.5</span>; <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span> 
+<span style="color:#75715e">// 字符串
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#e6db74">&#34;a&#34;</span>; <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#e6db74">&#34;b&#34;</span>; <span style="color:#75715e">// -1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#f92672">&lt;=&gt;</span> <span style="color:#e6db74">&#34;a&#34;</span>; <span style="color:#75715e">// 1
+</span></code></pre></div><ul>
+<li><strong>通过 define() 定义常量数组</strong></li>
+</ul>
+<p><code>Array 类型的常量现在可以通过 define() 来定义。在 PHP5.6 中仅能通过 const 定义。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;ANIMALS&#39;</span>, [
+    <span style="color:#e6db74">&#39;dog&#39;</span>,
+    <span style="color:#e6db74">&#39;cat&#39;</span>,
+    <span style="color:#e6db74">&#39;bird&#39;</span>
+]);
+
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">ANIMALS</span>[<span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// 输出 &#34;cat&#34;
+</span></code></pre></div><ul>
+<li><strong>生成器</strong></li>
+</ul>
+<p><code>现在，只需在最外层生成其中使用 yield from， 就可以把一个生成器自动委派给其他的生成器， Traversable 对象或者 array。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gen</span>()
+{
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">2</span>;
+
+    <span style="color:#66d9ef">yield</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">gen2</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gen2</span>()
+{
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">3</span>;
+    <span style="color:#66d9ef">yield</span> <span style="color:#ae81ff">4</span>;
+}
+
+<span style="color:#66d9ef">foreach</span> (<span style="color:#a6e22e">gen</span>() <span style="color:#66d9ef">as</span> $val)
+{
+    <span style="color:#66d9ef">echo</span> $val, <span style="color:#a6e22e">PHP_EOL</span>;
+}
+<span style="color:#75715e">// 1 2 3 4
+</span></code></pre></div><ul>
+<li><strong>整数除法函数 intdiv()</strong></li>
+</ul>
+<p><code>新加的函数 intdiv() 用来进行 整数的除法运算.</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">intdiv</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">3</span>));
+<span style="color:#75715e">// 3
+</span></code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idphp7171span"><span id="php71">7.1</span></h3>
+<ul>
+<li><strong>可为空（Nullable）类型</strong></li>
+</ul>
+<p><code>参数以及返回值的类型现在可以通过在类型前加上一个问号使之允许为空。 当启用这个特性时，传入的参数或者函数返回的结果要么是给定的类型，要么是 null 。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testReturn</span>()<span style="color:#f92672">:</span> <span style="color:#f92672">?</span><span style="color:#a6e22e">string</span>
+{
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;elePHPant&#39;</span>;
+}
+
+<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">testReturn</span>()); <span style="color:#75715e">// elePHPant
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testReturn1</span>()<span style="color:#f92672">:</span> <span style="color:#f92672">?</span><span style="color:#a6e22e">string</span>
+{
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span>;
+}
+
+<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">testReturn1</span>()); <span style="color:#75715e">// null
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#f92672">?</span><span style="color:#a6e22e">string</span> $name)
+{
+    <span style="color:#a6e22e">var_dump</span>($name);
+}
+
+<span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;elePHPant&#39;</span>); <span style="color:#75715e">// elePHPant
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">null</span>); <span style="color:#75715e">// null
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">test</span>(); <span style="color:#75715e">// Uncaught Error: Too few arguments to function test(), 0 passed in...
+</span></code></pre></div><ul>
+<li><strong>Void 函数</strong></li>
+</ul>
+<p><code>一个新的返回值类型void被引入。 返回值声明为 void 类型的方法要么干脆省去 return 语句，要么使用一个空的 return 语句。 对于 void 函数来说，null 不是一个合法的返回值。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">swap</span>($left, $right) <span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span>
+{
+    <span style="color:#66d9ef">if</span> ($left <span style="color:#f92672">===</span> $right) {
+        <span style="color:#66d9ef">return</span>;
+    }
+}
+<span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">swap</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)); <span style="color:#75715e">// null
+</span></code></pre></div><ul>
+<li><strong>list 可用 [] 替换 且支持键名</strong></li>
+</ul>
+<p><code>短数组语法（[]）现在作为list()语法的一个备选项，可以用于将数组的值赋给一些变量（包括在foreach中）。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$data <span style="color:#f92672">=</span> [
+    [<span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Tom&#39;</span>],
+    [<span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Fred&#39;</span>],
+];
+
+<span style="color:#75715e">// list() style
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">list</span>(<span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#f92672">=&gt;</span> $id1, <span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">=&gt;</span> $name1) <span style="color:#f92672">=</span> $data[<span style="color:#ae81ff">0</span>];
+
+<span style="color:#75715e">// [] style
+</span><span style="color:#75715e"></span>[<span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#f92672">=&gt;</span> $id1, <span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#f92672">=&gt;</span> $name1] <span style="color:#f92672">=</span> $data[<span style="color:#ae81ff">0</span>];
+</code></pre></div><ul>
+<li><strong>类常量可见性</strong></li>
+</ul>
+<p><code>现在起支持设置类常量的可见性。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ConstDemo</span>
+{
+    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">PUBLIC_CONST_A</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">PUBLIC_CONST_B</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">PROTECTED_CONST</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">PRIVATE_CONST</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+}
+</code></pre></div><ul>
+<li><strong>多异常捕获处理</strong></li>
+</ul>
+<p><code>一个catch语句块现在可以通过管道字符(|)来实现多个异常的捕获。 这对于需要同时处理来自不同类的不同异常时很有用。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">try</span> {
+    <span style="color:#75715e">// some code
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">FirstException</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">SecondException</span> $e) {
+    <span style="color:#75715e">// 处理第一个和第二个异常
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li><strong>支持为负的字符串偏移量</strong></li>
+</ul>
+<p><code>现在所有支持偏移量的字符串操作函数 都支持接受负数作为偏移量，包括通过[]或{}操作字符串下标。在这种情况下，一个负数的偏移量会被理解为一个从字符串结尾开始的偏移量。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">var_dump</span>(<span style="color:#e6db74">&#34;abcdef&#34;</span>[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>]); <span style="color:#75715e">//e
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">var_dump</span>(<span style="color:#a6e22e">strpos</span>(<span style="color:#e6db74">&#34;aabbcc&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// 3
+</span></code></pre></div><ul>
+<li><strong>通过 Closure::fromCallable() 将callables转为闭包</strong></li>
+</ul>
+<p><code>Closure新增了一个静态方法，用于将callable快速地 转为一个Closure 对象。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">exposeFunction</span>()
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Closure</span><span style="color:#f92672">::</span><span style="color:#a6e22e">fromCallable</span>([$this, <span style="color:#e6db74">&#39;privateFunction&#39;</span>]);
+    }
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">privateFunction</span>($param)
+    {
+        <span style="color:#a6e22e">var_dump</span>($param);
+    }
+}
+
+$privFunc <span style="color:#f92672">=</span> (<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Test</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exposeFunction</span>();
+$privFunc(<span style="color:#e6db74">&#39;some value&#39;</span>); <span style="color:#75715e">// some value
+</span></code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idphp7272span"><span id="php72">7.2</span></h3>
+<ul>
+<li><strong>新的对象类型</strong></li>
+</ul>
+<p><code>这种新的对象类型, object, 引进了可用于逆变（contravariant）参数输入和协变（covariant）返回任何对象类型。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">object</span> $obj) <span style="color:#f92672">:</span> <span style="color:#a6e22e">object</span>
+{
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplQueue</span>();
+}
+
+<span style="color:#a6e22e">test</span>(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">StdClass</span>());
+</code></pre></div><ul>
+<li><strong>允许重写抽象方法(Abstract method)</strong></li>
+</ul>
+<p><code>当一个抽象类继承于另外一个抽象类的时候，继承后的抽象类可以重写被继承的抽象类的抽象方法。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span>
+{
+    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>(<span style="color:#a6e22e">string</span> $s);
+}
+<span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">A</span>
+{
+    <span style="color:#75715e">// 覆盖-仍然保持参数的逆变和返回的协方差
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>($s) <span style="color:#f92672">:</span> <span style="color:#a6e22e">int</span>;
+}
+</code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idphp7474span"><span id="php74">7.4</span></h3>
+<ul>
+<li><strong>属性添加限定类型</strong></li>
+</ul>
+<p><code>类的属性中现在支持添加指定的类型。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">int</span> $id;
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">string</span> $name;
+}
+<span style="color:#75715e">//会强制要求 $user-&gt;id 只能为 int 类型，同时 $user-&gt;name 只能为 string 类型。
+</span></code></pre></div><ul>
+<li><strong>箭头函数</strong></li>
+</ul>
+<p><code>箭头函数 提供了一种更简洁的定义函数的方法。。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+
+$fn1 <span style="color:#f92672">=</span> <span style="color:#a6e22e">fn</span>($x) <span style="color:#f92672">=&gt;</span> $x <span style="color:#f92672">+</span> $y;
+<span style="color:#75715e">// 相当于通过 value 使用 $y：
+</span><span style="color:#75715e"></span>$fn2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> ($x) <span style="color:#66d9ef">use</span> ($y) {
+    <span style="color:#66d9ef">return</span> $x <span style="color:#f92672">+</span> $y;
+};
+
+<span style="color:#a6e22e">var_export</span>($fn1(<span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// 4
+</span></code></pre></div><ul>
+<li><strong>空合并运算符赋值</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$array[<span style="color:#e6db74">&#39;key&#39;</span>] <span style="color:#f92672">??=</span> <span style="color:#e6db74">&#39;xxx&#39;</span>;
+<span style="color:#75715e">// 等同于以下旧写法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>($array[<span style="color:#e6db74">&#39;key&#39;</span>])) {
+    $array[<span style="color:#e6db74">&#39;key&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;xxx&#39;</span>;
+}
+</code></pre></div><ul>
+<li><strong>数组展开操作</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$parts <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;pear&#39;</span>];
+$fruits <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>, <span style="color:#f92672">...</span>$parts, <span style="color:#e6db74">&#39;watermelon&#39;</span>];
+<span style="color:#75715e">// [&#39;banana&#39;, &#39;orange&#39;, &#39;apple&#39;, &#39;pear&#39;, &#39;watermelon&#39;];
+</span></code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idphp880span"><span id="php8">8.0</span></h3>
+<ul>
+<li><strong>命名参数</strong></li>
+</ul>
+<p><code>仅仅指定必填参数，跳过可选参数。参数的顺序无关</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 使用位置参数：
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">array_fill</span> ( <span style="color:#ae81ff">0</span> ,  <span style="color:#ae81ff">100</span> ,  <span style="color:#ae81ff">50</span> ) ;
+ 
+<span style="color:#75715e">// 使用命名参数：
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">array_fill</span> ( <span style="color:#a6e22e">start_index</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">0</span> , <span style="color:#a6e22e">num</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">100</span> , <span style="color:#a6e22e">value</span> <span style="color:#f92672">:</span>  <span style="color:#ae81ff">50</span> ) ;
+</code></pre></div><ul>
+<li><strong>注解</strong></li>
+</ul>
+<p><code>现在可以用 PHP 原生语法来使用结构化的元数据，而非 PHPDoc 声明。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PostsController</span>
+{
+    <span style="color:#75715e">#[Route(&#34;/api/posts/{id}&#34;, methods: [&#34;GET&#34;])]
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">get</span>($id) { <span style="color:#75715e">/* ... */</span> }
+}
+</code></pre></div><ul>
+<li><strong>构造器属性提升</strong></li>
+</ul>
+<p><code>当构造器参数带访问控制时，PHP 会同时把它当作对象属性和构造器参数， 并赋值到属性。 构造器可以是空的，或者包含其他语句。 参数值赋值到相应属性后执行正文中额外的代码语句。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Point</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">float</span> $x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>,
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">float</span> $y <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>,
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">float</span> $z <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0</span>,
+  ) {}
+}
+</code></pre></div><ul>
+<li><strong>联合类型</strong></li>
+</ul>
+<p><code>联合类型接受多个不同的类型做为参数</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Number</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">int</span><span style="color:#f92672">|</span><span style="color:#a6e22e">float</span> $number
+  ) {}
+}
+<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Number</span>(<span style="color:#e6db74">&#39;NaN&#39;</span>); <span style="color:#75715e">// TypeError
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Number</span>(<span style="color:#ae81ff">1</span>);
+</code></pre></div><ul>
+<li><strong>Match 表达式</strong></li>
+</ul>
+<p><code>match 表达式基于值的一致性进行分支计算。 match表达式和 switch 语句类似， 都有一个表达式主体，可以和多个可选项进行比较。 与 switch 不同点是，它会像三元表达式一样求值。 与 switch 另一个不同点，它的比较是严格比较（ ===）而不是松散比较（==）</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">match</span> (<span style="color:#ae81ff">8.0</span>) {
+  <span style="color:#e6db74">&#39;8.0&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Oh no!&#34;</span>,
+  <span style="color:#ae81ff">8.0</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;This is what I expected&#34;</span>,
+};
+<span style="color:#75715e">//&gt; This is what I expected
+</span></code></pre></div><ul>
+<li><strong>Nullsafe 运算符</strong></li>
+</ul>
+<p><code>现在可以用新的 nullsafe 运算符链式调用，而不需要条件检查 null。 如果链条中的一个元素失败了，整个链条会中止并认定为 Null。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">//php7
+</span><span style="color:#75715e"></span>$country <span style="color:#f92672">=</span>  <span style="color:#66d9ef">null</span>;
+<span style="color:#66d9ef">if</span> ($session <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
+  $user <span style="color:#f92672">=</span> $session<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">user</span>;
+  <span style="color:#66d9ef">if</span> ($user <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
+    $address <span style="color:#f92672">=</span> $user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getAddress</span>();
+ 
+    <span style="color:#66d9ef">if</span> ($address <span style="color:#f92672">!==</span> <span style="color:#66d9ef">null</span>) {
+      $country <span style="color:#f92672">=</span> $address<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">country</span>;
+    }
+  }
+}
+<span style="color:#75715e">//php8
+</span><span style="color:#75715e"></span>$country <span style="color:#f92672">=</span> $session<span style="color:#f92672">?-&gt;</span><span style="color:#a6e22e">user</span><span style="color:#f92672">?-&gt;</span><span style="color:#a6e22e">getAddress</span>()<span style="color:#f92672">?-&gt;</span><span style="color:#a6e22e">country</span>;
+</code></pre></div><ul>
+<li><strong>字符串与数字的比较更符合逻辑</strong></li>
+</ul>
+<p><code>PHP 8 比较数字字符串（numeric string）时，会按数字进行比较。 不是数字字符串时，将数字转化为字符串，按字符串比较。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">//php7
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foobar&#39;</span> <span style="color:#75715e">// true
+</span><span style="color:#75715e">//php8
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">0</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;foobar&#39;</span> <span style="color:#75715e">// false
+</span></code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+<h3 id="span-idphp8181span"><span id="php81">8.1</span></h3>
+<ul>
+<li><strong>枚举</strong></li>
+</ul>
+<p><code>Enum 类似 class，它和 class、interface、trait 共享同样的命名空间。 也能用同样的方式自动加载。 一个 Enum 定义了一种新的类型，它有固定、数量有限、可能的合法值。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">enum</span> <span style="color:#a6e22e">Suit</span>
+{
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">Hearts</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">Diamonds</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">Clubs</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">Spades</span>;
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">pick_a_card</span>(<span style="color:#a6e22e">Suit</span> $suit) { <span style="color:#f92672">...</span> }
+
+$val <span style="color:#f92672">=</span> <span style="color:#a6e22e">Suit</span><span style="color:#f92672">::</span><span style="color:#a6e22e">Diamonds</span>;
+
+<span style="color:#75715e">// OK
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">pick_a_card</span>($val);
+<span style="color:#75715e">// OK
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">pick_a_card</span>(<span style="color:#a6e22e">Suit</span><span style="color:#f92672">::</span><span style="color:#a6e22e">Clubs</span>);
+<span style="color:#75715e">// TypeError: pick_a_card(): Argument #1 ($suit) must be of type Suit, string given
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">pick_a_card</span>(<span style="color:#e6db74">&#39;Spades&#39;</span>);
+</code></pre></div><ul>
+<li><strong>只读属性</strong></li>
+</ul>
+<p><code>只读属性不能在初始化后更改，即在为它们分配值后。它们可以用于对值对象和数据传输对象建模。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BlogData</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">readonly</span> <span style="color:#a6e22e">Status</span> $status;
+  
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Status</span> $status)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> $status;
+    }
+}
+</code></pre></div><ul>
+<li><strong>First-class 可调用语法</strong></li>
+</ul>
+<p><code>现在可以获得对任何函数的引用。这统称为 First-class 可调用语法。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$foo <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">foo</span>(<span style="color:#f92672">...</span>);
+
+$fn <span style="color:#f92672">=</span> <span style="color:#a6e22e">strlen</span>(<span style="color:#f92672">...</span>);
+<span style="color:#a6e22e">var_dump</span>($fn(<span style="color:#e6db74">&#39;22222&#39;</span>)); <span style="color:#75715e">// 5
+</span></code></pre></div><ul>
+<li><strong>新的初始化器</strong></li>
+</ul>
+<p><code>对象现在可以用作默认参数值、静态变量和全局常量，以及属性参数。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Service</span>
+{
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Logger</span> $logger;
+   
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(
+        <span style="color:#a6e22e">Logger</span> $logger <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">NullLogger</span>(),
+    ) {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">logger</span> <span style="color:#f92672">=</span> $logger;
+    }
+}
+</code></pre></div><ul>
+<li><strong>纯交集类型</strong></li>
+</ul>
+<p><code>当一个值需要同时满足多个类型约束时，使用交集类型。注意，目前无法将交集和联合类型混合在一起，例如 A&amp;B|C。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">count_and_iterate</span>(<span style="color:#a6e22e">Iterator</span><span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Countable</span> $value) {
+    <span style="color:#66d9ef">foreach</span> ($value <span style="color:#66d9ef">as</span> $val) {
+        <span style="color:#66d9ef">echo</span> $val;
+    }
+
+    <span style="color:#a6e22e">count</span>($value);
+}
+</code></pre></div><ul>
+<li><strong>Never 返回类型</strong></li>
+</ul>
+<p><code>使用 never 类型声明的函数或方法表示它不会返回值，并且会抛出异常或通过调用 die()、exit()、trigger_error() 或类似的东西来结束脚本的执行。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">redirect</span>(<span style="color:#a6e22e">string</span> $uri)<span style="color:#f92672">:</span> <span style="color:#a6e22e">never</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;Location: &#39;</span> <span style="color:#f92672">.</span> $uri);
+    <span style="color:#66d9ef">exit</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">redirectToLoginPage</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">never</span> {
+    <span style="color:#a6e22e">redirect</span>(<span style="color:#e6db74">&#39;/login&#39;</span>);
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;Hello&#39;</span>; <span style="color:#75715e">// &lt;- dead code detected by static analysis
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li><strong>Final 类常量</strong></li>
+</ul>
+<p><code>可以声明 final 类常量，以禁止它们在子类中被重写。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span>
+{
+    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">XX</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;foo&#34;</span>;
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bar</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Foo</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">XX</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bar&#34;</span>; <span style="color:#75715e">// Fatal error
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li><strong>纤程</strong></li>
+</ul>
+<p><code>Fibers 是用于实现轻量级协作并发的基础类型。它们是一种创建可以像生成器一样暂停和恢复的代码块的方法，但可以从堆栈中的任何位置进行。Fibers 本身并没有提供并发性，仍然需要一个事件循环。但是，它们允许通过阻塞和非阻塞实现共享相同的 API。。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$fiber <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Fiber</span>(<span style="color:#66d9ef">function</span> ()<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span> {
+    $value <span style="color:#f92672">=</span> <span style="color:#a6e22e">Fiber</span><span style="color:#f92672">::</span><span style="color:#a6e22e">suspend</span>(<span style="color:#e6db74">&#39;fiber&#39;</span>);
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Value used to resume fiber: &#34;</span>, $value, <span style="color:#a6e22e">PHP_EOL</span>;
+});
+
+$value <span style="color:#f92672">=</span> $fiber<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">start</span>();
+
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Value from fiber suspending: &#34;</span>, $value, <span style="color:#a6e22e">PHP_EOL</span>;
+
+$fiber<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">resume</span>(<span style="color:#e6db74">&#39;test&#39;</span>);
+<span style="color:#75715e">// Value from fiber suspending: fiber
+</span><span style="color:#75715e">// Value used to resume fiber: test
+</span></code></pre></div><ul>
+<li><strong>对字符串键控数组的数组解包支持</strong></li>
+</ul>
+<p><code>PHP 以前支持通过扩展运算符在数组内部解包，但前提是数组具有整数键。现在也可以使用字符串键解包数组。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$arrayA <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">1</span>];
+$arrayB <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;b&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>];
+
+$result <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0</span>, <span style="color:#f92672">...</span>$arrayA, <span style="color:#f92672">...</span>$arrayB];
+
+<span style="color:#75715e">// [&#39;a&#39; =&gt; 1, &#39;b&#39; =&gt; 2]
+</span></code></pre></div><p><a href="#top">▲ 回顶部</a></p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/php/">php</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/two/" data-tooltip="vue-cli4 配置" aria-label="上一篇: vue-cli4 配置">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/php/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/php/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/php/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/php\/';
+        
+          this.page.identifier = '\/post\/php\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/two/" data-tooltip="vue-cli4 配置" aria-label="上一篇: vue-cli4 配置">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/php/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/php/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/php/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fphp%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fphp%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fphp%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
