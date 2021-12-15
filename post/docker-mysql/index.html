@@ -410,8 +410,9 @@ default-character-set   = utf8mb4
 </code></pre><p>启动 mysql
 <code>docker-compose up -d</code>
 运行完之后我们就启动了两个db 这时候我们先设置 master 进入db1容器</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it mysqls_db1_1 bash
-mysql -u root -P <span style="color:#ae81ff">13307</span> -h
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker inspect mysqls_db1_1 <span style="color:#75715e">#查看容器ip</span>
+docker exec -it mysqls_db1_1 bash
+mysql -u root -p
 GRANT REPLICATION SLAVE ON *.* to <span style="color:#e6db74">&#39;slave_user2&#39;</span>@<span style="color:#e6db74">&#39;db2&#39;</span> identified by <span style="color:#e6db74">&#39;123456&#39;</span>; <span style="color:#75715e"># 这里db2 换成db2的IP</span>
 FLUSH PRIVILEGES; <span style="color:#75715e">## 刷新并应用</span>
 show master status;
@@ -423,7 +424,7 @@ show master status;
 <span style="color:#ae81ff">1</span> row in set <span style="color:#f92672">(</span>0.02 sec<span style="color:#f92672">)</span>
 </code></pre></div><p>接来下编辑从库  进入db2容器</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -it mysqls_db2_1 bash
-mysql -u root -P <span style="color:#ae81ff">13308</span> -h 
+mysql -u root -p
 <span style="color:#75715e">## 从库只需要指定master是谁就可以</span>
 change master to master_host<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;db1&#39;</span>,master_port<span style="color:#f92672">=</span>3306,master_user<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;slave_user2&#39;</span>,master_password<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;123456&#39;</span>,master_log_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mysql-bin.000004&#39;</span>,master_log_pos<span style="color:#f92672">=</span>602; 
 start slave; <span style="color:#75715e">## 启动</span>
@@ -467,7 +468,7 @@ show slave status; <span style="color:#75715e">## 查看从库状态</span>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/redis/" data-tooltip="redis GEO 使用和搭建 Redis 集群" aria-label="下一篇: redis GEO 使用和搭建 Redis 集群">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -574,7 +575,7 @@ show slave status; <span style="color:#75715e">## 查看从库状态</span>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/redis/" data-tooltip="redis GEO 使用和搭建 Redis 集群" aria-label="下一篇: redis GEO 使用和搭建 Redis 集群">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
