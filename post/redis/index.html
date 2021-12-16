@@ -409,7 +409,7 @@ redis-cli -p <span style="color:#ae81ff">16371</span> --cluster create <span sty
 </span><span style="color:#ae81ff"></span>172.19.0.5:16374 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>172.19.0.6:16375 <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>172.19.0.7:16376 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>--cluster-replicas <span style="color:#ae81ff">1</span>
+</span><span style="color:#ae81ff"></span>--cluster-replicas <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># 这个为容器ip 集群无法通过外网访问</span>
 
 <span style="color:#75715e">## 我们回车之后, 会告诉你节点分布 redis集群默认是1主1备所以节点都是成双的 不会出现单数</span>
 &gt;&gt;&gt; Performing hash slots allocation on <span style="color:#ae81ff">6</span> nodes...
@@ -498,7 +498,7 @@ a8bee49f0e96af76a1e046de8163865e68e195c7 172.19.0.4:16374@26374 slave a7f4901a91
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/docker-compose-connect/" data-tooltip="多个docker-compose项目之间的通信" aria-label="下一篇: 多个docker-compose项目之间的通信">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -605,7 +605,7 @@ a8bee49f0e96af76a1e046de8163865e68e195c7 172.19.0.4:16374@26374 slave a7f4901a91
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/docker-compose-connect/" data-tooltip="多个docker-compose项目之间的通信" aria-label="下一篇: 多个docker-compose项目之间的通信">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
