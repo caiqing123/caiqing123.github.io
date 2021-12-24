@@ -6,7 +6,16 @@
     <description>Recent content on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Dec 2021 19:40:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Dec 2021 14:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>laravel核心知识学习</title>
+      <link>https://caiqing123.github.io/post/laravel/</link>
+      <pubDate>Fri, 24 Dec 2021 14:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/laravel/</guid>
+      <description>&lt;p&gt;laravel核心知识学习&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>多个docker-compose项目之间的通信</title>
       <link>https://caiqing123.github.io/post/docker-compose-connect/</link>
