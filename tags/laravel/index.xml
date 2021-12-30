@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>laravel on cql 博客</title>
+    <link>https://caiqing123.github.io/tags/laravel/</link>
+    <description>Recent content in laravel on cql 博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Dec 2021 14:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>laravel核心知识学习</title>
+      <link>https://caiqing123.github.io/post/laravel/</link>
+      <pubDate>Fri, 24 Dec 2021 14:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/laravel/</guid>
+      <description>&lt;p&gt;laravel核心知识学习&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

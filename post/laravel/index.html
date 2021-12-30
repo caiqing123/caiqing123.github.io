@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003elaravel核心知识学习\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/laravel\/",
+  "keywords":"[laravel, php]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="laravel, php">
+<meta name="description" content="laravel核心知识学习">
+
+
+<meta property="og:description" content="laravel核心知识学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel核心知识学习">
+<meta name="twitter:title" content="laravel核心知识学习">
+<meta property="og:url" content="https://caiqing123.github.io/post/laravel/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/laravel/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="laravel核心知识学习">
+<meta name="twitter:description" content="laravel核心知识学习">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2021-12-24T14:35:07">
+  
+  
+    <meta property="article:modified_time" content="2021-12-24T14:35:07">
+  
+  
+  
+    
+      <meta property="article:section" content="laravel">
+    
+  
+  
+    
+      <meta property="article:tag" content="laravel">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>laravel核心知识学习</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/laravel/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      laravel核心知识学习
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-12-24T14:35:07&#43;08:00">
+        
+  十二月 24, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/laravel">laravel</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>laravel核心知识学习</p>
+<h2 id="laravel-使用">laravel 使用</h2>
+<ul>
+<li><strong>依赖注入,控制翻转,反射各个概念的理解和使用</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e">// 定义写日志的接口规范
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>();   
+}
+
+<span style="color:#75715e">// 文件记录日志
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileLog</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>(){
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;file log write...&#39;</span>;
+    }   
+}
+
+
+<span style="color:#75715e">// 数据库记录日志
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseLog</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>(){
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;database log write...&#39;</span>;
+    }   
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> 
+{
+    <span style="color:#66d9ef">protected</span> $log;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Log</span> $log)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> $log;   
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">login</span>()
+    {
+        <span style="color:#75715e">// 登录成功，记录登录日志
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;login success...&#39;</span>;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">write</span>();
+    }
+
+}
+
+$user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">User</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DatabaseLog</span>());
+$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">login</span>();
+</code></pre></div><p><code>用任何方式记录操作日志都不需要去修改 User 类了，只需要通过构造函数参数传递就可以实现，其实这就是“控制反转”。不需要自己内容修改，改成由外部传递。这种由外部负责其依赖需求的行为，我们可以称其为 “控制反转（IoC）”。</code></p>
+<p><code>那什么是依赖注入呢？，其实上面的例子也算是依赖注入，不是由自己内部 new 对象或者实例，通过构造函数，或者方法传入的都属于 依赖注入（DI）</code></p>
+<p><code>反射的概念其实可以理解成根据类名返回该类的任何信息，比如该类有什么方法，参数，变量等等。我们先来学习下反射要用到的 api。拿 User 举例</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 获取User的reflectionClass对象
+</span><span style="color:#75715e"></span>$reflector <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ReflectionClass</span>(<span style="color:#a6e22e">User</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+
+<span style="color:#75715e">// 拿到User的构造函数
+</span><span style="color:#75715e"></span>$constructor <span style="color:#f92672">=</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getConstructor</span>();
+
+<span style="color:#75715e">// 拿到User的构造函数的所有依赖参数
+</span><span style="color:#75715e"></span>$dependencies <span style="color:#f92672">=</span> $constructor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getParameters</span>();
+
+
+<span style="color:#75715e">// 创建user对象
+</span><span style="color:#75715e"></span>$user <span style="color:#f92672">=</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstance</span>();
+
+<span style="color:#75715e">// 创建user对象，需要传递参数的
+</span><span style="color:#75715e"></span>$user <span style="color:#f92672">=</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstanceArgs</span>($dependencies <span style="color:#f92672">=</span> []);
+</code></pre></div><p>具体代码实现</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 注意我们这里需要修改一下User的构造函数，如果不去修改。反射是不能动态创建接口的，那如果非要用接口该怎么处理呢？下一节我们讲Ioc容器的时候会去解决。
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> 
+{
+    <span style="color:#66d9ef">protected</span> $log;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">FileLog</span> $log)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> $log;   
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">login</span>()
+    {
+        <span style="color:#75715e">// 登录成功，记录登录日志
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;login success...&#39;</span>;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">write</span>();
+    }
+
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">make</span>($concrete){
+    
+    $reflector <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ReflectionClass</span>($concrete);
+    $constructor <span style="color:#f92672">=</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getConstructor</span>();
+    <span style="color:#75715e">// 为什么这样写的? 主要是递归。比如创建FileLog不需要传入参数。
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">is_null</span>($constructor)) {
+        <span style="color:#66d9ef">return</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstance</span>();
+    }<span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">// 构造函数依赖的参数
+</span><span style="color:#75715e"></span>        $dependencies <span style="color:#f92672">=</span> $constructor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getParameters</span>();
+        <span style="color:#75715e">// 根据参数返回实例，如FileLog
+</span><span style="color:#75715e"></span>        $instances <span style="color:#f92672">=</span> <span style="color:#a6e22e">getDependencies</span>($dependencies);
+        <span style="color:#66d9ef">return</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstanceArgs</span>($instances);
+    }
+
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDependencies</span>($paramters) {
+    $dependencies <span style="color:#f92672">=</span> [];
+    <span style="color:#66d9ef">foreach</span> ($paramters <span style="color:#66d9ef">as</span> $paramter) {
+        $dependencies[] <span style="color:#f92672">=</span> <span style="color:#a6e22e">make</span>($paramter<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getClass</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>);
+    }
+    <span style="color:#66d9ef">return</span> $dependencies;
+}
+
+$user <span style="color:#f92672">=</span> <span style="color:#a6e22e">make</span>(<span style="color:#e6db74">&#39;User&#39;</span>);
+$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">login</span>();
+</code></pre></div><ul>
+<li><strong>如何实现Ioc容器和服务提供者是什么概念</strong></li>
+</ul>
+<p><code>提前把log,user都绑定到Ioc容器中。User的创建交给这个容器去做。比如下面这样的，你再任何地方使用login。都不需要关心是用什么记录日志了，哪怕后期需要修改只需要在ioc容器修改绑定其他记录方式日志就行了。</code></p>
+<p>具体代码实现的思路
+<code>1.Ioc容器维护binding数组记录bind方法传入的键值对如:log=&gt;FileLog, user=&gt;User 2.在ioc-&gt;make('user')的时候，通过反射拿到User的构造函数，拿到构造函数的参数，发现参数是User的构造函数参数log,然后根据log得到FileLog。 3.这时候我们只需要通过make获取binding绑定的FileLog 4.通过newInstanceArgs然后再去创建new User($filelog); </code>
+核心的Ioc容器代码</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>();
+}
+
+<span style="color:#75715e">// 文件记录日志
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FileLog</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>(){
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;file log write...&#39;</span>;
+    }
+}
+
+<span style="color:#75715e">// 数据库记录日志
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseLog</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Log</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">write</span>(){
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;database log write...&#39;</span>;
+    }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span>
+{
+    <span style="color:#66d9ef">protected</span> $log;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">Log</span> $log)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span> <span style="color:#f92672">=</span> $log;
+    }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">login</span>()
+    {
+        <span style="color:#75715e">// 登录成功，记录登录日志
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;login success...&#39;</span>;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">log</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">write</span>();
+    }
+}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Ioc</span>
+{
+    <span style="color:#66d9ef">public</span> $binding <span style="color:#f92672">=</span> [];
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">bind</span>($abstract, $concrete)
+    {
+        <span style="color:#75715e">//这里为什么要返回一个closure呢？因为bind的时候还不需要创建User对象，所以采用closure等make的时候再创建FileLog;
+</span><span style="color:#75715e"></span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">binding</span>[$abstract][<span style="color:#e6db74">&#39;concrete&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> ($ioc) <span style="color:#66d9ef">use</span> ($concrete) {
+            <span style="color:#66d9ef">return</span> $ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">build</span>($concrete);
+        };
+
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">make</span>($abstract)
+    {
+    	<span style="color:#75715e">// 根据key获取binding的值
+</span><span style="color:#75715e"></span>        $concrete <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">binding</span>[$abstract][<span style="color:#e6db74">&#39;concrete&#39;</span>];
+        <span style="color:#66d9ef">return</span> $concrete($this);
+    }
+
+    <span style="color:#75715e">// 创建对象
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">build</span>($concrete) {
+        $reflector <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ReflectionClass</span>($concrete);
+        $constructor <span style="color:#f92672">=</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getConstructor</span>();
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">is_null</span>($constructor)) {
+            <span style="color:#66d9ef">return</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstance</span>();
+        }<span style="color:#66d9ef">else</span> {
+            $dependencies <span style="color:#f92672">=</span> $constructor<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getParameters</span>();
+            $instances <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getDependencies</span>($dependencies);
+            <span style="color:#66d9ef">return</span> $reflector<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">newInstanceArgs</span>($instances);
+        }
+    }
+
+    <span style="color:#75715e">// 获取参数的依赖
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getDependencies</span>($paramters) {
+        $dependencies <span style="color:#f92672">=</span> [];
+        <span style="color:#66d9ef">foreach</span> ($paramters <span style="color:#66d9ef">as</span> $paramter) {
+            <span style="color:#75715e">//根据名称获取以绑定的对象
+</span><span style="color:#75715e"></span>            $dependencies[] <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">make</span>($paramter<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getClass</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>);
+        }
+        <span style="color:#66d9ef">return</span> $dependencies;
+    }
+
+}
+
+<span style="color:#75715e">//实例化IoC容器
+</span><span style="color:#75715e"></span>$ioc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Ioc</span>();
+$ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#39;Log&#39;</span>,<span style="color:#e6db74">&#39;FileLog&#39;</span>);
+$ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#39;user&#39;</span>,<span style="color:#e6db74">&#39;User&#39;</span>);
+$user <span style="color:#f92672">=</span> $ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">make</span>(<span style="color:#e6db74">&#39;user&#39;</span>);
+$user<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">login</span>();
+</code></pre></div><p>laravel中的服务容器和服务提供者是什么样子呢？
+<code>可以在config目录找到app.php中providers,这个数组定义的都是已经写好的服务提供者</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$providers <span style="color:#f92672">=</span> [
+    <span style="color:#a6e22e">Illuminate\Auth\AuthServiceProvider</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>,
+    <span style="color:#a6e22e">Illuminate\Broadcasting\BroadcastServiceProvider</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>,
+    <span style="color:#a6e22e">Illuminate\Bus\BusServiceProvider</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>,
+    <span style="color:#a6e22e">Illuminate\Cache\CacheServiceProvider</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>,
+    <span style="color:#f92672">...</span>
+]
+<span style="color:#f92672">...</span>
+
+<span style="color:#75715e">// 随便打开一个类比如CacheServiceProvider，这个服务提供者都是通过调用register方法注册到ioc容器中，其中的app就是Ioc容器。singleton可以理解成我们的上面例子中的bind方法。只不过这里singleton指的是单例模式。
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CacheServiceProvider</span>{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">register</span>()
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">singleton</span>(<span style="color:#e6db74">&#39;cache&#39;</span>, <span style="color:#66d9ef">function</span> ($app) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CacheManager</span>($app);
+        });
+
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">singleton</span>(<span style="color:#e6db74">&#39;cache.store&#39;</span>, <span style="color:#66d9ef">function</span> ($app) {
+            <span style="color:#66d9ef">return</span> $app[<span style="color:#e6db74">&#39;cache&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">driver</span>();
+        });
+
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">app</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">singleton</span>(<span style="color:#e6db74">&#39;memcached.connector&#39;</span>, <span style="color:#66d9ef">function</span> () {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MemcachedConnector</span>;
+        });
+    }
+}
+</code></pre></div><ul>
+<li><strong>acades外观模式背后实现原理</strong></li>
+</ul>
+<p>上一节我们讲到需要 $ioc-&gt;make(&lsquo;user&rsquo;) 才能拿到User的实例,再去使用 $user-&gt;login(); 那能不能更方便点，比如下面的用法,是不是很方便。
+<code>UserFacade::login();</code></p>
+<p>Facade工作原理
+<code> 1.Facade 核心实现原理就是在 UserFacade 提前注入Ioc容器。 2.定义一个服务提供者的外观类，在该类定义一个类的变量，跟ioc容器绑定的key一样， 3.通过静态魔术方法__callStatic可以得到当前想要调用的login 4.使用 static::$ioc-&gt;make('user'); </code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserFacade</span>
+{
+    <span style="color:#75715e">// 维护Ioc容器
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">static</span> $ioc;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setFacadeIoc</span>($ioc)
+    {
+        <span style="color:#66d9ef">static</span><span style="color:#f92672">::</span>$ioc <span style="color:#f92672">=</span> $ioc;
+    }
+
+    <span style="color:#75715e">// 返回User在Ioc中的bind的key
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getFacadeAccessor</span>()
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;user&#39;</span>;
+    }
+
+    <span style="color:#75715e">// php 魔术方法，在静态上下文中调用一个不可访问方法时会被触发
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> __callStatic($method, $args)
+    {
+        $instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">static</span><span style="color:#f92672">::</span>$ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">make</span>(<span style="color:#66d9ef">static</span><span style="color:#f92672">::</span><span style="color:#a6e22e">getFacadeAccessor</span>());
+        <span style="color:#66d9ef">return</span> $instance<span style="color:#f92672">-&gt;</span>$method(<span style="color:#f92672">...</span>$args);
+    }
+
+}
+
+<span style="color:#75715e">//实例化IoC容器
+</span><span style="color:#75715e"></span>
+$ioc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Ioc</span>();
+$ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#39;log&#39;</span>,<span style="color:#e6db74">&#39;FileLog&#39;</span>);
+$ioc<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">bind</span>(<span style="color:#e6db74">&#39;user&#39;</span>,<span style="color:#e6db74">&#39;User&#39;</span>);
+
+<span style="color:#a6e22e">UserFacade</span><span style="color:#f92672">::</span><span style="color:#a6e22e">setFacadeIoc</span>($ioc);
+
+<span style="color:#a6e22e">UserFacade</span><span style="color:#f92672">::</span><span style="color:#a6e22e">login</span>();
+</code></pre></div><ul>
+<li><strong>中间件实现</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+    <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Milldeware</span> {
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle</span>(<span style="color:#a6e22e">Closure</span> $next);
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VerfiyCsrfToekn</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Milldeware</span> {
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle</span>(<span style="color:#a6e22e">Closure</span> $next)
+        {
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;验证csrf Token &lt;br&gt;&#39;</span>;
+            $next();
+        }
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">VerfiyAuth</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Milldeware</span> {
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle</span>(<span style="color:#a6e22e">Closure</span> $next)
+        {
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;验证是否登录 &lt;br&gt;&#39;</span>;
+            $next();
+        }
+    }
+
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SetCookie</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Milldeware</span> {
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handle</span>(<span style="color:#a6e22e">Closure</span> $next)
+        {
+            $next();
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;设置cookie信息！&#39;</span>;
+        }
+    }
+
+    $handle <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;当前要执行的程序!&#39;</span>;
+    };
+
+    $pipe_arr <span style="color:#f92672">=</span> [
+        <span style="color:#e6db74">&#39;VerfiyCsrfToekn&#39;</span>,
+        <span style="color:#e6db74">&#39;VerfiyAuth&#39;</span>,
+        <span style="color:#e6db74">&#39;SetCookie&#39;</span>,
+    ];
+
+    <span style="color:#75715e">//array_reduce 将回调函数 callback 迭代地作用到 array 数组中的每一个单元中，从而将数组简化为单一的值。
+</span><span style="color:#75715e"></span>    $callback <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_reduce</span>($pipe_arr, <span style="color:#66d9ef">function</span>($stack, $pipe) {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>() <span style="color:#66d9ef">use</span> ($stack, $pipe){
+            <span style="color:#66d9ef">return</span> $pipe<span style="color:#f92672">::</span><span style="color:#a6e22e">handle</span>($stack);
+        };
+    },$handle);
+    
+    <span style="color:#75715e">//第一次迭代时，$stack：null，$pipe = VerfiyCsrfToekn，返回一个 use 了 VerfiyCsrfToekn 的闭包
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//第二次迭代时，$stack：use 了 VerfiyCsrfToekn 的闭包，$pipe = VerfiyAuth，返回一个 use 了 VerfiyAuth 的闭包
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 第三次迭代时，$stack：use 了 VerfiyAuth 的闭包，$pipe = SetCookie，返回一个 use 了 SetCookie 的闭包
+</span><span style="color:#75715e"></span>    
+
+    <span style="color:#75715e">//调用函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">call_user_func</span>($callback);
+</code></pre></div><ul>
+<li><strong>Laravel 入口文件说明</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#75715e">// 定义了laravel一个请求的开始时间
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;LARAVEL_START&#39;</span>, <span style="color:#a6e22e">microtime</span>(<span style="color:#66d9ef">true</span>));
+
+<span style="color:#75715e">// composer自动加载机制
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">require</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../vendor/autoload.php&#39;</span>;
+
+<span style="color:#75715e">// 这句话你就可以理解laravel,在最开始引入了一个ioc容器。
+</span><span style="color:#75715e"></span>$app <span style="color:#f92672">=</span> <span style="color:#66d9ef">require_once</span> <span style="color:#66d9ef">__DIR__</span><span style="color:#f92672">.</span><span style="color:#e6db74">&#39;/../bootstrap/app.php&#39;</span>;
+
+<span style="color:#75715e">// 打开__DIR__.&#39;/../bootstrap/app.php&#39;;你会发现这段代码，绑定了Illuminate\Contracts\Http\Kernel::class，
+</span><span style="color:#75715e">// 这个你可以理解成之前我们所说的$ioc-&gt;bind();方法。
+</span><span style="color:#75715e">// $app-&gt;singleton(
+</span><span style="color:#75715e">// 	Illuminate\Contracts\Http\Kernel::class,
+</span><span style="color:#75715e">//	App\Http\Kernel::class
+</span><span style="color:#75715e">// );
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 这个相当于我们创建了Kernel::class的服务提供者
+</span><span style="color:#75715e"></span>$kernel <span style="color:#f92672">=</span> $app<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">make</span>(<span style="color:#a6e22e">Illuminate\Contracts\Http\Kernel</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+
+<span style="color:#75715e">// 获取一个 Request ，返回一个 Response。以把该内核想象作一个代表整个应用的大黑盒子，输入 HTTP 请求，返回 HTTP 响应。
+</span><span style="color:#75715e"></span>$response <span style="color:#f92672">=</span> $kernel<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">handle</span>(
+    $request <span style="color:#f92672">=</span> <span style="color:#a6e22e">Illuminate\Http\Request</span><span style="color:#f92672">::</span><span style="color:#a6e22e">capture</span>()
+);
+
+<span style="color:#75715e">// 就是把我们服务器的结果返回给浏览器。
+</span><span style="color:#75715e"></span>$response<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">send</span>(); 
+
+<span style="color:#75715e">// 这个就是执行我们比较耗时的请求，
+</span><span style="color:#75715e"></span>$kernel<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">terminate</span>($request, $response);
+</code></pre></div><ul>
+<li><strong>trait在Laravel中的应用</strong></li>
+</ul>
+<p>具体的案例
+<code>如我们定义类的时候，很多都要做成单例模式，因此我们只需要定一个trait在需要单例的时候use trait就可以了。下面看下代码</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">trait</span> <span style="color:#a6e22e">Singleton</span> {
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">static</span> $_instance;
+
+    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getInstance</span>() {
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">isset</span>(<span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$_instance)) {
+            <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$_instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">static</span>();
+        }
+
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$_instance;
+    }
+
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">function</span> __construct() {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">init</span>();
+    }
+
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init</span>() {}
+
+}
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Db</span> {
+    <span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Singleton</span>;
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">init</span>() {
+
+    }
+}
+</code></pre></div><p>trait在Laravel中的应用
+<code>AuthenticatesUsers 这个里面实现了根login的业务逻辑，但是呢？所有的可配置的参数，可重写改的方法你都可以在LoginController中就实现重写，这样代码不就简洁了嘛。我们随意找一个举例，我们重写login的验证加入极验验证。</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers\Auth</span>;
+
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\Request</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Http\Controllers\Controller</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Validation\ValidationException</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Foundation\Auth\AuthenticatesUsers</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoginController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+
+    <span style="color:#66d9ef">use</span> <span style="color:#a6e22e">AuthenticatesUsers</span>;
+
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">redirectTo</span>()
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;/&#39;</span>;
+    }
+
+    <span style="color:#66d9ef">protected</span> $gee;
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#a6e22e">GeeCaptchaController</span> $gee)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">gee</span> <span style="color:#f92672">=</span> $gee;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">middleware</span>(<span style="color:#e6db74">&#39;guest&#39;</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">except</span>(<span style="color:#e6db74">&#39;logout&#39;</span>);
+    }
+
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * 重写login验证逻辑，增加极验验证
+</span><span style="color:#e6db74">     *
+</span><span style="color:#e6db74">     * @param  \Illuminate\Http\Request  $request
+</span><span style="color:#e6db74">     * @return void
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">validateLogin</span>(<span style="color:#a6e22e">Request</span> $request)
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">validate</span>($request, [
+            $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">username</span>() <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;required|string&#39;</span>,
+            <span style="color:#e6db74">&#39;password&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;required|string&#39;</span>,
+        ]);
+
+        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">gee</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">verify</span>()) {
+            <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">ValidationException</span><span style="color:#f92672">::</span><span style="color:#a6e22e">withMessages</span>([
+                <span style="color:#e6db74">&#39;captcha&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;无效的验证码失效!&#39;</span>,
+            ]);
+        }
+
+    }
+}
+</code></pre></div><ul>
+<li><strong>负载均衡,分布式,集群的理解</strong></li>
+</ul>
+<p>集群
+我们的项目如果跑在一台机器上，如果这台机器出现故障的话，或者用户请求量比较高，一台机器支撑不住的话。我们的网站可能就访问不了。那怎么解决呢？就需要使用多台机器，部署一样的程序，让几个机器同时的运行我们的网站。那怎么分发请求到我们的所有机器上？所以负载均衡的概念就出现了。</p>
+<p>负载均衡
+负载均衡是指基于反向代理能将现在所有的请求根据指定的策略算法，分发到不同的服务器上。常用实现负载均衡的可以用nginx,lvs。但是现在也有个问题，如果负载均衡服务器出现问题了怎么办？所以冗余的概念就出现了。</p>
+<p>冗余
+冗余其实就是两个或者多台服务器 一个主服务器，一个从服务器。 假设一个主服务器的负载均衡服务器出现了问题，从服务器能够替代主服务器来继续负载均衡。实现的方式就是使用keepalive来抢占虚拟主机。</p>
+<p>分布式
+分布式其实就是将一个大项目的拆分出来，单独运行。</p>
+<p>举个上面的例子。假设我们的访问量特别大。我们就可以做成分布式，跟cdn一样的机制。在北京，杭州，深圳三个地方都搭建一个一模一样的集群。离北京近的用户就访问北京的集群，离深圳近的就访问深圳这边的集群。这样就将我们网站给拆分3个区域了，各自独立。</p>
+<p>再举个例子比如我们redis分布式。redis分布式是将redis中的数据分布到不同的服务器上面，每台服务器存储不同的内容，而mysql集群是每台服务器都放着一样的数据。这也就理解了分布式和集群的概念。</p>
+<p>mysql 主从
+mysql master服务器会把sql操作日志写入到bin.log 日志里 slave服务器会去读master的bin.log 日志，然后执行sql语句。</p>
+<p>主从有以下几个问题。</p>
+<p>1.master服务器能写又能读，slave却只能读。</p>
+<p>slave读取的数据还没有写入，这样该怎么解决呢？</p>
+<p>1.假如缓存，从缓存中读取。
+2.强制从master读取。
+3.使用pxc集群，任何一个节点都是可读可写的，读写强一致性。</p>
+<p>laravel如何解决数据不一致
+在config/database.php mysql配置块中将sticky设置为true</p>
+<p>sticky 是一个 可选值，它可用于立即读取在当前请求周期内已写入数据库的记录。若 sticky 选项被启用，并且当前请求周期内执行过 「写」 操作，那么任何 「读」 操作都将使用 「写」 连接。这样可确保同一个请求周期内写入的数据可以被立即读取到，从而避免主从延迟导致数据不一致的问题。不过是否启用它，取决于应用程序的需求。</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/laravel/">laravel</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/docker-compose-connect/" data-tooltip="多个docker-compose项目之间的通信" aria-label="上一篇: 多个docker-compose项目之间的通信">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/laravel/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/laravel/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/laravel/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/laravel\/';
+        
+          this.page.identifier = '\/post\/laravel\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/docker-compose-connect/" data-tooltip="多个docker-compose项目之间的通信" aria-label="上一篇: 多个docker-compose项目之间的通信">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/laravel/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/laravel/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/laravel/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Flaravel%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Flaravel%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Flaravel%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
