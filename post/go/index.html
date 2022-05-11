@@ -300,6 +300,23 @@
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">start</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>()
 <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">url</span>)
 <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Since</span>(<span style="color:#a6e22e">start</span>)
+
+<span style="color:#75715e">//gin获取请求参数
+</span><span style="color:#75715e"></span><span style="color:#ae81ff">1.</span><span style="color:#a6e22e">表单请求</span>
+<span style="color:#a6e22e">post</span> <span style="color:#a6e22e">form</span>
+<span style="color:#a6e22e">header</span> <span style="color:#a6e22e">Content</span><span style="color:#f92672">-</span><span style="color:#a6e22e">Type</span> <span style="color:#a6e22e">application</span><span style="color:#f92672">/</span><span style="color:#a6e22e">x</span><span style="color:#f92672">-</span><span style="color:#a6e22e">www</span><span style="color:#f92672">-</span><span style="color:#a6e22e">form</span><span style="color:#f92672">-</span><span style="color:#a6e22e">urlencoded</span>;
+<span style="color:#a6e22e">调用ParseForm后可用</span>
+<span style="color:#75715e">//获取全部参数
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">PostForm</span> 
+<span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">Form</span>
+<span style="color:#ae81ff">2.</span><span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">正常请求</span>
+<span style="color:#a6e22e">post</span> <span style="color:#a6e22e">body</span>
+<span style="color:#a6e22e">header</span> <span style="color:#a6e22e">Content</span><span style="color:#f92672">-</span><span style="color:#a6e22e">Type</span> <span style="color:#a6e22e">application</span><span style="color:#f92672">/</span><span style="color:#a6e22e">json</span>
+<span style="color:#75715e">//获取全部参数为json格式需处理
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">Body</span>
+<span style="color:#ae81ff">3.</span><span style="color:#a6e22e">get</span>
+<span style="color:#75715e">//获取全部参数
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Request</span>.<span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">Query</span>()
 </code></pre></div>
               
 
