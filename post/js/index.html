@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003ejs 学习笔记\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/js\/",
+  "keywords":"[js]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="js">
+<meta name="description" content="js 学习笔记">
+
+
+<meta property="og:description" content="js 学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js 笔记">
+<meta name="twitter:title" content="js 笔记">
+<meta property="og:url" content="https://caiqing123.github.io/post/js/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/js/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="js 学习笔记">
+<meta name="twitter:description" content="js 学习笔记">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-08-03T17:35:07">
+  
+  
+    <meta property="article:modified_time" content="2022-08-03T17:35:07">
+  
+  
+  
+    
+      <meta property="article:section" content="js">
+    
+  
+  
+    
+      <meta property="article:tag" content="js">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>js 笔记</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/js/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      js 笔记
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-08-03T17:35:07&#43;08:00">
+        
+  八月 3, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/js">js</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>js 学习笔记</p>
+<h3 id="json-遍历的方法">json 遍历的方法</h3>
+<p>json 采用 <code>for...in...</code>进行遍历，和数组的遍历方式不同。如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myJson</span> <span style="color:#f92672">=</span> {
+        <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;xx&#34;</span>,
+        <span style="color:#e6db74">&#34;aaa&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">111</span>,
+        <span style="color:#e6db74">&#34;bbb&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">222</span>,
+    };
+
+    <span style="color:#75715e">//json遍历的方法：for...in...
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">myJson</span>) {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">key</span>); <span style="color:#75715e">//获取 键
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myJson</span>[<span style="color:#a6e22e">key</span>]); <span style="color:#75715e">//获取 值（第二种属性绑定和获取值的方法）
+</span><span style="color:#75715e"></span>    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="js对象-遍历的方法">js对象 遍历的方法</h3>
+<p>json 采用 <code>for...in...</code>进行遍历，和数组的遍历方式不同。如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;name&#39;</span>,
+        <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28</span>,
+        <span style="color:#a6e22e">gender</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;男&#39;</span>,
+        <span style="color:#a6e22e">sayHi</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>);
+        },
+    };
+
+    <span style="color:#75715e">// 遍历对象中的属性
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">obj</span>) {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;属性名:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">key</span>);
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;属性值:&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">obj</span>[<span style="color:#a6e22e">key</span>]); <span style="color:#75715e">// 注意，因为这里的属性名 key 是变量，所以，如果想获取属性值，不能写成 obj.key，而是要写成 obj[key]
+</span><span style="color:#75715e"></span>    }
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="深拷贝和浅拷贝">深拷贝和浅拷贝</h3>
+<ul>
+<li>
+<p>浅拷贝：只拷贝最外面一层的数据；更深层次的对象，只拷贝引用。</p>
+</li>
+<li>
+<p>深拷贝：拷贝多层数据；每一层级别的数据都会拷贝。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#75715e">// 浅拷贝
+</span><span style="color:#75715e"></span>    Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">obj2</span>, <span style="color:#a6e22e">obj1</span>);
+
+    <span style="color:#75715e">// 深拷贝 重新复制到新的内存空间
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj1</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;demo&#39;</span>,
+    };
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj2</span> <span style="color:#f92672">=</span> {};
+    <span style="color:#a6e22e">obj2</span>[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">obj1</span>.<span style="color:#a6e22e">name</span>
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj2</span>);
+    <span style="color:#a6e22e">obj1</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;github&#39;</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj2</span>);
+</code></pre></div><h3 id="正则">正则</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+    <span style="color:#75715e">// 匹配模式 `i` 忽略大小写。这里的 i 指的是 ignore。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 匹配模式 `g` 全局匹配模式。这里的 g 指的是 global。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果在正则表达式中同时使用`^`和`$`符号，则要求字符串必须完全符合正则表达式。
+</span><span style="color:#75715e"></span>    
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">变量</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/正则表达式/</span>;  <span style="color:#75715e">// 注意，这个语法里没有引号
+</span><span style="color:#75715e"></span>
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">变量</span> <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">/正则表达式/匹配模式;  // 注意，这个语法里没有引号</span>
+</code></pre></div><h3 id="dom事件">DOM事件</h3>
+<p>事件传播的三个阶段是：事件捕获、事件冒泡和目标。</p>
+<ul>
+<li>
+<p>事件捕获阶段：事件从祖先元素往子元素查找（DOM树结构），直到捕获到事件目标 target。在这个过程中，默认情况下，事件相应的监听函数是不会被触发的。</p>
+</li>
+<li>
+<p>事件目标：当到达目标元素之后，执行目标元素该事件相应的处理函数。如果没有绑定监听函数，那就不执行。</p>
+</li>
+<li>
+<p>事件冒泡阶段：事件从事件目标 target 开始，从子元素往冒泡祖先元素冒泡，直到页面的最上一级标签。</p>
+</li>
+</ul>
+<p>addEventListener可以捕获事件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">box1</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span> () {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;捕获 box3&#34;</span>);
+    }, <span style="color:#66d9ef">true</span>);
+</code></pre></div><p>上面的方法中，参数为true，代表事件在捕获阶段执行。</p>
+<p><strong>重点</strong>：捕获阶段，事件依次传递的顺序是：window &ndash;&gt; document &ndash;&gt; html&ndash;&gt; body &ndash;&gt; 父元素、子元素、目标元素。</p>
+<p><strong>事件冒泡</strong>: 当一个元素上的事件被触发的时候（比如说鼠标点击了一个按钮），同样的事件将会在那个元素的所有<strong>祖先元素</strong>中被触发。这一过程被称为事件冒泡；这个事件从原始元素开始一直冒泡到DOM树的最上层。</p>
+<p>通俗来讲，冒泡指的是：<strong>子元素的事件被触发时，父元素的同样的事件也会被触发</strong>。取消冒泡就是取消这种机制。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">//事件冒泡
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">box3</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;child&#34;</span>);
+    }
+
+    <span style="color:#a6e22e">box2</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;father&#34;</span>);
+    }
+
+    <span style="color:#a6e22e">box1</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;grandfather&#34;</span>);
+    }
+
+    document.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;body&#34;</span>);
+    }
+
+</code></pre></div><p>阻止冒泡的方法</p>
+<p>w3c的方法：（火狐、谷歌、IE11）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">stopPropagation</span>();
+</code></pre></div><h3 id="定时器的常见方法">定时器的常见方法</h3>
+<ul>
+<li>
+<p>setInterval()：循环调用。将一段代码，<strong>每隔一段时间</strong>执行一次。（循环执行）</p>
+</li>
+<li>
+<p>setTimeout()：延时调用。将一段代码，等待一段时间之后<strong>再执行</strong>。（只执行一次）
+清除定时器</p>
+</li>
+<li>
+<p>定时器的返回值是作为这个定时器的<strong>唯一标识</strong>，可以用来清除定时器。具体方法是：假设定时器setInterval()的返回值是<code>参数1</code>，那么<code>clearInterval(参数1)</code>就可以清除定时器,setTimeout()的道理是一样的。</p>
+</li>
+</ul>
+<h3 id="json-对象">JSON 对象</h3>
+<p>1、js对象(数组) &ndash;&gt; json对象(数组)：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">obj</span><span style="color:#f92672">/</span><span style="color:#a6e22e">arr</span>)
+</code></pre></div><p>2、json对象(数组) &ndash;&gt; js对象(数组)：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">	<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">json</span>)
+</code></pre></div><h3 id="给左边的变量自定义命名">给左边的变量自定义命名</h3>
+<p>对象的结构赋值里，左边的变量名一定要跟右边的属性名保持一致么？答案是不一定。我们可以单独给左边的变量自定义命名。</p>
+<p>举例如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dd&#39;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28</span> };
+<span style="color:#66d9ef">let</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">myName</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">myAge</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>; <span style="color:#75715e">// 对象的结构赋值
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myName</span>); <span style="color:#75715e">// 打印结果：dd
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myAge</span>); <span style="color:#75715e">// 打印结果：28
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// 打印报错：Uncaught ReferenceError: name is not defined
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">age</span>); <span style="color:#75715e">// 打印报错：Uncaught ReferenceError: age is not defined
+</span></code></pre></div><p>上方的第 2 行代码中</p>
+<ul>
+<li>
+<p>等号左边的属性名 name、age 是对应等号右边的属性名。</p>
+</li>
+<li>
+<p>等号左边的 myName、myAge 是左边自定义的变量名。</p>
+</li>
+</ul>
+<h3 id="set-数据结构">Set 数据结构</h3>
+<p>ES6 提供了 新的数据结构 Set。Set 类似于<strong>数组</strong>，但成员的值都是<strong>唯一</strong>的，没有重复的值。</p>
+<p>Set 的应用有很多。比如，在 H5 页面的搜索功能里，用户可能会多次搜索重复的关键字；但是在数据存储上，不需要存储重复的关键字。此时，我们就可以用 Set 来存储用户的搜索记录，Set 内部会自动判断值是否重复，如果重复，则不会进行存储，十分方便。</p>
+<h3 id="生成-set-数据结构">生成 Set 数据结构</h3>
+<p>Set 本身就是一个构造函数，可通过 <code>new Set()</code> 生成一个 Set 的实例。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">set1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Set</span>([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>]);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">set1</span>.<span style="color:#a6e22e">size</span>); <span style="color:#75715e">// 打印结果：2
+</span></code></pre></div><h3 id="asyncawait">async/await</h3>
+<ul>
+<li>async/await 相比原来的Promise的优势在于处理 then 链，不必把回调嵌套在then中，只要await 即可，如</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sing</span>() {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) {
+            <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+                <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">`来一首好听的歌吧~~~`</span>);
+            }, <span style="color:#ae81ff">1000</span>);
+        });
+    }
+    <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">demo</span>() {
+        <span style="color:#66d9ef">try</span> {
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">sing</span>();
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">s</span>) <span style="color:#75715e">// 来一首好听的歌吧~~~
+</span><span style="color:#75715e"></span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">e</span>)
+        }
+    }
+    <span style="color:#a6e22e">demo</span>();
+</code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/js/">js</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/css/" data-tooltip="css 笔记" aria-label="上一篇: css 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/js/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/js/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/js/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/js\/';
+        
+          this.page.identifier = '\/post\/js\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/css/" data-tooltip="css 笔记" aria-label="上一篇: css 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/js/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/js/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/js/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fjs%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fjs%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fjs%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
