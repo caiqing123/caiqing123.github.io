@@ -6,7 +6,16 @@
     <description>Recent content on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 03 Aug 2022 17:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 10:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue 笔记</title>
+      <link>https://caiqing123.github.io/post/vue/</link>
+      <pubDate>Tue, 09 Aug 2022 10:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/vue/</guid>
+      <description>&lt;p&gt;vue 学习笔记&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>js 笔记</title>
       <link>https://caiqing123.github.io/post/js/</link>
@@ -19,7 +28,7 @@
     <item>
       <title>css 笔记</title>
       <link>https://caiqing123.github.io/post/css/</link>
-      <pubDate>Mon, 25 Jul 2022 16:35:07 +0800</pubDate>
+      <pubDate>Mon, 01 Aug 2022 17:35:07 +0800</pubDate>
       
       <guid>https://caiqing123.github.io/post/css/</guid>
       <description>&lt;p&gt;css 学习笔记&lt;/p&gt;</description>

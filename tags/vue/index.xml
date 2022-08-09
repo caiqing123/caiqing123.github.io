@@ -6,7 +6,16 @@
     <description>Recent content in vue on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Dec 2021 17:28:53 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 10:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue 笔记</title>
+      <link>https://caiqing123.github.io/post/vue/</link>
+      <pubDate>Tue, 09 Aug 2022 10:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/vue/</guid>
+      <description>&lt;p&gt;vue 学习笔记&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>vue-cli4 配置</title>
       <link>https://caiqing123.github.io/post/two/</link>

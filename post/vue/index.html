@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003evue 学习笔记\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/vue\/",
+  "keywords":"[vue]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="vue">
+<meta name="description" content="vue 学习笔记">
+
+
+<meta property="og:description" content="vue 学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue 笔记">
+<meta name="twitter:title" content="vue 笔记">
+<meta property="og:url" content="https://caiqing123.github.io/post/vue/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/vue/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="vue 学习笔记">
+<meta name="twitter:description" content="vue 学习笔记">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-08-09T10:35:07">
+  
+  
+    <meta property="article:modified_time" content="2022-08-09T10:35:07">
+  
+  
+  
+    
+      <meta property="article:section" content="vue">
+    
+  
+  
+    
+      <meta property="article:tag" content="vue">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>vue 笔记</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/vue/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      vue 笔记
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-08-09T10:35:07&#43;08:00">
+        
+  八月 9, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/vue">vue</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>vue 学习笔记</p>
+<h3 id="自定义过滤器">自定义过滤器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">// 定义一个 Vue 全局的过滤器，名字叫做  msgFormat
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">filter</span>(<span style="color:#e6db74">&#39;msgFormat&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">myMsg</span>, <span style="color:#a6e22e">arg2</span>, <span style="color:#a6e22e">arg3</span>) {
+        <span style="color:#75715e">// 字符串的  replace 方法：第一个参数，除了可写一个 字符串之外，还可以定义一个正则；第二个参数代表要替换为 xxx
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//将 myMsg 中的所有`xx`字样，修改为`arg2 + arg3`
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">myMsg</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/xx/g</span>, <span style="color:#a6e22e">arg2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arg3</span>)
+    })
+    <span style="color:#75715e">// 自定义私有过滤器
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+        <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> {
+            <span style="color:#75715e">// input是自定义过滤器的默认参数，input的值永远都是取自于 | 左边的内容
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">msgFormat</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">arg2</span>, <span style="color:#a6e22e">arg3</span>) {
+                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">replace</span>(<span style="color:#e6db74">/xx/g</span>, <span style="color:#a6e22e">arg2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arg3</span>)
+            }
+        }
+    })
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- 通过 两个过滤器（msgFormat、myFilter2）对 msg 进行过滤--&gt;</span>
+        <span style="color:#75715e">&lt;!-- 将 msg 交给第一个过滤器来处理，然后将处理的结果交给第二个过滤器来处理--&gt;</span>
+        &lt;<span style="color:#f92672">p</span>&gt;{{ msg | msgFormat(&#39;参数1&#39;, &#39;参数2&#39;) | myFilter2}}&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h3 id="自定义指令">自定义指令</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#75715e">//自定义全局指令 v-focus，让文本框自动获取焦点
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//参数1：指令的名称。注意，在定义的时候，指令的名称前面，不需要加 v- 前缀；但是：在`调用`的时候，必须在指令名称前 加上 v- 前缀
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//参数2：是一个对象，这个对象身上，有一些指令相关的函数，这些函数可以在特定的阶段，执行相关的操作
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">directive</span>(<span style="color:#e6db74">&#39;color&#39;</span>, {
+        <span style="color:#75715e">//在每个函数中，第一个参数，永远是 el ，表示 被绑定了指令的那个元素，这个 el 参数，是一个原生的JS对象（DOM对象）
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">bind</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">el</span>) { <span style="color:#75715e">// 每当指令绑定到元素上的时候，会立即执行这个 bind 函数，【只执行一次】
+</span><span style="color:#75715e"></span>          <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;red&#34;</span>
+
+        },
+        <span style="color:#a6e22e">inserted</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">el</span>) {  <span style="color:#75715e">// inserted 表示元素 插入到DOM中的时候，会执行 inserted 函数【触发1次】
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">updated</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">el</span>) {  <span style="color:#75715e">// 当VNode更新的时候，会执行 updated， 【可能会触发多次】
+</span><span style="color:#75715e"></span>        }
+    })
+    
+    <span style="color:#75715e">//简写
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">directive</span>(<span style="color:#e6db74">&#39;color&#39;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">binding</span>) { <span style="color:#75715e">//注意，这个function等同于把代码写到了 bind 和 update 中去
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">binding</span>.<span style="color:#a6e22e">value</span>
+    })
+
+    <span style="color:#75715e">//自定义私有指令
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+      <span style="color:#a6e22e">directives</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#39;color&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">el</span>, <span style="color:#a6e22e">binding</span>) {
+          <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">binding</span>.<span style="color:#a6e22e">value</span>;
+        }
+      }
+    })
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- 直接调用指令 --&gt;</span>
+        &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">v-color</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#39;green&#39;&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h3 id="生命周期">生命周期</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+        <span style="color:#75715e">// 这是第1个生命周期函数，表示实例完全被创建出来之前，会执行它
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">beforeCreate</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;01 beforeCreate&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+            <span style="color:#75715e">//注意：在 beforeCreate 生命周期函数执行的时候，data 和 methods 中的 数据都还没有没初始化
+</span><span style="color:#75715e"></span>        },
+
+        <span style="color:#75715e">// 这是第2个生命周期函数
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">created</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;02 created&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+            <span style="color:#75715e">//注意：如果要调用 methods 中的方法，或者操作 data 中的数据，最早，只能在 created 中操作
+</span><span style="color:#75715e"></span>        },
+
+        <span style="color:#75715e">// 这是第3个生命周期函数，表示 模板已经在内存中编辑完成了，但是尚未把模板渲染到页面中
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">beforeMount</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;03 beforeMount&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+            <span style="color:#75715e">// 在 beforeMount 执行的时候，页面中的元素，还没有被真正替换过来，只是之前写的一些模板字符串
+</span><span style="color:#75715e"></span>        },
+
+        <span style="color:#75715e">// 这是第4个生命周期函数，表示，内存中的模板，已经真实的挂载到了页面中，用户已经可以看到渲染好的页面了
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">mounted</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;04 mounted&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+            <span style="color:#75715e">// 注意： mounted 是 实例创建期间的最后一个生命周期函数，当执行完 mounted 就表示，实例已经被完全创建好了
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 此时，如果没有其它操作的话，这个实例，就静静的 躺在我们的内存中，一动不动
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#75715e">// 运行中的两个事件
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">beforeUpdate</span>() {
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;-------------05 beforeUpdate&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+          <span style="color:#75715e">// 结论：当执行 beforeUpdate 的时候，页面中的显示的数据，还是旧的，此时 data 数据是最新的，页面尚未和 最新的数据保持同步
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">updated</span>() {
+          <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;-------------06 updated&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">msg</span>);
+          <span style="color:#75715e">// 结论：updated 事件执行的时候，页面和 data 数据已经保持同步了，都是最新的
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">beforeDestroy</span>() {
+            <span style="color:#75715e">//实例销毁之前调用。在这一步，实例仍然完全可用。可以在beforeDestroy里**清除定时器、或清除事件绑定**。
+</span><span style="color:#75715e"></span>        },
+        <span style="color:#a6e22e">destroyed</span>(){
+            <span style="color:#75715e">//Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。
+</span><span style="color:#75715e"></span>        }
+    });
+</code></pre></div><h3 id="组件传值">组件传值</h3>
+<p><strong>父组件给子组件传值的步骤</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#75715e">&lt;!-- 第三步：父组件在引用子组件的时候， 通过 属性绑定（v-bind:）的形式,  --&gt;</span>
+    <span style="color:#75715e">&lt;!--   把 需要传递给 子组件的数据，以属性绑定的形式，传递到子组件内部，供子组件使用 --&gt;</span>
+    &lt;<span style="color:#f92672">component1</span> <span style="color:#a6e22e">v-bind:parent-msg</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;msg&#34;</span>&gt;&lt;/<span style="color:#f92672">component1</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- 定义子组件的模板 --&gt;</span>
+    &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myTemplate&#34;</span>&gt;
+      <span style="color:#75715e">&lt;!-- 第二步：在子组件的模板中，使用props中的属性 --&gt;</span>
+      &lt;<span style="color:#f92672">h2</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;change&#34;</span>&gt;我是子组件。我想使用父组件中的数据parentMsg： {{ parentMsg }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#75715e">// 创建 Vue 实例，得到 ViewModel
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">vm</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+        <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+          <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;父组件中的数据123&#39;</span>
+        },
+        <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> {
+          <span style="color:#75715e">// 子组件默认无法访问到 父组件中的 data 中的数据 和 methods 中的方法
+</span><span style="color:#75715e"></span>          <span style="color:#a6e22e">component1</span><span style="color:#f92672">:</span> { <span style="color:#75715e">//将子组件的名称定义为 component1
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#myTemplate&#39;</span>,
+            <span style="color:#75715e">// 注意： 组件中的 所有 props 中的数据，都是通过 父组件 传递给子组件的
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// props 中的数据，都是只读的，无法重新赋值
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;parentMsg&#39;</span>], <span style="color:#75715e">// 第一步：把父组件传递过来的 parentMsg 属性，先在 props 数组中，定义一下，这样，才能使用这个数据
+</span><span style="color:#75715e"></span>          }
+        }
+      });
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><blockquote>
+<p>根据上方；例子</p>
+</blockquote>
+<p>（1）在子组件的<code>props</code>属性中声明父亲传递过来的数据</p>
+<p>（2）定义子组件的模板时，使用props中的属性</p>
+<p>（3）父组件在引用子组件时，进行属性绑定。</p>
+<p><strong>父组件将方法传递给子组件</strong>：</p>
+<blockquote>
+<p>父组件通过事件绑定机制，将父组件的方法传递给子组件</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- 父组件向子组件 传递 方法，是通过 事件绑定机制； v-on。当我们自定义了 一个 事件属性 parent-show（这个地方不能用驼峰命名）之后，--&gt;</span>
+        <span style="color:#75715e">&lt;!-- 那么，子组件就能够，通过 emit 来调用 传递进去的 这个 方法了 --&gt;</span>
+        <span style="color:#75715e">&lt;!-- 【第一步】。意思是说，`show`是父组件的方法名，`parent-show`是自定义的时间属性，稍后要在子组件中用到 --&gt;</span>
+        &lt;<span style="color:#f92672">component1</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">parent-show</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;show&#39;</span>&gt;&lt;/<span style="color:#f92672">component1</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+
+    <span style="color:#75715e">&lt;!-- 定义子组件的模板 --&gt;</span>
+    &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myTemplate&#34;</span>&gt;
+        <span style="color:#75715e">&lt;!-- 【第二步】按照正常的写法来：点击按钮，调用子组件的方法 --&gt;</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">click</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;childClick&#34;</span>&gt;我是子组件，点击调用父组件的方法&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">template</span>&gt;
+
+    &lt;<span style="color:#f92672">script</span>&gt;
+        <span style="color:#75715e">// 创建 Vue 实例，得到 ViewModel
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">vm</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+            <span style="color:#a6e22e">el</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#app&#39;</span>,
+            <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">show</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () { <span style="color:#75715e">// 定义父组件的show方法
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;父组件提供的方法&#39;</span>);
+                }
+            },
+            <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">component1</span><span style="color:#f92672">:</span> { <span style="color:#75715e">//将子组件的名称定义为 component1
+</span><span style="color:#75715e"></span>                    <span style="color:#a6e22e">template</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#myTemplate&#39;</span>,
+                    <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
+                        <span style="color:#a6e22e">childClick</span>() {
+                            <span style="color:#75715e">// 当点击子组件的按钮时，如何 拿到 父组件传递过来的 func 方法，并调用这个方法？？？
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">//  emit 英文原意： 是触发，调用、发射。意思是，触发父组件的方法
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">// 【第三步】 在子组件的方法中，通过 emit 触发父组件的方法
+</span><span style="color:#75715e"></span>                            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">$emit</span>(<span style="color:#e6db74">&#39;parent-show&#39;</span>);
+                            <span style="color:#75715e">// 子组件如果要给父组件传递参数，在触发 emit 的时候，通过参数的形式带出去就可以了
+</span><span style="color:#75715e"></span>                            <span style="color:#75715e">//this.$emit(&#39;parent-show&#39;, &#39;xx&#39;, &#39;xx1&#39;);
+</span><span style="color:#75715e"></span>                        }
+                    }
+                }
+            }
+        });
+    &lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">//通过Image对象进行错误上报
+</span><span style="color:#75715e">// myPath表示上报的路径（我要上报到哪里去）。后面的内容是自己加的参数。
+</span><span style="color:#75715e"></span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Image</span>()).<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://xxx.com/myPath?badjs=msg&#39;</span>;   
+</code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/vue/">vue</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/js/" data-tooltip="js 笔记" aria-label="上一篇: js 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/vue/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/vue/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/vue/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/vue\/';
+        
+          this.page.identifier = '\/post\/vue\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/js/" data-tooltip="js 笔记" aria-label="上一篇: js 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/vue/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/vue/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/vue/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fvue%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fvue%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Fvue%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
