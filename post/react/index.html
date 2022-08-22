@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003ereact 学习笔记\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/react\/",
+  "keywords":"[react]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="react">
+<meta name="description" content="react 学习笔记">
+
+
+<meta property="og:description" content="react 学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react 笔记">
+<meta name="twitter:title" content="react 笔记">
+<meta property="og:url" content="https://caiqing123.github.io/post/react/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/react/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="react 学习笔记">
+<meta name="twitter:description" content="react 学习笔记">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-08-10T10:35:07">
+  
+  
+    <meta property="article:modified_time" content="2022-08-10T10:35:07">
+  
+  
+  
+    
+      <meta property="article:section" content="react">
+    
+  
+  
+    
+      <meta property="article:tag" content="react">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>react 笔记</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/react/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02NYWLD4XD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02NYWLD4XD');
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      react 笔记
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-08-10T10:35:07&#43;08:00">
+        
+  八月 10, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/react">react</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>react 学习笔记</p>
+<h3 id="组件">组件</h3>
+<p><strong>添加组件</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 注意，这一行的 type 是写 &#34;text/babel&#34;，而不是 &#34;text/javascript&#34; --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/babel&#34;</span>&gt;
+    <span style="color:#75715e">// 方式一
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 这个构造函数，就相当于一个 组件 也可以直接引入处理
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Hello</span>() {
+        <span style="color:#66d9ef">return</span> (
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">这是</span> <span style="color:#a6e22e">Hello组件</span> <span style="color:#a6e22e">中定义的元素</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+            );
+    }
+
+    <span style="color:#75715e">// 方式二
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 使用 class 创建的类，通过 extends 关键字，继承 `React.Component` 之后，这个类，就是一个组件的模板了。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果想要引用这个组件，可以把类的名称以**标签的形式**，导入到 JSX 中使用。
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello2</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+        <span style="color:#75715e">// 在 class 实现的组件内部，必须定义一个 render 函数
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">render</span>() {
+            <span style="color:#75715e">// 在 render 函数中，还必须 return 一个东西，如果没有什么需要被return 的，则需要 return null
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> (
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+                        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">这是使用</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">类创建的组件</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+            );
+        }
+    }
+
+    <span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Hello&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;,</span>
+        document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;app&#34;</span>)
+    );
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><strong>需要注意的是</strong>：</p>
+<p>React在解析所有标签的时候，是以标签的首字母来区分的：如果标签的首字母是小写，就按照普通的 HTML 标签来解析；如果首字母是大写，则按照 <strong>组件</strong>的形式来解析。</p>
+<p>比如上方代码中，如果把大写的 <code>Hello</code> 改成小写的 <code>hello</code>，运行会报错，无法看到预期的结果。</p>
+<p><strong>结论</strong>：组件的首字母必须大写。</p>
+<p><strong>组件传值</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 注意，这一行的 type 是写 &#34;text/babel&#34;，而不是 &#34;text/javascript&#34; --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/babel&#34;</span>&gt;
+    <span style="color:#75715e">// 父组件中的数据
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;xx&#34;</span>,
+        <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">27</span>,
+        <span style="color:#a6e22e">gender</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;男&#34;</span>,
+        <span style="color:#a6e22e">address</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;xx&#34;</span>
+    };
+
+    <span style="color:#75715e">// 方式一
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 在子组件中，如果想要使用外部传递过来的数据，必须显示的在 构造函数参数列表中，定义 props 属性来接收
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 通过 props 得到的任何数据都是只读的，不能重新赋值
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Hello</span>(<span style="color:#a6e22e">props</span>) {
+        <span style="color:#66d9ef">return</span> (
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">这是</span> <span style="color:#a6e22e">Hello子组件</span> <span style="color:#a6e22e">中定义的元素</span><span style="color:#960050;background-color:#1e0010">：</span> {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+        );
+    }
+
+    <span style="color:#75715e">// 方式二
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 使用 class 创建的类，通过 extends 关键字，继承 `React.Component` 之后，这个类，就是一个组件的模板了。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果想要引用这个组件，可以把类的名称以**标签的形式**，导入到 JSX 中使用。
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello2</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+        <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+            <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>);
+
+            <span style="color:#75715e">// 注意：`this.state` 是固定写法，表示当前组件实例的私有数据对象，就好比 vue 中，组件实例身上的 data(){ return {} } 函数
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 如果想要使用 组件中 state 上的数据，直接通过 this.state.*** 来访问即可
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+                <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;这是 Hello2 组件的私有msg数据&#34;</span>,
+                <span style="color:#a6e22e">info</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;xx&#34;</span>
+            };
+        }
+        <span style="color:#75715e">//无constructor 则直接定义
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   state = {
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//       msg: &#39;hello&#39;,
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   }
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 在 class 实现的组件内部，必须定义一个 render 函数
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">render</span>() {
+            <span style="color:#75715e">// 在 render 函数中，还必须 return 一个东西，如果没有什么需要被return 的，则需要 return null
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> (
+                    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+                        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">这是使用</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">类创建的组件</span> {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+                    <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+            );
+        }
+    }
+
+    <span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+            <span style="color:#75715e">//注意：这里的 ...Obj 语法，是 ES6中的属性扩散，表示：把这个对象上的所有属性，展开了，放到这个位置，类似name={person.name} age={person.age}
+</span><span style="color:#75715e"></span>            <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Hello</span> {...<span style="color:#a6e22e">person</span>}<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Hello&gt;</span>
+            <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;,</span>
+            document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;app&#34;</span>)
+    );
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><strong>对比</strong>：</p>
+<ul>
+<li>
+<p><strong>方式一</strong>：通过 function构造函数 创建组件。内部没有 state 私有数据，只有 一个 props 来接收外界传递过来的数据。</p>
+</li>
+<li>
+<p><strong>方式二</strong>：通过 class 创建子组件。内部除了有 this.props 这个只读属性之外，还有一个专门用于 存放自己私有数据的 this.state 属性，这个 state 是可读可写的。</p>
+</li>
+</ul>
+<p>基于上面的区别，我们可以为这两种创建组件的方式下定义： 使用 function 创建的组件，叫做【无状态组件】；使用 class 创建的组件，叫做【有状态组件】。</p>
+<p><strong>本质区别</strong>：</p>
+<p>有状态组件和无状态组件，最本质的区别，就是有无 state 属性。同时， class 创建的组件，有自己的生命周期函数，但是，function 创建的 组件，没有自己的生命周期函数。</p>
+<p><strong>什么时候使用 有状态组件，什么时候使用无状态组件</strong>：</p>
+<ul>
+<li>
+<p>（1）如果一个组件需要存放自己的私有数据，或者需要在组件的不同阶段执行不同的业务逻辑，此时，非常适合用 class 创建出来的有状态组件。</p>
+</li>
+<li>
+<p>（2）如果一个组件，只需要根据外界传递过来的 props，渲染固定的页面结构即可的话，此时，非常适合使用 function 创建出来的无状态组件。（使用无状态组件的小小好处： 由于剔除了组件的生命周期，所以，运行速度会相对快一点点）。</p>
+</li>
+</ul>
+<h3 id="生命周期">生命周期</h3>
+<p><strong>1、组件创建阶段</strong></p>
+<blockquote>
+<p>组件创建阶段的生命周期函数，有一个显著的特点：创建阶段的生命周期函数，在组件的一辈子中，只执行一次。</p>
+</blockquote>
+<ul>
+<li>getDefaultProps</li>
+</ul>
+<p>初始化 props 属性默认值。</p>
+<ul>
+<li>getInitialState</li>
+</ul>
+<p>初始化组件的私有数据。因为 state 是定义在组件的 constructor 构造器当中的，只要new 了 class类，必然会调用 constructor构造器。</p>
+<ul>
+<li>componentWillMount()</li>
+</ul>
+<p>组件将要被挂载。此时还没有开始渲染虚拟DOM。</p>
+<p>在这个阶段，不能去操作DOM元素，但可以操作属性、状态、function。相当于 Vue 中的Create()函数。</p>
+<ul>
+<li>render()</li>
+</ul>
+<p>第一次开始渲染真正的虚拟DOM。当render执行完，内存中就有了完整的虚拟DOM了。</p>
+<p>意思是，此时，虚拟DOM在内存中创建好了，但是还没有挂在到页面上。</p>
+<p>在这个函数内部，不能去操作DOM元素，<strong>因为还没return之前，虚拟DOM还没有创建</strong>；当return执行完毕后，虚拟DOM就创建好了，但是还没有挂在到页面上。</p>
+<ul>
+<li><strong>componentDidMount()</strong></li>
+</ul>
+<p><strong>当组件（虚拟DOM）挂载到页面之后，会进入这个生命周期函数</strong>。</p>
+<p>只要进入到这个生命周期函数，则必然说明，页面上已经有可见的DOM元素了。此时，组件已经显示到了页面上，state上的数据、内存中的虚拟DOM、以及浏览器中的页面，已经完全保持一致了。</p>
+<p>当这个方法执行完，组件就进入都了 运行中 的状态。所以说，componentDidMount 是创建阶段的最后一个函数。</p>
+<p>在这个函数中，我们可以放心的去 操作 页面上你需要使用的 DOM 元素了。如果我们想操作DOM元素，最早只能在 componentDidMount 中进行。相当于 Vue 中的 mounted() 函数</p>
+<p><strong>2、组件运行阶段</strong></p>
+<blockquote>
+<p>有一个显著的特点，根据组件的state和props的改变，有选择性的触发0次或多次。</p>
+</blockquote>
+<ul>
+<li>componentWillReceiveProps()</li>
+</ul>
+<p>组件将要接收新属性。只有当父组件中，通过某些事件，重新修改了 传递给 子组件的 props 数据之后，才会触发这个钩子函数。</p>
+<ul>
+<li>shouldComponentUpdate()</li>
+</ul>
+<p>判断组件是否需要被更新。此时，组件尚未被更新，但是，state 和 props 肯定是最新的。</p>
+<ul>
+<li>componentWillUpdate()</li>
+</ul>
+<p>组件将要被更新。此时，组件还没有被更新，在进入到这个生命周期函数的时候，内存中的虚拟DOM还是旧的，页面上的 DOM 元素也是旧的。（也就是说，此时操作的是旧的 DOM元素）</p>
+<ul>
+<li>render</li>
+</ul>
+<p>此时，又要根据最新的 state 和 props，重新渲染一棵内存中的 虚拟DOM树。当 render 调用完毕，内存中的旧DOM树，已经被新DOM树替换了！此时，虚拟DOM树已经和组件的 state 保持一致了，都是最新的；但是页面还是旧的。</p>
+<ul>
+<li>componentDidUpdate</li>
+</ul>
+<p>此时，组件完成更新，页面被重新渲染。此时，state、虚拟DOM 和 页面已经完全保持同步。</p>
+<p><strong>3、组件销毁阶段</strong></p>
+<p>一辈子只执行一次。</p>
+<ul>
+<li>componentWillUnmount: 组件将要被卸载。此时组件还可以正常使用。</li>
+</ul>
+<h3 id="绑定this并给函数传参">绑定this并给函数传参</h3>
+<ul>
+<li>箭头函数 或通过 bind() 绑定this</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyComponent</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;这是 MyComponent 组件 默认的msg&#34;</span>
+    };
+  }
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">绑定This并传参</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">input</span>
+          <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span>
+          <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;绑定this并传参&#34;</span>
+          <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{() =&gt; {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">changeMsg3</span>(<span style="color:#e6db74">&#34;千古3&#34;</span>, <span style="color:#e6db74">&#34;壹号3&#34;</span>);
+          }}
+        <span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">msg</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+    );
+  }
+  
+  <span style="color:#a6e22e">changeMsg</span> <span style="color:#f92672">=</span> () =&gt; {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>); <span style="color:#75715e">// 打印结果：MyComponent 组件
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+          <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;设置 msg 为新的值&#34;</span>
+      });
+  }
+    
+  <span style="color:#a6e22e">changeMsg3</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arg1</span>, <span style="color:#a6e22e">arg2</span>) =&gt; {
+    <span style="color:#75715e">// console.log(this);
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 注意：这里的方式，是一个普通方法，因此，在触发的时候，这里的 this 是 undefined
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+      <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;绑定this并传参的方式3：&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arg1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">arg2</span>
+    });
+  };
+}
+
+</code></pre></div><h2 id="单项数据绑定">单项数据绑定</h2>
+<p>在 Vue 中，可以通过 v-model 指令来实现双向数据绑定。但是，在 React 中并没有指令的概念，而且 <strong>React 默认不支持 双向数据绑定</strong>。</p>
+<p>React 只支持，把数据从 state 上传输到 页面，但是，无法自动实现数据从 页面 传输到 state 中 进行保存。</p>
+<p>React中，只支持单项数据绑定，不支持双向数据绑定</p>
+<p><strong>通过onChange方法，实现双向数据绑定表单</strong></p>
+<p>如果针对 表单元素做 value 属性绑定，那么，必须同时为 表单元素 绑定 readOnly, 或者提供 onChange 事件：</p>
+<ul>
+<li>
+<p>如果是绑定readOnly，表示这个元素只读，不能被修改。此时，控制台就不会弹出警告了。</p>
+</li>
+<li>
+<p>如果是绑定onChange，表示这个元素的值可以被修改，但是，要自己定义修改的逻辑。</p>
+</li>
+</ul>
+<p><strong>绑定 onChange 的举例如下</strong>：（通过onChange方法，实现双向数据绑定）</p>
+<p>(1)index.html:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ie=edge&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Document&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- 容器，通过 React 渲染得到的 虚拟DOM，会呈现到这个位置 --&gt;</span>
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div><p>（2）main.js:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// JS打包入口文件
+</span><span style="color:#75715e">// 1. 导入包
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">ReactDOM</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react-dom&#34;</span>;
+
+<span style="color:#75715e">// 导入组件
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MyComponent</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;./components/MyComponent.jsx&#34;</span>;
+
+<span style="color:#75715e">// 使用 render 函数渲染 虚拟DOM
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">MyComponent</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/MyComponent&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;,</span>
+  document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;app&#34;</span>)
+);
+
+</code></pre></div><p>（3）components/MyComponent.jsx</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyComponent</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+      <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;这是组件 默认的msg&#34;</span>
+    };
+  }
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> (
+      <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">呵呵哒</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">input</span>
+          <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">msg</span>} <span style="color:#a6e22e">onChange</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">txtChanged</span>} <span style="color:#a6e22e">ref</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;txt&#34;</span> <span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h3</span><span style="color:#f92672">&gt;</span>{<span style="color:#e6db74">&#34;实时显示msg中的内容：&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">msg</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h3&gt;</span>
+      <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
+    );
+  }
+
+  <span style="color:#75715e">// 为 文本框 绑定 txtChanged 事件
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">txtChanged</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">e</span>) =&gt; {
+    <span style="color:#75715e">// 获取 &lt;input&gt; 文本框中 文本的3种方式：
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//  方式一：使用 document.getElementById
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">//  方式二：使用 ref
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// console.log(this.refs.txt.value);
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">//  方式三：使用 事件对象的 参数 e 来拿
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 此时，e.target 就表示触发 这个事件的 事件源对象，得到的是一个原生的JS DOM 对象。在这个案例里，e.target就是指文本框
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// console.log(e.target.value);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({
+      <span style="color:#a6e22e">msg</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>
+    });
+  };
+}
+
+</code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/react/">react</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript/" data-tooltip="typescript 笔记" aria-label="下一篇: typescript 笔记">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/vue/" data-tooltip="vue 笔记" aria-label="上一篇: vue 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/react/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/react/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/react/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/react\/';
+        
+          this.page.identifier = '\/post\/react\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript/" data-tooltip="typescript 笔记" aria-label="下一篇: typescript 笔记">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/vue/" data-tooltip="vue 笔记" aria-label="上一篇: vue 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/react/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/react/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/react/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Freact%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Freact%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Freact%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
