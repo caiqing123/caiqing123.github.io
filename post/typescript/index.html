@@ -43,10 +43,10 @@
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2022-08-22T11:35:07">
+    <meta property="article:published_time" content="2022-08-20T11:35:07">
   
   
-    <meta property="article:modified_time" content="2022-08-22T11:35:07">
+    <meta property="article:modified_time" content="2022-08-20T11:35:07">
   
   
   
@@ -248,9 +248,9 @@
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-08-22T11:35:07&#43;08:00">
+      <time datetime="2022-08-20T11:35:07&#43;08:00">
         
-  八月 22, 2022
+  八月 20, 2022
 
       </time>
     
@@ -1109,6 +1109,635 @@
 <span style="color:#75715e">// b 不是第一个参数对象的属性
 </span><span style="color:#75715e">// fn21({ a: 1 }, &#39;b&#39;); // Error
 </span><span style="color:#75715e"></span>
+</code></pre></div><h3 id="高级类型">高级类型</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts">
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 交叉类型
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 多个类型合并为一个类型，合并类型需同时满足多种类型
+</span><span style="color:#75715e"> * 类似类型的 与（&amp;）运算
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IStr</span> {
+  <span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span>,
+}
+
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">INum</span> {
+  <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span>,
+}
+
+<span style="color:#75715e">// 合并后的交叉类型
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StrAndNumType</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">IStr</span> <span style="color:#f92672">&amp;</span> <span style="color:#a6e22e">INum</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj6</span>: <span style="color:#66d9ef">StrAndNumType</span> <span style="color:#f92672">=</span> {
+  <span style="color:#75715e">// 缺少属性会报错
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;abc&#39;</span>,
+  <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">123</span>,
+
+  <span style="color:#75715e">// 多余属性也会报错
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// bol: true,
+</span><span style="color:#75715e"></span>};
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 联合类型
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 类似类型的 或（|）运算，需至少满足多种类型的一种
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StrOrNumType</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">IStr</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">INum</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">strOrNum</span>: <span style="color:#66d9ef">StrOrNumType</span>;
+
+<span style="color:#75715e">// 满足联合类型中任意一种 即可通过
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">strOrNum</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;abc&#39;</span> };
+<span style="color:#a6e22e">strOrNum</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">123</span> };
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 类型守卫
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 在运行时 检查以确保某个作用域类型 的表达式
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">// 如果函数入参是联合类型，那么内部访问该参数时，用任意一种类型访问参数都会报错，
+</span><span style="color:#75715e">// 因为 ts 判断联合类型时只要有一个类型不满足，就不会通过，所以导致每个都不通过；
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn22</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>[])<span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span> {
+  <span style="color:#75715e">// if (arg &gt; 0) {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   return arg + 1; // Error
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// } else if ( arg.length &gt; 0) { // Error
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   return arg.pop(); // Error
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// } else {
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   return 0;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// 为了避免这种情况的报错，需要使用 类型断言
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arg</span> <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">number</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span> <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">number</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+
+  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> ( (&lt;<span style="color:#f92672">number</span><span style="color:#960050;background-color:#1e0010">[]</span>&gt;<span style="color:#a6e22e">arg</span>).<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">return</span> (&lt;<span style="color:#f92672">number</span><span style="color:#960050;background-color:#1e0010">[]</span>&gt;<span style="color:#a6e22e">arg</span>).<span style="color:#a6e22e">pop</span>() <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">number</span>;
+
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+}
+
+<span style="color:#75715e">// 由于多次书写类型断言很麻烦，所以 ts 出现了 类型守卫 的机制:
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * typeof 类型守卫：
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn23</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>[])<span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span> {
+  <span style="color:#75715e">// ts 会识别 typeof 语句，并将当前 if 区块中的 arg 都当成 number，
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 类似于加上了隐式的类型断言
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;number&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+  
+  <span style="color:#75715e">// 其他 if 区块也能识别为指定类型
+</span><span style="color:#75715e"></span>  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">pop</span>() <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">number</span>;
+  
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+}
+
+<span style="color:#75715e">/** 
+</span><span style="color:#75715e"> * truthiness 类型守卫
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn24</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">number</span>[] <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;object&#39;</span>) {
+    <span style="color:#75715e">// 不能直接使用数组的特性，即使使用了 typeof，因为 null 也是 &#39;object&#39; 类型，
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 并且 null 不能使用 for...of...
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// for (let i of arg) { i; } // Error
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// 使用 truthiness 类型守卫可以进一步限制变量为 数组类型，
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// !!arg 或者 Boolean() 等涉及布尔运算的操作都能触发这种类型守卫；
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arg</span>) {
+      <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">arg</span>) { <span style="color:#a6e22e">i</span>; }
+    }
+  }
+}
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 等式类型守卫
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn25</span>(<span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">b</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">boolean</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#75715e">// 直接使用参数的方法会报错，因为可能是 number 类型
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a.toUpperCase(); // Error
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// b.toUpperCase(); // Error
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// 使用了等式判断后，ts 会自动取二者的交集类型，即 string，就可以正常调用方法了，
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 也可以使用类似 a === null 的直接与基本类型对比的判断触发类型守卫；
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">b</span>) {
+    <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">toUpperCase</span>();
+    <span style="color:#a6e22e">b</span>.<span style="color:#a6e22e">toUpperCase</span>();
+  }
+}
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * instanceof 类型守卫
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn26</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">Number</span> <span style="color:#f92672">|</span> String)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#75715e">//（x instanceof y) 用于检查 x 的原型链中是否包含 y.prototype
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// 直接调用方法会报错，Number 类型不存在该方法
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// arg.toUpperCase(); // Error
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// instanceof 表达式会触发类型守卫，限制 arg 为 String 类型
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">arg</span> <span style="color:#66d9ef">instanceof</span> String) {
+    <span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">toUpperCase</span>();
+  }
+}
+
+<span style="color:#a6e22e">fn26</span>(<span style="color:#e6db74">&#39;abc&#39;</span>);
+<span style="color:#75715e">// fn26(true); // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 自定义类型守卫
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 首先自定义一个函数来判断参数类型，返回值类型具有固定格式：
+</span><span style="color:#75715e"> * param is type
+</span><span style="color:#75715e"> * 其中 param 必须是参数，type 是类型
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isStr</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">arg</span> <span style="color:#66d9ef">is</span> <span style="color:#66d9ef">string</span> {
+  <span style="color:#75715e">// 内部可以使用其他 类型守卫
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">arg</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;string&#39;</span>;
+
+  <span style="color:#75715e">// 也可以直接使用类型断言
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// return (arg as string).toUpperCase !== undefined;
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fn27</span>(<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#75715e">// 像使用其他类型守卫一样引用 自定义函数，触发类型守卫
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isStr</span>(<span style="color:#a6e22e">arg</span>)) {
+    <span style="color:#a6e22e">arg</span>.<span style="color:#a6e22e">toUpperCase</span>();
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">arg</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+  }
+}
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 类型别名
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 为一些基本类型或复杂类型定义一个别名
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">MyString</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StrOrNum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StrAndNum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">&amp;</span> <span style="color:#66d9ef">number</span>;
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">callback</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">string</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">boolean</span>
+
+<span style="color:#75715e">// 像使用基本类型一样使用类型别名
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myString</span>: <span style="color:#66d9ef">MyString</span>;
+
+<span style="color:#75715e">// 类型别名可以是 泛型
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TypeArr</span>&lt;<span style="color:#f92672">T</span>&gt; <span style="color:#f92672">=</span> <span style="color:#a6e22e">T</span>[];
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">strArr</span>: <span style="color:#66d9ef">TypeArr</span>&lt;<span style="color:#f92672">string</span>&gt; <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;a&#39;</span>];
+
+<span style="color:#75715e">// 类型别名可以 自己引用自己（嵌套）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">NestObj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span>,
+  <span style="color:#a6e22e">obj?</span>: <span style="color:#66d9ef">NestObj</span>,
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">nestObj</span>: <span style="color:#66d9ef">NestObj</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;abc&#39;</span>,
+  <span style="color:#a6e22e">obj</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;def&#39;</span> },
+}
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 字面量类型
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 使用该类型的变量值需要等于字面值
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">OneOrTwo</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;two&#39;</span> <span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">OneOrTwo</span>;
+
+<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;one&#39;</span>;
+<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;two&#39;</span>;
+<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#75715e">// 取类型中不存在的值会报错
+</span><span style="color:#75715e">// num = &#39;three&#39;; // Error
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 可辨识联合（Discriminated Union）
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 当联合类型中的每一个类型，都包含一个为字面量类型的共有属性时，
+</span><span style="color:#75715e"> * ts 将会把这个联合类型识别为 可辨识联合
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Square</span> {
+  <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;square&#34;</span>;
+  <span style="color:#a6e22e">size</span>: <span style="color:#66d9ef">number</span>;
+}
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Circle</span> {
+  <span style="color:#a6e22e">kind</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;circle&#34;</span>;
+  <span style="color:#a6e22e">radius</span>: <span style="color:#66d9ef">number</span>;
+}
+
+<span style="color:#75715e">// 该联合类型每个接口类型都含有 kind 属性，并且是字符串字面量类型，
+</span><span style="color:#75715e">// kind 被称为可辨识联合 Shape 的 可辨识特征（Discriminant）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Shape</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Square</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">Circle</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">area</span>(<span style="color:#a6e22e">s</span>: <span style="color:#66d9ef">Shape</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span> {
+  <span style="color:#75715e">// 直接访问会提示 Circle 没有 size 属性
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// return s.size ** 2; // Error
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// 使用 switch 或者 if 判断 kind 属性后，ts 会自动限制为指定类型
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">kind</span>) {
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;square&#34;</span><span style="color:#f92672">:</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">size</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>;
+
+    <span style="color:#75715e">// 但是仍然存在一个问题，漏写判断时 ts 并不会提示
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// case &#34;circle&#34;:
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   return Math.PI * s.radius ** 2;
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+  }
+}
+
+<span style="color:#75715e">// 解决提示漏写 case 的问题，可以利用 ts 类型守卫的特性，
+</span><span style="color:#75715e">// 即代码中判断了所有联合类型的可能性之后，该联合类型会被限制为 never 类型，
+</span><span style="color:#75715e">// 所以在最后尝试将联合类型赋值给一个 never 类型，如果报错就说明还有情况没有判断到；
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">area2</span>(<span style="color:#a6e22e">s</span>: <span style="color:#66d9ef">Shape</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">number</span> {
+  <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">kind</span>) {
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;square&#39;</span><span style="color:#f92672">:</span>
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">size</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>;
+
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;circle&#34;</span><span style="color:#f92672">:</span>
+      <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">PI</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">radius</span> <span style="color:#f92672">**</span> <span style="color:#ae81ff">2</span>;
+
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+      <span style="color:#75715e">// 如果上面的 case 漏写一个，下面就会报错，
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// 提示 不能将 xxx 分配给 never；
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span>: <span style="color:#66d9ef">never</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">s</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">result</span>;
+  }
+}
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 索引类型
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IObj4</span> {
+  <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>,
+  <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">number</span>,
+}
+
+<span style="color:#75715e">// keyof 为索引查询操作符，表示类型是接口所有属性的 联合类型
+</span><span style="color:#75715e">// 等价于：
+</span><span style="color:#75715e">// type Key4 = &#39;name&#39; | &#39;age&#39;;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Key1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">keyof</span> <span style="color:#a6e22e">IObj4</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key1</span>: <span style="color:#66d9ef">Key1</span>;
+
+<span style="color:#a6e22e">key1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;name&#39;</span>;
+<span style="color:#a6e22e">key1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;age&#39;</span>;
+<span style="color:#75715e">// key4 = &#39;hobby&#39;; // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 或者获取普通对象的类型的索引
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj7</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">0</span> };
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Key2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">keyof</span> <span style="color:#66d9ef">typeof</span> <span style="color:#a6e22e">obj7</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">key2</span>: <span style="color:#66d9ef">Key2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;name&#39;</span>;
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 映射类型
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 将类型中每个属性进行映射转变，类似数组的 map 方法
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IObj5</span> {
+  <span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>;
+  <span style="color:#a6e22e">age</span>: <span style="color:#66d9ef">number</span>;
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map1</span> <span style="color:#f92672">=</span> {
+  <span style="color:#75715e">// 为接口中每个属性添加 只读与可选 标识
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">readonly</span> [<span style="color:#a6e22e">K</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">keyof</span> <span style="color:#a6e22e">IObj5</span>]<span style="color:#f92672">?:</span> <span style="color:#a6e22e">IObj5</span>[<span style="color:#a6e22e">K</span>];
+
+  <span style="color:#75715e">// 无法新增额外的属性
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// hobby: string; // Error
+</span><span style="color:#75715e"></span>};
+
+<span style="color:#75715e">// 等同于：
+</span><span style="color:#75715e">// type Map1 = {
+</span><span style="color:#75715e">//     readonly name?: string;
+</span><span style="color:#75715e">//     readonly age?: number;
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 也可以写一个通用的转变泛型
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">TMap2</span>&lt;<span style="color:#f92672">T</span>&gt; <span style="color:#f92672">=</span> {
+  <span style="color:#66d9ef">readonly</span> [<span style="color:#a6e22e">K</span> <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">keyof</span> <span style="color:#a6e22e">T</span>]<span style="color:#f92672">?:</span> <span style="color:#a6e22e">T</span>[<span style="color:#a6e22e">K</span>];
+}
+
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TMap2</span>&lt;<span style="color:#f92672">IObj5</span>&gt;;
+
+<span style="color:#75715e">// ts 也内置了一些条件类型，如：
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Readonly - 属性全转换为只读：
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Readonly</span><span style="color:#f92672">&lt;</span>{ <span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">string</span> }<span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// { readonly a: string }
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Partial - 属性全转换为可选：
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map4</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Partial</span><span style="color:#f92672">&lt;</span>{ <span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">string</span> }<span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// { a?: string | undefined }
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Pick - 属性拷贝
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Pick</span><span style="color:#f92672">&lt;</span>{ <span style="color:#a6e22e">a</span>: <span style="color:#66d9ef">string</span>; <span style="color:#a6e22e">b</span>: <span style="color:#66d9ef">number</span> }, <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// { a: string }
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Exclude&lt;T, U&gt; - 从 T 中剔除可以赋值给 U 的类型
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map6</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Exclude</span><span style="color:#f92672">&lt;</span><span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// &#39;a&#39;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Extract&lt;T, U&gt; - 从 T 中提取可以赋值给 U 的类型
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map7</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Extract</span><span style="color:#f92672">&lt;</span><span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;b&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;b&#39;</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// &#39;a&#39; | &#39;b&#39;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * NonNullable&lt;T&gt; - 从 T 中剔除 null 和 undefined
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map8</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">NonNullable</span><span style="color:#f92672">&lt;</span><span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">undefined</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// &#39;a&#39;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * ReturnType&lt;T&gt; - 获取函数返回值的类型
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Map9</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ReturnType</span><span style="color:#f92672">&lt;</span>() <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">string</span><span style="color:#f92672">&gt;</span>; <span style="color:#75715e">// string
+</span><span style="color:#75715e"></span>
+</code></pre></div><h3 id="装饰器">装饰器</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">/************************************************************
+</span><span style="color:#75715e"> * 装饰器
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * 用于标注或修改类及其成员，是一种特殊类型声明，
+</span><span style="color:#75715e"> * 支持被附加到类声明、方法、访问符、属性或参数上
+</span><span style="color:#75715e"> ************************************************************/</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 基本使用
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">// 声明装饰器函数：
+</span><span style="color:#75715e">// 函数一共接收三个参数：
+</span><span style="color:#75715e">// 1. 装饰器所装饰的目标（target）；
+</span><span style="color:#75715e">// 2. 装饰目标的属性名（key）；
+</span><span style="color:#75715e">// 3. 装饰目标的属性描述值（descriptor）；
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decBasic</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">descriptor</span>: <span style="color:#66d9ef">object</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;decorator&#39;</span>);
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;=============== Basic ===============&#39;</span>);
+
+<span style="color:#75715e">// 使用装饰器，直接写在装饰目标的上方，
+</span><span style="color:#75715e">// 这里装饰目标是类的 getNum 方法；
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecBasicCS</span> {
+  <span style="color:#66d9ef">@decBasic</span>
+  <span style="color:#a6e22e">getNum</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;class&#39;</span>);
+  }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decBasicCS</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DecBasicCS</span>();
+<span style="color:#a6e22e">decBasicCS</span>.<span style="color:#a6e22e">getNum</span>();
+<span style="color:#75715e">// &#34;decorator&#34;
+</span><span style="color:#75715e">// &#34;class&#34;
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 装饰器工厂
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 可自定义如何装饰一个目标（允许为装饰器传参）
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decFactory</span>(<span style="color:#a6e22e">str</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;add&#39;</span> <span style="color:#f92672">|</span> <span style="color:#e6db74">&#39;plus&#39;</span>) {
+  <span style="color:#75715e">// 这里可写自定义装饰逻辑
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">returnFn</span>;
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">str</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;add&#39;</span>) {
+    <span style="color:#75715e">// 装饰器工厂函数最后需要返回一个装饰器函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">returnFn</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;add&#39;</span>);
+    }
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">returnFn</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;plus&#39;</span>);
+    }
+  }
+
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">returnFn</span>;
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;=============== Factory ===============&#39;</span>);
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecFactoryCS</span> {
+  <span style="color:#75715e">// 装饰器工厂函数可以像普通函数一样传参执行（运行时执行）
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decFactory</span>(<span style="color:#e6db74">&#39;add&#39;</span>)
+  <span style="color:#a6e22e">useAdd</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+  
+  <span style="color:#75715e">// 使用不同参数针对不同装饰目标，或使用不同装饰逻辑
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decFactory</span>(<span style="color:#e6db74">&#34;plus&#34;</span>)
+  <span style="color:#a6e22e">usePlus</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decFactoryCS</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DecFactoryCS</span>();
+<span style="color:#a6e22e">decFactoryCS</span>.<span style="color:#a6e22e">useAdd</span>(); <span style="color:#75715e">// &#34;add&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">decFactoryCS</span>.<span style="color:#a6e22e">usePlus</span>(); <span style="color:#75715e">// &#34;plus&#34;
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 装饰器组合
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 一个装饰目标可同时被多个装饰器叠加装饰
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decMultiOne</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;one&#39;</span>);
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decMultiTwo</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;two&#39;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decMultiOneFact() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;one fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;one&#39;</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decMultiTwoFact() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;two fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;two&#39;</span>);
+  }
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;=============== Multi decorator ===============&#39;</span>);
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecMultiCS</span> {
+  <span style="color:#75715e">// 多个装饰器叠加时，会从装饰目标开始，依次向上执行，
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 类型于执行 decMultiOne(decMultiTwo(getNum))
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decMultiOne</span>
+  <span style="color:#66d9ef">@decMultiTwo</span>
+  <span style="color:#a6e22e">getNum</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+
+  <span style="color:#75715e">// 装饰器也可以横向书写
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decMultiOne</span> <span style="color:#66d9ef">@decMultiTwo</span> <span style="color:#a6e22e">getNum1</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+
+  <span style="color:#66d9ef">@decMultiOne</span> <span style="color:#66d9ef">@decMultiTwo</span>
+  <span style="color:#a6e22e">getNum2</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+
+  <span style="color:#75715e">// 使用装饰器工厂也能叠加，但是执行顺序是：
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - 先自上而下执行工厂函数的逻辑
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// - 然后自下而上执行装饰器的逻辑
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decMultiOneFact</span>()
+  <span style="color:#66d9ef">@decMultiTwoFact</span>()
+  <span style="color:#a6e22e">getNum3</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decMultiCS</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DecMultiCS</span>();
+<span style="color:#a6e22e">decMultiCS</span>.<span style="color:#a6e22e">getNum</span>();
+<span style="color:#75715e">// &#34;two&#34;
+</span><span style="color:#75715e">// &#34;one&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">decMultiCS</span>.<span style="color:#a6e22e">getNum1</span>();
+<span style="color:#75715e">// &#34;two&#34;
+</span><span style="color:#75715e">// &#34;one&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">decMultiCS</span>.<span style="color:#a6e22e">getNum2</span>();
+<span style="color:#75715e">// &#34;two&#34;
+</span><span style="color:#75715e">// &#34;one&#34;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">decMultiCS</span>.<span style="color:#a6e22e">getNum3</span>();
+<span style="color:#75715e">// &#34;one&#34; &#34;fact&#34;
+</span><span style="color:#75715e">// &#34;two&#34; &#34;fact&#34;
+</span><span style="color:#75715e">// &#34;two&#34;
+</span><span style="color:#75715e">// &#34;one&#34;
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 多种装饰目标类型
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 执行顺序：
+</span><span style="color:#75715e"> * 1. 参数装饰器，然后依次是方法装饰器，访问符装饰器，或属性装饰器 应用到每个 实例成员。
+</span><span style="color:#75715e"> * 2. 参数装饰器，然后依次是方法装饰器，访问符装饰器，或属性装饰器 应用到每个 静态成员。
+</span><span style="color:#75715e"> * 3. 参数装饰器应用到构造函数。
+</span><span style="color:#75715e"> * 4. 类装饰器应用到类。
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decClass() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;class fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">Function</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;class&#39;</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decAttr() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;attr fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;attr&#39;</span>, <span style="color:#a6e22e">key</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decMethod() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;method fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;method&#39;</span>, <span style="color:#a6e22e">key</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decGetter() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;getter fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;getter&#39;</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decSetter() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;getter fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;getter&#39;</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">decArg() {</span>
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;arg fact&#39;</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">target</span>: <span style="color:#66d9ef">unknown</span>, <span style="color:#a6e22e">key</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">index</span>: <span style="color:#66d9ef">unknown</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;arg&#39;</span>);
+  }
+}
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;=============== Multi target ===============&#39;</span>);
+
+<span style="color:#75715e">// 类装饰器，实际是作用于类的构造函数，
+</span><span style="color:#75715e">// 即装饰器的 target 入参是构造函数（并且只能定义这一个入参）
+</span><span style="color:#75715e">// 如果类装饰器返回一个值，它会使用提供的构造函数来替换类的声明
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">@decClass</span>()
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MultiDecCS</span> {
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 属性装饰器
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * target: 对于静态成员来说是类的构造函数，对于实例成员是类的原型对象
+</span><span style="color:#75715e">   * 属性装饰器没有第三个入参 属性描述符；
+</span><span style="color:#75715e">   */</span>
+
+  <span style="color:#75715e">// 公共属性
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decAttr</span>()
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">publicAttr</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#75715e">// 私有属性
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decAttr</span>()
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">privateAttr</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#75715e">// 受保护属性
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decAttr</span>()
+  <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">protectedAttr</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#75715e">// 静态属性
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decAttr</span>()
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">staticAttr</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 方法装饰器
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * target: 对于静态成员来说是类的构造函数，对于实例成员是类的原型对象
+</span><span style="color:#75715e">   * 如果方法装饰器返回一个值，它会被用作方法的属性描述符
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#66d9ef">@decMethod</span>()
+  <span style="color:#a6e22e">getVar</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {}
+
+  <span style="color:#75715e">// 静态方法
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">@decMethod</span>()
+  <span style="color:#a6e22e">getStaticVar</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">void</span> {};
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * getter 修饰器
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * target: 对于静态成员来说是类的构造函数，对于实例成员是类的原型对象
+</span><span style="color:#75715e">   * 但不能同时向同一个属性的 getter 和 setter 设置修饰器
+</span><span style="color:#75715e">   * 如果访问器装饰器返回一个值，它会被用作方法的属性描述符
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#66d9ef">@decGetter</span>()
+  <span style="color:#66d9ef">get</span> <span style="color:#66d9ef">var</span>()<span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span> { <span style="color:#66d9ef">return</span>; }
+  
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * setter 修饰器
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#66d9ef">@decSetter</span>()
+  <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">var1</span>(<span style="color:#a6e22e">val</span>: <span style="color:#66d9ef">unknown</span>) {}
+
+  <span style="color:#75715e">/**
+</span><span style="color:#75715e">   * 参数装饰器
+</span><span style="color:#75715e">   *
+</span><span style="color:#75715e">   * target: 对于静态成员来说是类的构造函数，对于实例成员是类的原型对象
+</span><span style="color:#75715e">   * 入参第三个是当前参数在入参数组中的索引
+</span><span style="color:#75715e">   */</span>
+  <span style="color:#a6e22e">getArg</span>&lt;<span style="color:#f92672">T</span>&gt;(<span style="color:#66d9ef">@decArg</span>() <span style="color:#a6e22e">arg</span>: <span style="color:#66d9ef">T</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">T</span> { <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">arg</span>; }
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">multiDecCS</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MultiDecCS</span>();
+
 </code></pre></div>
               
 
@@ -1136,7 +1765,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript2/" data-tooltip="typescript 笔记2" aria-label="下一篇: typescript 笔记2">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -1243,7 +1872,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript2/" data-tooltip="typescript 笔记2" aria-label="下一篇: typescript 笔记2">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>

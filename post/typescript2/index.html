@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    
+    <script type="application/ld+json">
+
+{  
+  "@context":"http://schema.org",
+  "@type":"Website",
+  "@id":"https:\/\/caiqing123.github.io\/",
+  "author": {
+    "@type": "Person",
+    "name": "cql",
+    
+    "image": "https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a"
+    
+  },
+  "name":"cql 博客",
+  "description":"\u003cp\u003etypescript 学习笔记2\u003c\/p\u003e",
+  "url":"https:\/\/caiqing123.github.io\/post\/typescript2\/",
+  "keywords":"[typescript]"
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.90.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="cql">
+<meta name="keywords" content="typescript">
+<meta name="description" content="typescript 学习笔记2">
+
+
+<meta property="og:description" content="typescript 学习笔记2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="typescript 笔记2">
+<meta name="twitter:title" content="typescript 笔记2">
+<meta property="og:url" content="https://caiqing123.github.io/post/typescript2/">
+<meta property="twitter:url" content="https://caiqing123.github.io/post/typescript2/">
+<meta property="og:site_name" content="cql 博客">
+<meta property="og:description" content="typescript 学习笔记2">
+<meta name="twitter:description" content="typescript 学习笔记2">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2022-08-23T15:35:07">
+  
+  
+    <meta property="article:modified_time" content="2022-08-23T15:35:07">
+  
+  
+  
+    
+      <meta property="article:section" content="typescript">
+    
+  
+  
+    
+      <meta property="article:tag" content="typescript">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=640">
+
+
+
+
+
+
+    <title>typescript 笔记2</title>
+
+    <link rel="icon" href="https://caiqing123.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://caiqing123.github.io/post/typescript2/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://caiqing123.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-02NYWLD4XD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02NYWLD4XD');
+</script>
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://caiqing123.github.io/" aria-label="去首页">cql 博客</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://caiqing123.github.io/#about" aria-label="打开链接: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://caiqing123.github.io/#about" aria-label="阅读有关作者的更多信息">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">cql</h4>
+        
+          <h5 class="sidebar-profile-bio">cql 博客</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/caiqing123" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://caiqing123.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      typescript 笔记2
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-08-23T15:35:07&#43;08:00">
+        
+  八月 23, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://caiqing123.github.io/categories/typescript">typescript</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>typescript 学习笔记2</p>
+<h3 id="模块-导出导入">模块 导出/导入</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 导出
+</span><span style="color:#75715e"> **/</span>
+<span style="color:#75715e">// 当前文件有 export 内容，所以当前文件会被当成一个模块，
+</span><span style="color:#75715e">// 内部申明的变量不能直接被全局访问；
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">modStr</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">expBol</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#75715e">// 可以导出多种类型
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">expStr</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;export&#34;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IExp</span> {
+    <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span>;
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CExp</span> {
+    <span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abc&#34;</span>;
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">StrOrNum</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">string</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">number</span>;
+
+<span style="color:#75715e">// 先申明后导出
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">expBol</span> };
+
+<span style="color:#75715e">// 可以直接引导出引入的变量，进行重命名或拓展
+</span><span style="color:#75715e">// 也可以自己引入自己的变量
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> { <span style="color:#a6e22e">expBol</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">expBol2</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./export&#34;</span>;
+
+<span style="color:#75715e">// 被直接导出的导入变量，当前模块代码无法访问
+</span><span style="color:#75715e">// expBol2; // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 默认导出
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * 一个模块只能有一个默认导出
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bol</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">bol</span>;
+
+<span style="color:#75715e">// 不能这样简写（申明即导出）
+</span><span style="color:#75715e">// export default const bol = true; // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 但是 类、函数、接口 等可以申明即导出
+</span><span style="color:#75715e">// export default class CS {}
+</span><span style="color:#75715e">// export default function() {}
+</span><span style="color:#75715e">// export default interface IF {}
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 字面值也可以直接默认导出
+</span><span style="color:#75715e">// export default true
+</span><span style="color:#75715e">// export default &#39;abc&#39;;
+</span><span style="color:#75715e">// export default 123;
+</span><span style="color:#75715e">// export default { num: 123 };
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 导入
+</span><span style="color:#75715e"> **/</span>
+
+<span style="color:#75715e">// ts 文件中不带顶级的 import 或 export，
+</span><span style="color:#75715e">// 则内部申明的变量默认全局可访问;
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">num</span>; <span style="color:#75715e">// from advanceType.ts
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">num1</span>; <span style="color:#75715e">// from basicType.ts
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 无法直接访问具有 export 申明的 export.ts 文件（模块）中的变量
+</span><span style="color:#75715e">// modStr; // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 导入需要加上路径，文件名后缀可省略
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">expStr</span>, <span style="color:#a6e22e">IExp</span>, <span style="color:#a6e22e">CExp</span>, <span style="color:#a6e22e">expBol</span>, <span style="color:#a6e22e">expBol2</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./export&#34;</span>;
+
+<span style="color:#75715e">// 导入具有默认导出的模块，可以对默认内容重命名
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">renamedBol</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./defaultExport&#34;</span>;
+
+<span style="color:#75715e">// 导入模块所有内容到一个变量（对象）中
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">exportObj</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;./export&#34;</span>;
+
+<span style="color:#75715e">// 导入类型变量的语法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#66d9ef">type</span> { <span style="color:#a6e22e">StrOrNum</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;./export&#39;</span>;
+
+<span style="color:#75715e">// 没有 export 的内容，也能直接通过 import &#39;./global&#39; 的形式，
+</span><span style="color:#75715e">// 引入当前文件中的所有全局变量
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">globalVar1</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abc&#39;</span>;
+<span style="color:#75715e">// 直接导入文件（没有包含 export），使引入文件中的所有全局变量
+</span><span style="color:#75715e">// 在当前文件可访问，例如：globalVar1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#34;./global&#34;</span>;
+
+<span style="color:#75715e">// 导入 export = xxx 形式的导出模块
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">bol1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#34;./defaultExport&#34;</span>);
+
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str</span>: <span style="color:#66d9ef">string</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">expStr</span>;
+<span style="color:#a6e22e">str</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">globalVar1</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bol</span>: <span style="color:#66d9ef">boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">expBol</span>;
+<span style="color:#a6e22e">bol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">expBol2</span>;
+<span style="color:#a6e22e">bol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">renamedBol</span>;
+<span style="color:#a6e22e">bol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">exportObj</span>.<span style="color:#a6e22e">expBol2</span>;
+<span style="color:#a6e22e">bol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bol1</span>;
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj1</span>: <span style="color:#66d9ef">IExp</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">123</span>,
+};
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CS1</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">CExp</span> {}
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">str2</span>: <span style="color:#66d9ef">StrOrNum</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;abc&#39;</span>;
+
+
+<span style="color:#75715e">// 动态导入模块
+</span><span style="color:#75715e">// 首先申明 require 函数，或者直接安装申明文件：npm i -D @types/node
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">declare</span> <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">require</span>(<span style="color:#a6e22e">name</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#66d9ef">any</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">bol2</span>: <span style="color:#66d9ef">boolean</span>;
+
+<span style="color:#66d9ef">if</span> (Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.5</span>) {
+    <span style="color:#a6e22e">bol2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;./global&#39;</span>);
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">bol2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+}
+
+<span style="color:#a6e22e">bol</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">bol2</span>;
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 模块解析过程
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">// 导入模块示例：
+</span><span style="color:#75715e">// import * from &#39;test&#39;;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 相对导入：
+</span><span style="color:#75715e">//   带有路径标识，例如：&#39;./test&#39;, &#39;/test&#39;, &#39;../test&#39;；
+</span><span style="color:#75715e">// 非相对导入：
+</span><span style="color:#75715e">//   不带路径标识，例如：&#39;test&#39;, &#39;test/test&#39;, &#39;@test/test&#39;;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 相对导入：
+</span><span style="color:#75715e">// import * from &#39;./test&#39;; 的解析模块文件顺序：
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//  ./test.ts
+</span><span style="color:#75715e">//  ./test.tsx
+</span><span style="color:#75715e">//  ./test.d.ts
+</span><span style="color:#75715e">//  ./test/package.json （如果文件有指定 &#34;types&#34; 属性，则取它的值对应的文件）
+</span><span style="color:#75715e">//  ./test/index.ts
+</span><span style="color:#75715e">//  ./test/index.tsx
+</span><span style="color:#75715e">//  ./test/index.d.ts
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 非相对导入：
+</span><span style="color:#75715e">// import * from &#39;test&#39;; 的解析模块文件顺序
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//  ./node_modules/test.ts
+</span><span style="color:#75715e">//  ./node_modules/test.tsx
+</span><span style="color:#75715e">//  ./node_modules/test.d.ts
+</span><span style="color:#75715e">//  ./node_modules/test/package.json （如果文件有指定 &#34;types&#34; 属性，则取它的值对应的文件）
+</span><span style="color:#75715e">//  ./node_modules/test/index.ts
+</span><span style="color:#75715e">//  ./node_modules/test/index.tsx
+</span><span style="color:#75715e">//  ./node_modules/test/index.d.ts
+</span><span style="color:#75715e">//  ...（依次寻找上一级目录的 node_modules 文件夹）
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 配置文件中指定如何 解析非相对模块：
+</span><span style="color:#75715e">// {
+</span><span style="color:#75715e">//   &#34;compilerOptions&#34;: {
+</span><span style="color:#75715e">//     &#34;baseUrl&#34;: &#34;.&#34;,
+</span><span style="color:#75715e">//     &#34;paths&#34;: {
+</span><span style="color:#75715e">//       &#34;test&#34;: [
+</span><span style="color:#75715e">//         &#34;test/test&#34;, // 这里路径是相对于上面的 &#34;baseUrl&#34; 属性值
+</span><span style="color:#75715e">//         &#34;test1/test1&#34;, // 可以指定多个回退路径，文件不存在会依次解析下一个
+</span><span style="color:#75715e">//         &#34;*&#34; // 模块名称与文件相同（当前路径下）可以直接使用通配符
+</span><span style="color:#75715e">//       ]
+</span><span style="color:#75715e">//     }
+</span><span style="color:#75715e">//   }
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>
+
+</code></pre></div><h3 id="命名空间">命名空间</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">// ts 1.5 之后，内部模块（module x {}）改为 命名空间（namespace x {}），
+</span><span style="color:#75715e">// 外部模块 改为 模块（import/export）
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 当前文件中或与其他文件中的全局变量中，存在重复的变量名申明会报错
+</span><span style="color:#75715e">// let num; // Error
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num7</span>: <span style="color:#66d9ef">number</span>;
+<span style="color:#75715e">// let num7; // Error
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 通过命名空间解决这个问题
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name1</span> {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+}
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name2</span> {
+  <span style="color:#75715e">// 同时，其他文件中也能这样重新申明同名变量；
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#75715e">// 但是变量和接口名可以重复，分别表示不同的结构
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">CommonName</span>;
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommonName</span> {};
+
+<span style="color:#75715e">// 类、接口、命名空间也可以名称相同，都表示为同一个类型结构
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CommonName1</span> {};
+<span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">CommonName1</span> {};
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">CommonName1</span> {};
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 命名空间 嵌套
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name3</span> {
+  <span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name3_1</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  }
+
+  <span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name3_2</span> {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+  }
+
+  <span style="color:#75715e">// 变量之间互不影响
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+}
+
+<span style="color:#75715e">// 内部嵌套的命名空间外部无法访问
+</span><span style="color:#75715e">// Name3_1; // Error
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 命名空间 别名
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name4</span> {
+  <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name4_1</span> {
+    <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name4_2</span> {
+      <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">num</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    }
+  }
+}
+
+<span style="color:#75715e">// 取别名的格式为：import xxx = name1.name2 ...
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Name42</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Name4</span>.<span style="color:#a6e22e">Name4_1</span>.<span style="color:#a6e22e">Name4_2</span>;
+
+<span style="color:#75715e">// 访问别名中的变量就像访问对象
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num10</span>: <span style="color:#66d9ef">number</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Name42</span>.<span style="color:#a6e22e">num</span>;
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 外部命名空间
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">declare</span> <span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Name5</span> {
+  <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">num</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">number</span>;
+}
+<span style="color:#66d9ef">declare</span> <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">num11</span>: <span style="color:#66d9ef">Name5.num</span>;
+
+</code></pre></div><h3 id="发布">发布</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#75715e">/************************************************************
+</span><span style="color:#75715e"> * 发布
+</span><span style="color:#75715e"> *
+</span><span style="color:#75715e"> * 发布声明文件的方式：
+</span><span style="color:#75715e"> * - 包含到 npm 包中；
+</span><span style="color:#75715e"> * - 发布到 @types 组织上
+</span><span style="color:#75715e"> ************************************************************/</span>
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 包含到 npm 包中
+</span><span style="color:#75715e"> * 
+</span><span style="color:#75715e"> * 使用该 npm 包时可以不用添加额外的声明依赖（&#34;@types/xxx&#34;）到 &#34;dependencies&#34; 中
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">// 配置 package.json 中的 &#34;types&#34; 属性（或者 &#34;typings&#34;），添加声明文件入口：
+</span><span style="color:#75715e">// {
+</span><span style="color:#75715e">//   &#34;name&#34;: &#34;demo&#34;,
+</span><span style="color:#75715e">//   &#34;version&#34;: &#34;0.1.1&#34;,
+</span><span style="color:#75715e">//   &#34;main&#34;: &#34;./src/main.ts&#34;,
+</span><span style="color:#75715e">//   &#34;types&#34;: &#34;./src/main.d.ts&#34;
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// &#34;main&#34;，&#34;types&#34; 文件都有导出的话，最终只会导出 &#34;types&#34; 中的内容，
+</span><span style="color:#75715e">// 否则只会导出配置了的那个文件的导出内容；
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// 只有声明入口文件和 &#34;main&#34; 文件同级并且同名（后缀 &#34;.d.ts&#34;），
+</span><span style="color:#75715e">// 才可以不用配置 &#34;types&#34; 值，ts 会自动识别它为声明文件入口；
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 也可以指定某些 ts 版本下使用的声明文件来源：
+</span><span style="color:#75715e">// {
+</span><span style="color:#75715e">//   &#34;typesVersions&#34;: {
+</span><span style="color:#75715e">//     &#34;&gt;=3.1&#34;: {
+</span><span style="color:#75715e">//       &#34;*&#34;: [&#34;ts3.1/*&#34;]
+</span><span style="color:#75715e">//     }
+</span><span style="color:#75715e">//     &#34;&gt;=3.0&#34;: {
+</span><span style="color:#75715e">//       &#34;*&#34;: [&#34;ts3.0/*&#34;]
+</span><span style="color:#75715e">//     }
+</span><span style="color:#75715e">//   }
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e">// 该配置表示如果当前使用的 ts 版本大于等于 3.1 时，将从 &#34;ts3.1&#34;（与 package.json 文件同级）目录中读取声明文件，
+</span><span style="color:#75715e">// 然后是判断 3.0 版本，最后如果都没有匹配的，则再从 &#34;types&#34; 中读取声明文件；
+</span><span style="color:#75715e">// 注意版本的书写顺序，应该是高版本在上，低版本在下，否则会匹配错误；
+</span><span style="color:#75715e"></span>
+
+
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 发布到 @types 公共仓库中
+</span><span style="color:#75715e"> */</span>
+
+<span style="color:#75715e">// 要单独发布自己的包对应的 types 包，先提交 PR 到 &lt;https://github.com/DefinitelyTyped/DefinitelyTyped&gt; 仓库中，
+</span><span style="color:#75715e">// types 包名称需要 npm 包对应，比如 demo 包对应的 types 包应该是 @types/demo；
+</span><span style="color:#75715e">// 然后使用发布工具 &lt;https://github.com/microsoft/DefinitelyTyped-tools/tree/master/packages/publisher&gt; 将 types 包发布到 npm 上；
+</span></code></pre></div>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://caiqing123.github.io/tags/typescript/">typescript</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript/" data-tooltip="typescript 笔记" aria-label="上一篇: typescript 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/typescript2/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/typescript2/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/typescript2/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/caiqing123.github.io\/post\/typescript2\/';
+        
+          this.page.identifier = '\/post\/typescript2\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'https-caiqing123-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 cql. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://caiqing123.github.io/post/typescript/" data-tooltip="typescript 笔记" aria-label="上一篇: typescript 笔记">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="分享这个帖子">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://caiqing123.github.io/post/typescript2/" title="分享到 Facebook" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://caiqing123.github.io/post/typescript2/" title="分享到 Twitter" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://caiqing123.github.io/post/typescript2/" title="分享到 Linkedin" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="发表评论">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="回到顶部">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftypescript2%2F" aria-label="分享到 Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftypescript2%2F" aria-label="分享到 Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcaiqing123.github.io%2Fpost%2Ftypescript2%2F" aria-label="分享到 Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>分享到 Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/8326f93f7f0189da62a749745793e60a?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">cql</h4>
+    
+      <div id="about-card-bio">cql 博客</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        job
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        中国
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://caiqing123.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://caiqing123.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

@@ -6,11 +6,20 @@
     <description>Recent content in typescript on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Aug 2022 11:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Aug 2022 15:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript 笔记2</title>
+      <link>https://caiqing123.github.io/post/typescript2/</link>
+      <pubDate>Tue, 23 Aug 2022 15:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/typescript2/</guid>
+      <description>&lt;p&gt;typescript 学习笔记2&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>typescript 笔记</title>
       <link>https://caiqing123.github.io/post/typescript/</link>
-      <pubDate>Mon, 22 Aug 2022 11:35:07 +0800</pubDate>
+      <pubDate>Sat, 20 Aug 2022 11:35:07 +0800</pubDate>
       
       <guid>https://caiqing123.github.io/post/typescript/</guid>
       <description>&lt;p&gt;typescript 学习笔记&lt;/p&gt;</description>
