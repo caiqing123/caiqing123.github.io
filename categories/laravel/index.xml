@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>laravel on cql 博客</title>
+    <title>Laravel on cql 博客</title>
     <link>https://caiqing123.github.io/categories/laravel/</link>
-    <description>Recent content in laravel on cql 博客</description>
+    <description>Recent content in Laravel on cql 博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 24 Dec 2021 14:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Oct 2022 10:35:07 +0800</lastBuildDate><atom:link href="https://caiqing123.github.io/categories/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> Laravel9 生成语言包</title>
+      <link>https://caiqing123.github.io/post/laravel-lang/</link>
+      <pubDate>Fri, 21 Oct 2022 10:35:07 +0800</pubDate>
+      
+      <guid>https://caiqing123.github.io/post/laravel-lang/</guid>
+      <description>&lt;p&gt;使用 Laravel-Lang/publisher 对 Laravel 的中文支持&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>laravel核心知识学习</title>
       <link>https://caiqing123.github.io/post/laravel/</link>
